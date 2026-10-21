@@ -1,14 +1,14 @@
-# OnCourse Global — UX Wireframe Prototype Suite
+# OnCourse — UX Wireframe Prototype Suite
 
 **Prepared by:** Swara Studio  
 **Companion to:** K Webmaker Digital SOW v1.0 (Phase 1/2)  
-**Client:** OnCourse Global
+**Client:** OnCourse
 
 ---
 
 ## 🌟 Overview
 
-A coded structural UX wireframe prototype with client-side interactivity for the **OnCourse Global** website redesign. This prototype demonstrates information architecture, segment journeys (Undergraduate Class 8–12, Master's, MBA, Test Prep & Transfer), recurring brand pillars, and dynamic enquiry flows before high-fidelity visual design (Phase 2) and WordPress CMS build (Phase 3).
+A coded structural UX wireframe prototype with client-side interactivity for the **OnCourse** website redesign. This prototype demonstrates information architecture, segment journeys (Undergraduate Class 8–12, Master's, MBA, Test Prep & Transfer), recurring brand pillars, and dynamic enquiry flows before high-fidelity visual design (Phase 2) and WordPress CMS build (Phase 3).
 
 ### Key Architectural Highlights
 - **Semantic HTML5 & Tailwind CSS via CDN**: Responsive, mobile-first layouts tested at 375px, 768px, and 1280px.

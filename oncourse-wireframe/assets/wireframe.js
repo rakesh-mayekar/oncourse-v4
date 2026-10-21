@@ -1,10 +1,13 @@
 /**
- * OnCourse Global — UX Wireframe Interactive Controller
+ * OnCourse — UX Wireframe Interactive Controller
  * Vanilla JS behaviors for Sticky CTA, Segment-aware Form, Contextual Popups,
  * FAQ Accordion, and Carousel Sliders.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.OnCourseNav && typeof window.OnCourseNav.init === 'function') {
+    window.OnCourseNav.init();
+  }
   initMobileMenu();
   initStickyCTA();
   initSegmentPopup();
@@ -16,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstagramFeed();
   initTimelineDownloadModal();
   initEventsController();
+  initMajorEventAnnouncement();
 });
 
 // 1. Mobile Menu Toggle
+window.initMobileMenu = initMobileMenu;
 function initMobileMenu() {
   const toggleButtons = [
     document.getElementById('mobile-menu-toggle'),
@@ -344,8 +349,8 @@ function initConsultationModal() {
           OG
         </div>
         <div>
-          <span class="text-xs font-black tracking-tight text-neutral-900 uppercase block">OnCourse Global</span>
-          <span class="text-[10px] font-mono text-neutral-500 uppercase tracking-wider block">Endless Possibility • Dual Mentors</span>
+          <span class="text-xs font-black tracking-tight text-neutral-900 uppercase block">OnCourse</span>
+          <span class="text-[10px] font-mono text-neutral-500 uppercase tracking-wider block">Endless Possibility • Senior Advisory</span>
         </div>
       </div>
       <button id="consultation-modal-close" type="button" class="w-8 h-8 rounded-lg text-neutral-400 hover:text-black hover:bg-neutral-100 flex items-center justify-center transition-colors cursor-pointer" aria-label="Close dialog">
@@ -412,7 +417,7 @@ function initConsultationModal() {
             Preferred Hub *
           </label>
           <select id="popup-hub" name="hub" required class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs sm:text-sm text-neutral-900 bg-white focus:ring-2 focus:ring-black focus:border-black font-medium">
-            <option value="mumbai">Mumbai (HQ - Nariman Pt / Bandra)</option>
+            <option value="mumbai">Mumbai (Nariman Pt / Bandra)</option>
             <option value="delhi">New Delhi (Connaught Place)</option>
             <option value="gurgaon">Gurgaon (DLF Cyber City)</option>
             <option value="dubai">Dubai (DIFC / Downtown)</option>
@@ -441,7 +446,7 @@ function initConsultationModal() {
       <div class="pt-1 flex items-center justify-center gap-2 text-[10px] text-neutral-500 font-mono text-center">
         <span>🔒 Confidential Profile Diagnostic</span>
         <span>&bull;</span>
-        <span>2 Dedicated Mentors</span>
+        <span>Senior Admissions Advisory</span>
         <span>&bull;</span>
         <span>Response &lt; 24h</span>
       </div>
@@ -460,7 +465,7 @@ function initConsultationModal() {
         </p>
       </div>
       <div class="p-3.5 rounded-lg bg-neutral-50 border border-neutral-200 text-[11px] font-mono text-neutral-600 max-w-xs mx-auto text-left space-y-1">
-        <div><strong>Mentors:</strong> Senior Counsellor + Dedicated Mentor</div>
+        <div><strong>Advisory:</strong> Senior Counsellor &amp; Dedicated Specialist</div>
         <div><strong>Hub:</strong> Active in Mumbai, Delhi, Gurgaon &amp; Dubai</div>
       </div>
       <div class="pt-2">
@@ -643,14 +648,14 @@ function initInstagramFeed() {
     container.innerHTML = '';
     items.slice(0, 6).forEach(item => {
       const a = document.createElement('a');
-      a.href = item.permalink || 'https://www.instagram.com/oncoursevantage/';
+      a.href = item.permalink || 'https://www.instagram.com/oncourse/';
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.className = 'group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 hover:border-pink-500/70 transition-all duration-300 flex flex-col justify-between aspect-[9/14] shadow-lg hover:shadow-pink-500/10 hover:-translate-y-1 block';
 
       const mediaUrl = item.media_url || item.thumbnail_url || 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80';
       const isVideo = item.media_type === 'VIDEO';
-      const caption = item.caption || '@oncoursevantage reel';
+      const caption = item.caption || '@oncourse reel';
       const views = item.views_count ? `▶ ${(item.views_count / 1000).toFixed(1)}K` : '▶ Reel';
       const likes = item.like_count ? `❤️ ${item.like_count}` : '❤️ OnCourse';
 
@@ -674,7 +679,7 @@ function initInstagramFeed() {
             ${caption}
           </p>
           <div class="flex items-center justify-between mt-1.5 pt-1.5 border-t border-white/10 text-[9px] font-mono text-neutral-300">
-            <span class="text-pink-400 font-bold">@oncoursevantage</span>
+            <span class="text-pink-400 font-bold">@oncourse</span>
             <span>${likes}</span>
           </div>
         </div>
@@ -685,6 +690,9 @@ function initInstagramFeed() {
 }
 
 // 10. Timeline PDF Download Gated Modal Controller
+// CLIENT FEEDBACK ITEM 01: Resource Centre Download Limit (Max 3 downloads per email / contact number)
+// NOTE: Front-end state persistence is implemented via localStorage ('oncourse_resource_downloads_v1')
+// for prototype validation. In production, this requires backend database/CRM quota verification.
 function initTimelineDownloadModal() {
   const modal = document.getElementById('timeline-download-modal');
   if (!modal) return;
@@ -692,11 +700,57 @@ function initTimelineDownloadModal() {
   const backdrop = document.getElementById('timeline-modal-backdrop');
   const closeBtn = document.getElementById('timeline-modal-close');
   const successCloseBtn = document.getElementById('timeline-success-close');
+  const limitCloseBtn = document.getElementById('timeline-limit-close');
   const form = document.getElementById('timeline-download-form');
   const successBox = document.getElementById('timeline-download-success');
+  const limitBox = document.getElementById('timeline-download-limit-reached');
   const dialogWin = modal.querySelector('.relative.bg-white');
+  const STORAGE_KEY = 'oncourse_resource_downloads_v1';
 
-  function openModal() {
+  function getQuotaData() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveQuotaData(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+      console.warn('Quota persistence unavailable:', e);
+    }
+  }
+
+  function getDownloadCount(email, phone) {
+    const data = getQuotaData();
+    const emailCount = email ? (data[email] || 0) : 0;
+    const phoneCount = phone ? (data[phone] || 0) : 0;
+    return Math.max(emailCount, phoneCount);
+  }
+
+  function incrementDownloadCount(email, phone) {
+    const data = getQuotaData();
+    const current = getDownloadCount(email, phone);
+    const nextCount = current + 1;
+    if (email) data[email] = nextCount;
+    if (phone) data[phone] = nextCount;
+    saveQuotaData(data);
+    return nextCount;
+  }
+
+  function openModal(mode) {
+    if (mode === 'limit') {
+      if (form) form.classList.add('hidden');
+      if (successBox) successBox.classList.add('hidden');
+      if (limitBox) limitBox.classList.remove('hidden');
+    } else {
+      if (form) form.classList.remove('hidden');
+      if (successBox) successBox.classList.add('hidden');
+      if (limitBox) limitBox.classList.add('hidden');
+    }
+
     modal.classList.remove('hidden');
     requestAnimationFrame(() => {
       modal.classList.remove('opacity-0');
@@ -705,8 +759,10 @@ function initTimelineDownloadModal() {
         dialogWin.classList.add('scale-100');
       }
     });
-    const firstInput = modal.querySelector('input:not([type="hidden"])');
-    if (firstInput) setTimeout(() => firstInput.focus(), 120);
+    if (mode !== 'limit') {
+      const firstInput = modal.querySelector('input:not([type="hidden"])');
+      if (firstInput) setTimeout(() => firstInput.focus(), 120);
+    }
   }
 
   function closeModal() {
@@ -717,6 +773,9 @@ function initTimelineDownloadModal() {
     }
     setTimeout(() => {
       modal.classList.add('hidden');
+      if (form) form.classList.remove('hidden');
+      if (successBox) successBox.classList.add('hidden');
+      if (limitBox) limitBox.classList.add('hidden');
     }, 300);
   }
 
@@ -731,6 +790,7 @@ function initTimelineDownloadModal() {
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (backdrop) backdrop.addEventListener('click', closeModal);
   if (successCloseBtn) successCloseBtn.addEventListener('click', closeModal);
+  if (limitCloseBtn) limitCloseBtn.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
@@ -738,14 +798,79 @@ function initTimelineDownloadModal() {
     }
   });
 
+  // Handle consultation CTA from limit reached view
+  const limitConsultCta = document.getElementById('limit-reached-consult-cta');
+  if (limitConsultCta) {
+    limitConsultCta.addEventListener('click', () => {
+      closeModal();
+    });
+  }
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Hide form and show success
+      const emailInput = document.getElementById('pdf-user-email');
+      const phoneInput = document.getElementById('pdf-user-phone');
+      const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+      const phone = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
+
+      const currentCount = getDownloadCount(email, phone);
+
+      // Check download limit (Max 3 allowed, from 4th attempt onward display limit reached message)
+      if (currentCount >= 3) {
+        // Enforce quota limit: DO NOT allow download
+        form.classList.add('hidden');
+        if (successBox) successBox.classList.add('hidden');
+        if (limitBox) limitBox.classList.remove('hidden');
+        return;
+      }
+
+      // Normal download flow (Downloads 1 to 3)
+      const newCount = incrementDownloadCount(email, phone);
       form.classList.add('hidden');
-      if (successBox) successBox.classList.remove('hidden');
+      if (limitBox) limitBox.classList.add('hidden');
+      if (successBox) {
+        successBox.classList.remove('hidden');
+        const badge = successBox.querySelector('.download-quota-badge');
+        if (badge) {
+          badge.textContent = `Download ${newCount} of 3 Used`;
+        }
+      }
 
       // Trigger automatic PDF download
+      const downloadUrl = '../assets/docs/OnCourse-Class-8-to-12-Timelines-Guide.pdf';
+      const tempLink = document.createElement('a');
+      tempLink.href = downloadUrl;
+      tempLink.download = 'OnCourse-Class-8-to-12-Timelines-Guide.pdf';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+    });
+  }
+
+  // Bind inline Guidebook download form if present on Knowledge Centre page
+  const guidebookForm = document.getElementById('guidebook-download-form');
+  if (guidebookForm) {
+    guidebookForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = guidebookForm.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+      const currentCount = getDownloadCount(email, '');
+
+      if (currentCount >= 3) {
+        openModal('limit');
+        return;
+      }
+
+      const newCount = incrementDownloadCount(email, '');
+      openModal();
+      if (form) form.classList.add('hidden');
+      if (limitBox) limitBox.classList.add('hidden');
+      if (successBox) {
+        successBox.classList.remove('hidden');
+        const badge = successBox.querySelector('.download-quota-badge');
+        if (badge) badge.textContent = `Download ${newCount} of 3 Used`;
+      }
       const downloadUrl = '../assets/docs/OnCourse-Class-8-to-12-Timelines-Guide.pdf';
       const tempLink = document.createElement('a');
       tempLink.href = downloadUrl;
@@ -886,6 +1011,57 @@ function initEventsController() {
       update();
       setInterval(update, 1000);
     }
+  }
+}
+
+// 12. Reusable Major Event Update Panel (Soul of Hospitality Reference)
+function initMajorEventAnnouncement() {
+  if (window.OnCourseEventPanel && typeof window.OnCourseEventPanel.init === 'function') {
+    window.OnCourseEventPanel.init();
+  }
+
+  const annBar = document.getElementById('top-announcement-bar');
+  if (!annBar) return;
+  const closeBtn = document.getElementById('close-announcement-bar');
+
+  const eventId = annBar.getAttribute('data-event-id') || 'default-major-event';
+  const dismissKey = 'oncourse_dismissed_event_' + eventId;
+
+  // Check persistence
+  if (sessionStorage.getItem(dismissKey) === 'true') {
+    annBar.style.display = 'none';
+    return;
+  }
+
+  // Support global dynamic configuration to allow future events to update without code rebuild
+  if (window.OnCourseMajorEventConfig && window.OnCourseMajorEventConfig.active) {
+    const cfg = window.OnCourseMajorEventConfig;
+    const titleEl = document.getElementById('announcement-event-title');
+    const dateEl = document.getElementById('announcement-event-date');
+    const badgeEl = document.getElementById('announcement-event-badge');
+    const ctaEl = document.getElementById('announcement-event-cta');
+    const ctaTextEl = document.getElementById('announcement-event-cta-text');
+
+    if (titleEl && cfg.title) titleEl.innerHTML = cfg.title;
+    if (dateEl && cfg.date) dateEl.innerHTML = cfg.date;
+    if (badgeEl && cfg.badge) {
+      const badgeText = badgeEl.querySelector('span:last-child') || badgeEl;
+      badgeText.textContent = cfg.badge;
+    }
+    if (ctaEl && cfg.link) ctaEl.href = cfg.link;
+    if (ctaTextEl && cfg.ctaText) ctaTextEl.textContent = cfg.ctaText;
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      annBar.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+      annBar.style.opacity = '0';
+      annBar.style.transform = 'translateY(-100%)';
+      sessionStorage.setItem(dismissKey, 'true');
+      setTimeout(() => {
+        annBar.style.display = 'none';
+      }, 300);
+    });
   }
 }
 

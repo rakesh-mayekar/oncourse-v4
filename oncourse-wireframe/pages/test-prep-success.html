@@ -3,41 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Prep Success Stories &amp; Score Results | OnCourse Global</title>
+  <title>Test Prep Success Stories &amp; Score Results | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=3">
+  <script src="../assets/navigation.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
-  <!-- ================= GLOBAL HEADER ================= -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-      <div class="flex items-center justify-between h-full">
+  <!-- ================= GLOBAL MEGA-MENU HEADER (Shared Component) ================= -->
+  <!-- Standardized 80px fixed height, identical across 100% of pages -->
+  <header id="global-header" data-active="test-prep" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
         
-        <!-- Brand Logo -->
-        <div class="flex items-center flex-shrink-0">
-          <a href="home.html" title="OnCourse Global Home" class="flex items-center group">
-          <img src="../assets/images/oncourse-logo.png" alt="OnCourse Global" class="h-8 sm:h-9 w-auto object-contain">
-        </a>
+        <!-- Section 1: Brand Logo -->
+        <div class="flex items-center flex-shrink-0 mr-3 xl:mr-6 header-brand-logo">
+          <a href="home.html" title="OnCourse Home" class="flex items-center group">
+            <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 w-auto object-contain">
+          </a>
         </div>
 
-        <!-- Nav Links & CTA Button -->
-        <div class="flex items-center space-x-6 2xl:space-x-8 h-full">
-          <nav class="hidden xl:flex items-center space-x-5 2xl:space-x-7 text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full">
-            <a href="home.html" class="hover:text-black transition-colors py-2 text-gray-800">Home</a>
-            <a href="about.html" class="hover:text-black transition-colors py-2 text-gray-800">About Us</a>
+        <!-- Section 2: Nav Links & CTA Button -->
+        <div class="flex items-center space-x-5 xl:space-x-7 2xl:space-x-8 h-full">
+          
+          <!-- Desktop Nav Links -->
+          <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 text-[13px] font-semibold text-gray-700 h-full whitespace-nowrap">
+            
+            <!-- 0. HOME (Direct Link) -->
+            <a href="home.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">Home</a>
 
-            <!-- Undergraduate Dropdown -->
-            <div class="relative group h-full flex items-center nav-item-has-menu">
-              <a href="undergraduate.html" class="inline-flex items-center gap-1 hover:text-black transition-colors py-2 text-gray-800">
+            <!-- 1. ABOUT US (Direct Link, No Dropdown) -->
+            <a href="about.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">About Us</a>
+
+            <!-- 2. UNDERGRADUATE (With Programs Dropdown) -->
+            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+              <a href="undergraduate.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
                 <span>Undergraduate</span>
                 <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
               <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
                 <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                <span class="text-xs font-bold text-gray-900 block">Overview</span>
-                <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
-              </a>
+                  <span class="text-xs font-bold text-gray-900 block">Overview</span>
+                  <span class="text-[11px] text-gray-500 block">Admissions advisory &amp; strategy</span>
+                </a>
                 <a href="undergraduate-program.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Program</span>
                   <span class="text-[11px] text-gray-500 block">Strategic roadmaps &amp; profile building</span>
@@ -57,17 +65,17 @@
               </div>
             </div>
 
-            <!-- Master's Dropdown -->
-            <div class="relative group h-full flex items-center nav-item-has-menu">
-              <a href="masters.html" class="inline-flex items-center gap-1 hover:text-black transition-colors py-2 text-gray-800">
+            <!-- 3. MASTER'S (With Programs Dropdown) -->
+            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+              <a href="masters.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
                 <span>Master's</span>
                 <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
               <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
                 <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                <span class="text-xs font-bold text-gray-900 block">Overview</span>
-                <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
-              </a>
+                  <span class="text-xs font-bold text-gray-900 block">Overview</span>
+                  <span class="text-[11px] text-gray-500 block">Graduate advisory &amp; strategy</span>
+                </a>
                 <a href="masters-program.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Program</span>
                   <span class="text-[11px] text-gray-500 block">STEM, AI/ML, Data Science, Finance</span>
@@ -87,17 +95,17 @@
               </div>
             </div>
 
-            <!-- MBA Dropdown -->
-            <div class="relative group h-full flex items-center nav-item-has-menu">
-              <a href="mba.html" class="inline-flex items-center gap-1 hover:text-black transition-colors py-2 text-gray-800">
+            <!-- 4. MBA (With Programs Dropdown) -->
+            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+              <a href="mba.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
                 <span>MBA</span>
                 <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
               <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
                 <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                <span class="text-xs font-bold text-gray-900 block">Overview</span>
-                <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
-              </a>
+                  <span class="text-xs font-bold text-gray-900 block">Overview</span>
+                  <span class="text-[11px] text-gray-500 block">Executive MBA advisory &amp; strategy</span>
+                </a>
                 <a href="mba-program.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Program</span>
                   <span class="text-[11px] text-gray-500 block">M7 roadmaps &amp; career transitions</span>
@@ -117,17 +125,17 @@
               </div>
             </div>
 
-            <!-- 5. TEST PREP (With Dropdown) -->
-            <div class="relative group h-full flex items-center nav-item-has-menu">
-              <a href="test-prep.html" class="inline-flex items-center gap-1 hover:text-black transition-colors py-2 text-black font-bold">
+            <!-- 5. TEST PREP (With Programs Dropdown) -->
+            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+              <a href="test-prep.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-black font-bold border-b-2 border-black pb-0.5">
                 <span>Test Prep</span>
-                <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <svg class="w-3.5 h-3.5 text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
               <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
                 <a href="test-prep.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                <span class="text-xs font-bold text-gray-900 block">Overview</span>
-                <span class="text-[11px] text-gray-500 block">Testing diagnostic & score elevation</span>
-              </a>
+                  <span class="text-xs font-bold text-gray-900 block">Overview</span>
+                  <span class="text-[11px] text-gray-500 block">Testing diagnostic &amp; score elevation</span>
+                </a>
                 <a href="test-prep-sat-act.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">SAT &amp; ACT</span>
                   <span class="text-[11px] text-gray-500 block">Digital SAT &amp; ACT adaptive prep</span>
@@ -136,7 +144,7 @@
                   <span class="text-xs font-bold text-gray-900 block">GMAT &amp; GRE</span>
                   <span class="text-[11px] text-gray-500 block">GMAT Focus &amp; GRE score elevation</span>
                 </a>
-                <a href="test-prep-success.html" class="block p-2 rounded-lg bg-gray-50 text-black transition-colors">
+                <a href="test-prep-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
                   <span class="text-[11px] text-gray-500 block">SAT, ACT, GMAT &amp; GRE admit outcomes</span>
                 </a>
@@ -147,34 +155,51 @@
               </div>
             </div>
 
-            <a href="contact.html" class="hover:text-black transition-colors py-2 text-gray-800">Contact Us</a>
-            <a href="careers.html" class="hover:text-black transition-colors py-2 text-gray-800">Join Our Team</a>
+            <!-- 6. CONTACT US (Direct Link, No Dropdown) -->
+            <a href="contact.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">Contact Us</a>
+
+            <!-- 7. JOIN OUR TEAM (Direct Link, No Dropdown) -->
+            <a href="careers.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">
+              Join Our Team
+            </a>
+
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap">
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
             Book Consultation
           </a>
 
-          <!-- Mobile Hamburger -->
-          <div class="flex xl:hidden items-center space-x-2">
+          <!-- Mobile / Tablet Hamburger (< lg) -->
+          <div class="flex lg:hidden items-center space-x-2 shrink-0">
+            <a href="contact.html#consultation-form" class="sm:hidden px-3 py-1.5 rounded-md bg-black text-white text-xs font-bold">
+              Book
+            </a>
             <button id="mobile-menu-toggle" type="button" class="p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100" aria-label="Toggle Navigation">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
           </div>
+
         </div>
 
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
+    <!-- Mobile Drawer Menu (Structured Exactly per Architecture) -->
     <div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto shadow-xl">
-      <div class="border-b border-gray-100 pb-2"><a href="home.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Home</a></div>
-      <div class="border-b border-gray-100 pb-2"><a href="about.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">About Us</a></div>
+      <div class="border-b border-gray-100 pb-2">
+        <a href="home.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Home</a>
+      </div>
+      <div class="border-b border-gray-100 pb-2">
+        <a href="about.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">About Us</a>
+      </div>
       <div class="border-b border-gray-100 pb-3">
-        <div class="flex items-center justify-between mb-1"><a href="undergraduate.html" class="text-xs font-black uppercase tracking-wider text-black">Undergraduate</a><span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span></div>
+        <div class="flex items-center justify-between mb-1">
+          <a href="undergraduate.html" class="text-xs font-black uppercase tracking-wider text-black">Undergraduate</a>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
+        </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black">&bull; Overview</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="undergraduate-program.html" class="block py-1 hover:text-black">&bull; Program</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
@@ -182,9 +207,12 @@
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
-        <div class="flex items-center justify-between mb-1"><a href="masters.html" class="text-xs font-black uppercase tracking-wider text-black">Master's</a><span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span></div>
+        <div class="flex items-center justify-between mb-1">
+          <a href="masters.html" class="text-xs font-black uppercase tracking-wider text-black">Master's</a>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
+        </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black">&bull; Overview</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="masters-program.html" class="block py-1 hover:text-black">&bull; Program</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
@@ -192,9 +220,12 @@
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
-        <div class="flex items-center justify-between mb-1"><a href="mba.html" class="text-xs font-black uppercase tracking-wider text-black">MBA</a><span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span></div>
+        <div class="flex items-center justify-between mb-1">
+          <a href="mba.html" class="text-xs font-black uppercase tracking-wider text-black">MBA</a>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
+        </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black">&bull; Overview</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="mba-program.html" class="block py-1 hover:text-black">&bull; Program</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
@@ -202,31 +233,54 @@
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
-        <div class="flex items-center justify-between mb-1"><a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep &amp; Transfer</a><span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Testing</span></div>
+        <div class="flex items-center justify-between mb-1">
+          <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep &amp; Transfer</a>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
+        </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="test-prep.html" class="block py-1 hover:text-black">&bull; Overview</a>
+          <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="test-prep-sat-act.html" class="block py-1 hover:text-black">&bull; SAT &amp; ACT</a>
           <a href="test-prep-gmat-gre.html" class="block py-1 hover:text-black">&bull; GMAT &amp; GRE</a>
-          <a href="test-prep-success.html" class="block py-1 hover:text-black font-semibold">&bull; Success Stories</a>
+          <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-transfer.html" class="block py-1 hover:text-black">&bull; Transfer Admissions</a>
         </div>
       </div>
-      <div class="border-b border-gray-100 pb-2"><a href="contact.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Contact Us</a></div>
-      <div class="border-b border-gray-100 pb-2"><a href="careers.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Join Our Team</a></div>
-      <div class="pt-2"><a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md block">Book a Consultation</a></div>
+      <div class="border-b border-gray-100 pb-2">
+        <a href="contact.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Contact Us</a>
+      </div>
+      <div class="border-b border-gray-100 pb-2">
+        <a href="careers.html" class="text-xs font-black uppercase tracking-wider text-black block py-1">Join Our Team</a>
+      </div>
+      <div class="pt-2 flex flex-col gap-2.5">
+        <a href="careers.html" class="w-full text-center px-4 py-2.5 rounded-md border-2 border-black text-black font-bold text-xs uppercase tracking-wider">
+          Join Our Team
+        </a>
+        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md">
+          Book a Consultation
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- ================= SUB-NAVIGATION ================= -->
-  <nav class="bg-black text-white border-b border-gray-800 sticky top-20 z-30 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center overflow-x-auto hide-scrollbar py-3 space-x-6 text-xs sm:text-sm font-semibold whitespace-nowrap">
-        <div class="flex items-center space-x-6">
-          <a href="test-prep.html" class="text-gray-300 hover:text-white transition-colors pb-1">Overview</a>
-          <a href="test-prep-sat-act.html" class="text-gray-300 hover:text-white transition-colors pb-1">SAT &amp; ACT</a>
-          <a href="test-prep-gmat-gre.html" class="text-gray-300 hover:text-white transition-colors pb-1">GMAT &amp; GRE</a>
-          <a href="test-prep-success.html" class="text-white border-b-2 border-white font-bold pb-1">Success Stories</a>
-        </div>
+  <!-- ================= STANDARDIZED SECONDARY NAVIGATION ================= -->
+  <nav id="secondary-nav" data-section="test-prep" data-active="success" class="bg-black text-white border-b border-gray-800 sticky top-20 z-30 shadow-xs h-12 secondary-nav-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center overflow-x-auto hide-scrollbar space-x-8 text-xs sm:text-sm font-semibold whitespace-nowrap h-full">
+          <a href="test-prep.html" class="text-gray-300 hover:text-white border-b-2 border-transparent h-full flex items-center transition-colors text-xs sm:text-sm whitespace-nowrap">
+            Overview
+          </a>
+          <a href="test-prep-sat-act.html" class="text-gray-300 hover:text-white border-b-2 border-transparent h-full flex items-center transition-colors text-xs sm:text-sm whitespace-nowrap">
+            SAT & ACT
+          </a>
+          <a href="test-prep-gmat-gre.html" class="text-gray-300 hover:text-white border-b-2 border-transparent h-full flex items-center transition-colors text-xs sm:text-sm whitespace-nowrap">
+            GMAT & GRE
+          </a>
+          <a href="test-prep-success.html" class="text-white border-b-2 border-white font-bold h-full flex items-center transition-colors text-xs sm:text-sm whitespace-nowrap">
+            Success Stories
+          </a>
+          <a href="test-prep-transfer.html" class="text-gray-300 hover:text-white border-b-2 border-transparent h-full flex items-center transition-colors text-xs sm:text-sm whitespace-nowrap">
+            Transfer Admissions
+          </a>
       </div>
     </div>
   </nav>
@@ -470,8 +524,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           <div class="lg:col-span-5 bg-neutral-900/85 border border-neutral-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-xl backdrop-blur-md relative overflow-hidden space-y-5">
             <div>
-              <a href="home.html" title="OnCourse Global Home" class="inline-block focus:outline-none">
-                <img src="../assets/images/oncourse-logo-white.png" alt="OnCourse Global" class="h-9 sm:h-10 w-auto object-contain">
+              <a href="home.html" title="OnCourse Home" class="inline-block focus:outline-none">
+                <img src="../assets/images/oncourse-logo-white.png" alt="OnCourse" class="h-9 sm:h-10 w-auto object-contain">
               </a>
               <p class="text-xs text-neutral-300 leading-relaxed font-normal">
                 India's premier education and admissions consultancy. We guide undergraduate, master's, and MBA applicants with personalized dual-mentor advisory.
@@ -515,7 +569,7 @@
     </div>
     <div class="bg-[#060608] py-4">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-neutral-400 text-center md:text-left">
-        <div>&copy; 2026 OnCourse Global. All rights reserved. &bull; Standardized Testing Suite.</div>
+        <div>&copy; 2026 OnCourse. All rights reserved. &bull; Standardized Testing Suite.</div>
         <div class="flex items-center gap-4 text-neutral-300 font-medium">
           <a href="contact.html" class="hover:text-white transition-colors">Privacy Policy</a>
           <span>&bull;</span>

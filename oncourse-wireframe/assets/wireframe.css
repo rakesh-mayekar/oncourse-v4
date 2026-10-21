@@ -1,4 +1,4 @@
-/* OnCourse Global — Architectural Wireframe Styling System */
+/* OnCourse — Architectural Wireframe Styling System */
 /* COLOR PALETTE & HIERARCHY SPECIFICATION (Based on Client Wireframing Reference) */
 /*
    Visual Hierarchy:
@@ -64,6 +64,90 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 ::selection {
   background-color: #DADADA !important;
   color: #1A1A1A !important;
+}
+
+/* ================= Unified Navigation Architecture (Desktop & Global) ================= */
+.global-header {
+  height: 5rem !important; /* 80px */
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+.global-header-inner {
+  max-width: 80rem !important; /* 1280px / 7xl */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+@media (min-width: 640px) {
+  .global-header-inner {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  .global-header-inner {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+.nav-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-link-item.active {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border-bottom-color: #000000 !important;
+}
+
+/* Secondary Navigation Standardization */
+.secondary-nav-bar {
+  height: 3rem !important; /* 48px / h-12 */
+  position: sticky !important;
+  top: 5rem !important; /* 80px */
+  z-index: 30 !important;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #1F2937 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.secondary-nav-link {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  border-bottom: 2px solid transparent !important;
+  color: #D1D5DB !important;
+  transition: color 0.15s ease, border-color 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.secondary-nav-link:hover {
+  color: #FFFFFF !important;
+}
+
+.secondary-nav-link.active {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-bottom-color: #FFFFFF !important;
 }
 
 /* ================= 2. Wireframe Placeholder Visual Tokens (NO STRIPES) ================= */
@@ -445,3 +529,159 @@ input:focus, select:focus, textarea:focus {
 .border-palette-iron  { border-color: #4D4D4D !important; }
 .border-palette-midnight { border-color: #262626 !important; }
 .border-palette-black { border-color: #1A1A1A !important; }
+
+/* ==========================================================================
+   STANDARDIZED GLOBAL NAVIGATION SYSTEM (Desktop Consistency)
+   ========================================================================== */
+
+/* 1. Global Mega-Menu Header */
+.global-header {
+  height: 80px !important;
+  min-height: 80px !important;
+  max-height: 80px !important;
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #E5E7EB !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+}
+
+/* 2. Global Secondary Navigation Bar */
+.secondary-nav-bar {
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  background-color: #1A1A1A !important;
+  border-bottom: 1px solid #262626 !important;
+  position: sticky !important;
+  top: 80px !important;
+  z-index: 40 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 3. Dropdown Menu Standardization */
+.nav-dropdown-menu {
+  position: absolute !important;
+  top: 80px !important;
+  left: 0 !important;
+  width: 18rem !important; /* 288px */
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  padding: 0.75rem !important;
+  z-index: 50 !important;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Ensure no horizontal scrollbar on secondary nav */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* ==========================================================================
+   EVENT UPDATE PANEL — SOUL OF HOSPITALITY REFERENCE (DESKTOP)
+   ========================================================================== */
+
+/* 1. Backdrop Dimming Overlay (Underneath page remains visible) */
+.event-panel-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 55 !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.event-panel-backdrop.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* 2. Top Attached Expandable Panel Container */
+.event-top-panel {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 60 !important;
+  background-color: #0F1117 !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #262626 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease !important;
+  will-change: transform, opacity;
+}
+
+.event-top-panel.open {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* 3. Panel Bottom Attached Close Tab */
+.event-panel-collapse-tab {
+  position: absolute !important;
+  bottom: -36px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: #0F1117 !important;
+  border-bottom: 1px solid #333333 !important;
+  border-left: 1px solid #333333 !important;
+  border-right: 1px solid #333333 !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px !important;
+  padding: 6px 22px !important;
+  color: #A3A3A3 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  z-index: 65 !important;
+}
+
+.event-panel-collapse-tab:hover {
+  background-color: #1A1D26 !important;
+  color: #FFFFFF !important;
+  border-color: #555555 !important;
+}
+
+/* 4. Persistent Announcement / Trigger Strip */
+.event-trigger-strip {
+  background-color: #0C0D12 !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #262626 !important;
+  position: relative !important;
+  z-index: 45 !important;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease !important;
+}
+
+.event-trigger-strip.hidden-strip {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+  border-bottom: none !important;
+  pointer-events: none !important;
+}
+

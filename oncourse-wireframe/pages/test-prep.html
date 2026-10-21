@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Prep & Transfer Admissions | OnCourse</title>
+  <title>1-on-1 SAT, ACT, GMAT & GRE Coaching | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=3">
   <script src="../assets/navigation.js"></script>
@@ -144,9 +144,17 @@
                   <span class="text-xs font-bold text-gray-900 block">GMAT &amp; GRE</span>
                   <span class="text-[11px] text-gray-500 block">GMAT Focus &amp; GRE score elevation</span>
                 </a>
+                <a href="test-prep-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
+                  <span class="text-[11px] text-gray-500 block">Exam guides, test dates &amp; score planning</span>
+                </a>
                 <a href="test-prep-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
                   <span class="text-[11px] text-gray-500 block">SAT, ACT, GMAT &amp; GRE admit outcomes</span>
+                </a>
+                <a href="test-prep-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                  <span class="text-xs font-bold text-gray-900 block">Events</span>
+                  <span class="text-[11px] text-gray-500 block">Test prep webinars &amp; score workshops</span>
                 </a>
                 <a href="test-prep-transfer.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
                   <span class="text-xs font-bold text-gray-900 block">Transfer Admissions</span>
@@ -241,7 +249,9 @@
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="test-prep-sat-act.html" class="block py-1 hover:text-black">&bull; SAT &amp; ACT</a>
           <a href="test-prep-gmat-gre.html" class="block py-1 hover:text-black">&bull; GMAT &amp; GRE</a>
+          <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
+          <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
           <a href="test-prep-transfer.html" class="block py-1 hover:text-black">&bull; Transfer Admissions</a>
         </div>
       </div>
@@ -286,12 +296,12 @@
   </nav>
 
   <main class="flex-grow">
-    
-    <!-- 1. HERO BLOCK -->
+
+    <!-- 01. HERO -->
     <section class="bg-white border-b border-gray-200 py-12 lg:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-800 border border-gray-200">
               <span class="w-2 h-2 rounded-full bg-gray-500"></span>
@@ -299,31 +309,21 @@
             </div>
 
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-              Data Diagnostics & Adaptive Test Preparation
+              1-on-1 SAT, ACT, GMAT &amp; GRE Coaching
             </h1>
 
             <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Individualized score elevation diagnostics for Digital SAT, ACT, GMAT Focus, and GRE to align testing metrics with elite global admissions.
-              <span class="text-xs text-gray-400 font-mono block mt-1.5">[Hero copy and program positioning to be finalized with client]</span>
+              Flexible, personalised test preparation for students who want guidance built around their own schedule, led by expert subject matter experts.
             </p>
 
             <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="test-prep" class="w-full sm:w-auto px-6 py-3.5 rounded-lg bg-black text-white font-bold text-sm hover:bg-gray-800 shadow-md transition-all text-center cursor-pointer">
-                Diagnostic Assessment &rarr;
+                Book a Free Consultation &rarr;
               </a>
-              <a href="test-prep-success.html" class="w-full sm:w-auto px-6 py-3.5 rounded-lg border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-all text-center">
-                Score Results &rarr;
+              <a href="#exam-cards" class="w-full sm:w-auto px-6 py-3.5 rounded-lg border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-all text-center">
+                Explore Exams &darr;
               </a>
             </div>
-
-            <div class="pt-2 flex items-center justify-center lg:justify-start gap-5 text-xs text-gray-400 font-mono">
-              <span>[Adaptive Question Bank]</span>
-              <span>&bull;</span>
-              <span>[1-on-1 Error Logging]</span>
-              <span>&bull;</span>
-              <span>[Diagnostic Baselines]</span>
-            </div>
-
           </div>
 
           <div class="lg:col-span-5">
@@ -338,242 +338,525 @@
       </div>
     </section>
 
-    <!-- 2. TRUST / SCORE BAR -->
-    <!-- 2. TRUST / PROOF METRICS BAR (Low-Fidelity Wireframe: Metrics to be Confirmed) -->
-    <section id="score-metrics" class="bg-gray-100 border-b border-gray-200 py-8 scroll-mt-32">
+    <!-- 02. PROOF STRIP (compact; verified figures only) -->
+    <section id="proof-strip" class="bg-gray-100 border-b border-gray-200 py-6 scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
-          <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-xs">
-            <div class="text-xl sm:text-2xl font-black text-black">[+XX Pts]</div>
-            <div class="text-xs font-semibold text-gray-600 mt-1 uppercase tracking-wider">Digital SAT Score Jump</div>
-            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[Client to confirm]</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-200">
+          <div class="text-center">
+            <div class="text-base font-black text-black font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <div class="text-[11px] font-semibold text-gray-600 mt-1 uppercase tracking-wider">Average SAT score improvement</div>
+            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[CLIENT TO CONFIRM]</div>
           </div>
-          <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-xs">
-            <div class="text-xl sm:text-2xl font-black text-black">[+X.X Pts]</div>
-            <div class="text-xs font-semibold text-gray-600 mt-1 uppercase tracking-wider">ACT Composite Jump</div>
-            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[Client to confirm]</div>
+          <div class="text-center">
+            <div class="text-base font-black text-black font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <div class="text-[11px] font-semibold text-gray-600 mt-1 uppercase tracking-wider">Average ACT composite improvement</div>
+            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[CLIENT TO CONFIRM]</div>
           </div>
-          <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-xs">
-            <div class="text-xl sm:text-2xl font-black text-black">[XXX+]</div>
-            <div class="text-xs font-semibold text-gray-600 mt-1 uppercase tracking-wider">GMAT Focus Target</div>
-            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[Client to confirm]</div>
+          <div class="text-center">
+            <div class="text-base font-black text-black font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <div class="text-[11px] font-semibold text-gray-600 mt-1 uppercase tracking-wider">Average GMAT / GRE improvement</div>
+            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[CLIENT TO CONFIRM]</div>
           </div>
-          <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-xs">
-            <div class="text-xl sm:text-2xl font-black text-black">[XX%]</div>
-            <div class="text-xs font-semibold text-gray-600 mt-1 uppercase tracking-wider">Top 30 Transfer Rate</div>
-            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[Client to confirm]</div>
+          <div class="text-center">
+            <div class="text-base font-black text-black font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <div class="text-[11px] font-semibold text-gray-600 mt-1 uppercase tracking-wider">Students coached 1-on-1</div>
+            <div class="text-[10px] text-gray-400 font-mono mt-0.5">[CLIENT TO CONFIRM]</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. EXAM SUITE MODULE -->
-    <section id="sat-act" class="py-16 bg-white border-b border-gray-200 scroll-mt-32">
+    <!-- 03. EXAM CARDS (one card per test) -->
+    <section id="exam-cards" class="py-16 bg-white border-b border-gray-200 scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Exam Specializations</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Choose Your Test</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
-            Standardized Testing Programs
+            SAT, ACT, GMAT &amp; GRE Coaching
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
             <div>
-              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase">Undergraduate</span>
-              <h3 class="text-lg font-bold text-gray-900 mt-3">Digital SAT</h3>
-              <p class="text-xs text-gray-600 mt-2">Adaptive multi-stage exam simulation, Desmos calculator shortcuts, and targeted vocab mastery.</p>
+              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase border border-gray-200">Undergraduate</span>
+              <h3 class="text-2xl font-black text-gray-900 mt-3">SAT</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">1-on-1 coaching for the computer-adaptive Digital SAT: Reading &amp; Writing and Math, with timed module practice and error review.</p>
             </div>
             <div class="mt-6 pt-4 border-t border-gray-200">
-              <a href="test-prep-sat-act.html" class="text-xs font-bold text-black hover:underline">Explore SAT Prep &rarr;</a>
+              <a href="test-prep-sat-act.html#sat-snapshot" class="inline-flex items-center px-4 py-2 rounded-md bg-black text-white text-xs font-bold hover:bg-gray-800 transition-colors">SAT coaching &rarr;</a>
             </div>
           </div>
-
           <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
             <div>
-              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase">Undergraduate</span>
-              <h3 class="text-lg font-bold text-gray-900 mt-3">ACT</h3>
-              <p class="text-xs text-gray-600 mt-2">Pacing mechanics, Science section data interpretation strategies, and timing conditioning.</p>
+              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase border border-gray-200">Undergraduate</span>
+              <h3 class="text-2xl font-black text-gray-900 mt-3">ACT</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">1-on-1 coaching for the ACT: English, Math, Reading and Science, with pacing drills built around the composite score.</p>
             </div>
             <div class="mt-6 pt-4 border-t border-gray-200">
-              <a href="test-prep-sat-act.html" class="text-xs font-bold text-black hover:underline">Explore ACT Prep &rarr;</a>
+              <a href="test-prep-sat-act.html#act-snapshot" class="inline-flex items-center px-4 py-2 rounded-md bg-black text-white text-xs font-bold hover:bg-gray-800 transition-colors">ACT coaching &rarr;</a>
             </div>
           </div>
-
-          <div id="gmat-gre" class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between scroll-mt-32">
-            <div>
-              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase">MBA</span>
-              <h3 class="text-lg font-bold text-gray-900 mt-3">GMAT Focus Edition</h3>
-              <p class="text-xs text-gray-600 mt-2">Data Insights mastery, advanced Quantitative problem-solving, and verbal critical reasoning.</p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-gray-200">
-              <a href="test-prep-gmat-gre.html" class="text-xs font-bold text-black hover:underline">Explore GMAT Prep &rarr;</a>
-            </div>
-          </div>
-
           <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
             <div>
-              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase">Graduate & MS</span>
-              <h3 class="text-lg font-bold text-gray-900 mt-3">GRE General</h3>
-              <p class="text-xs text-gray-600 mt-2">High-frequency academic vocabulary, quantitative precision drill sets, and analytical writing.</p>
+              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase border border-gray-200">MBA</span>
+              <h3 class="text-2xl font-black text-gray-900 mt-3">GMAT</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">1-on-1 coaching for the GMAT Focus Edition: Quantitative, Verbal and Data Insights, planned around your business school deadlines.</p>
             </div>
             <div class="mt-6 pt-4 border-t border-gray-200">
-              <a href="test-prep-gmat-gre.html" class="text-xs font-bold text-black hover:underline">Explore GRE Prep &rarr;</a>
+              <a href="test-prep-gmat-gre.html#gmat-snapshot" class="inline-flex items-center px-4 py-2 rounded-md bg-black text-white text-xs font-bold hover:bg-gray-800 transition-colors">GMAT coaching &rarr;</a>
+            </div>
+          </div>
+          <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase border border-gray-200">Master's &amp; MBA</span>
+              <h3 class="text-2xl font-black text-gray-900 mt-3">GRE</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">1-on-1 coaching for the GRE General Test: Verbal, Quantitative and Analytical Writing, for Master's and MBA applicants.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-200">
+              <a href="test-prep-gmat-gre.html#gre-snapshot" class="inline-flex items-center px-4 py-2 rounded-md bg-black text-white text-xs font-bold hover:bg-gray-800 transition-colors">GRE coaching &rarr;</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3B. SCORE DELTA BENCHMARKING (Success Stories) -->
-    <section id="success-stories" class="py-14 bg-white border-b border-gray-200 scroll-mt-24">
+    <!-- 04. HOW IT WORKS / COACHING ROADMAP -->
+    <section id="how-it-works" class="py-16 bg-gray-50 border-b border-gray-200 scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">How It Works</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
+            Your Coaching Roadmap
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Five steps from first diagnostic to test day.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+            <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
+            <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">01</div>
+            <h3 class="text-sm font-bold text-gray-900">Diagnostic test</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">A full-length diagnostic establishes your baseline score and highlights the sections that need the most work.</p>
+          </div>
+          <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+            <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
+            <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">02</div>
+            <h3 class="text-sm font-bold text-gray-900">Personalised plan &amp; tutor match</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">You are matched with a subject matter expert and receive a study plan built around your target score and test date.</p>
+          </div>
+          <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+            <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
+            <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">03</div>
+            <h3 class="text-sm font-bold text-gray-900">1-on-1 coaching</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Flexible one-to-one sessions, scheduled around school or work, focused on concepts, strategy and timing.</p>
+          </div>
+          <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+            <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
+            <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">04</div>
+            <h3 class="text-sm font-bold text-gray-900">Practice &amp; progress tracking</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Regular timed practice tests with error review so you and your tutor can see progress section by section.</p>
+          </div>
+          <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
+            
+            <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">05</div>
+            <h3 class="text-sm font-bold text-gray-900">Test day &amp; score review</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">Final readiness check, test-day plan and a post-test review to decide on a retake or move to applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. RESULTS (verified data only) -->
+    <section id="results" class="py-16 bg-white border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-black mb-2">
-              <span class="w-2 h-2 rounded-full bg-black"></span>
-              Verified Diagnostic Score Deltas
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
-              Average Standardized Testing Score Improvements
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Results</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">
+              Score Improvements &amp; Student Outcomes
             </h2>
             <p class="text-xs sm:text-sm text-gray-600 mt-1">
-              Through adaptive diagnostic tests, error taxonomy analytics, and 1-on-1 pedagogical reviews.
+              Verified results and testimonials from OnCourse students. <span class="font-mono text-gray-400">[All figures below require client-supplied data]</span>
             </p>
           </div>
-          <div>
-            <span class="text-xs text-black font-bold bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 inline-block">
-              100% Computer-Adaptive Official Question Banks
-            </span>
-          </div>
+          <a href="test-prep-success.html" class="text-xs font-bold text-black hover:underline whitespace-nowrap">View all success stories &rarr;</a>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
             <span class="text-xs font-bold uppercase tracking-wider text-black">Digital SAT</span>
-            <div class="text-3xl font-black text-black my-2 font-mono">[+XX Pts]</div>
-            <p class="text-xs text-gray-600">Average Points Improvement</p>
-            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">
-              Diagnostic: [Baseline] &rarr; Official: [Target &bull; Client to confirm]
+            <div class="text-base font-black text-black my-2 font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <p class="text-xs text-gray-600">Average score improvement</p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">Baseline &rarr; Final: [CLIENT TO CONFIRM]</div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-black">ACT</span>
+            <div class="text-base font-black text-black my-2 font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <p class="text-xs text-gray-600">Average composite improvement</p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">Baseline &rarr; Final: [CLIENT TO CONFIRM]</div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-black">GMAT Focus</span>
+            <div class="text-base font-black text-black my-2 font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <p class="text-xs text-gray-600">Average score improvement</p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">Baseline &rarr; Final: [CLIENT TO CONFIRM]</div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-black">GRE</span>
+            <div class="text-base font-black text-black my-2 font-mono whitespace-nowrap">[VERIFIED RESULT]</div>
+            <p class="text-xs text-gray-600">Average combined improvement</p>
+            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">Baseline &rarr; Final: [CLIENT TO CONFIRM]</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-6 bg-gray-50/60">
+            <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">SAT / ACT</span>
+            <p class="text-sm text-gray-500 mt-3 leading-relaxed italic">[VERIFIED TESTIMONIAL: student or parent quote on 1-on-1 coaching and score outcome. CLIENT TO CONFIRM]</p>
+            <div class="pt-3 mt-4 border-t border-gray-200 text-[11px] font-mono text-gray-400">[Student name &bull; Test &bull; Score outcome &bull; CLIENT TO CONFIRM]</div>
+          </div>
+          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-6 bg-gray-50/60">
+            <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">GMAT / GRE</span>
+            <p class="text-sm text-gray-500 mt-3 leading-relaxed italic">[VERIFIED TESTIMONIAL: student or parent quote on 1-on-1 coaching and score outcome. CLIENT TO CONFIRM]</p>
+            <div class="pt-3 mt-4 border-t border-gray-200 text-[11px] font-mono text-gray-400">[Student name &bull; Test &bull; Score outcome &bull; CLIENT TO CONFIRM]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. FAQ -->
+    <section id="faq" class="py-16 bg-gray-50 border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Frequently Asked Questions</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
+            Test Prep Coaching FAQ
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">
+            Tutor matching, progress tracking, scheduling, retakes and guarantees.
+          </p>
+        </div>
+
+        <!-- ACCORDION ITEMS (Handled by initFAQAccordion in wireframe.js) -->
+        <div class="space-y-4">
+          <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+            <button type="button" class="faq-accordion-btn w-full p-5 text-left bg-gray-50 hover:bg-gray-100 font-bold text-sm text-gray-900 flex items-center justify-between transition-colors" aria-expanded="true">
+              <span>How are students matched with a tutor?</span>
+              <svg class="faq-icon w-5 h-5 text-gray-500 transform rotate-180 transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-panel p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span class="font-mono text-gray-400">[CLIENT TO CONFIRM: OnCourse tutor-student matching process: how subject matter experts are assigned, by diagnostic results, target test, schedule and learning style]</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+            <button type="button" class="faq-accordion-btn w-full p-5 text-left bg-gray-50 hover:bg-gray-100 font-bold text-sm text-gray-900 flex items-center justify-between transition-colors" aria-expanded="false">
+              <span>How is student progress tracked?</span>
+              <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span class="font-mono text-gray-400">[CLIENT TO CONFIRM: OnCourse progress tracking: practice test cadence, score reports, parent updates and review sessions]</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+            <button type="button" class="faq-accordion-btn w-full p-5 text-left bg-gray-50 hover:bg-gray-100 font-bold text-sm text-gray-900 flex items-center justify-between transition-colors" aria-expanded="false">
+              <span>What is the cancellation and rescheduling policy?</span>
+              <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span class="font-mono text-gray-400">[CLIENT TO CONFIRM: OnCourse cancellation and rescheduling policy: notice period, make-up sessions and any fees]</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+            <button type="button" class="faq-accordion-btn w-full p-5 text-left bg-gray-50 hover:bg-gray-100 font-bold text-sm text-gray-900 flex items-center justify-between transition-colors" aria-expanded="false">
+              <span>What is the retake strategy if the target score is not reached?</span>
+              <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span class="font-mono text-gray-400">[CLIENT TO CONFIRM: OnCourse retake strategy: when a retake is recommended, how the plan is adjusted and score-choice guidance]</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+            <button type="button" class="faq-accordion-btn w-full p-5 text-left bg-gray-50 hover:bg-gray-100 font-bold text-sm text-gray-900 flex items-center justify-between transition-colors" aria-expanded="false">
+              <span>Is there a score guarantee?</span>
+              <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span class="font-mono text-gray-400">[CLIENT TO CONFIRM: OnCourse score guarantee policy, if any: conditions, eligibility and what is offered]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. CLOSING CTA + ENQUIRY FORM (reuses the shared OnCourse lead form) -->
+    <section id="consultation-form" class="py-16 bg-white scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Get Started</span>
+              <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">
+                Start with a Free Diagnostic Consultation
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                Tell us which test you are preparing for and your target date. We will set up a diagnostic, match you with a subject matter expert and share a 1-on-1 coaching plan.
+              </p>
+            </div>
+            <ul class="text-xs text-gray-700 space-y-2">
+              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Full-length diagnostic test and score breakdown</span></li>
+              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Tutor match based on your test, schedule and learning style</span></li>
+              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Personalised study plan to your test date</span></li>
+            </ul>
+            <div class="bg-black text-white rounded-2xl p-6">
+              <h3 class="text-lg font-black tracking-tight">Prefer to talk first?</h3>
+              <p class="text-xs text-gray-300 mt-1">Book a short call with a test prep advisor.</p>
+              <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="test-prep" class="mt-4 inline-flex items-center px-5 py-2.5 rounded-lg bg-white text-black font-extrabold text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">
+                Book a Free Consultation &rarr;
+              </a>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
-            <span class="text-xs font-bold uppercase tracking-wider text-black">ACT Composite</span>
-            <div class="text-3xl font-black text-black my-2 font-mono">[+X.X Pts]</div>
-            <p class="text-xs text-gray-600">Average Composite Points</p>
-            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">
-              Diagnostic: [Baseline] &rarr; Official: [Target &bull; Client to confirm]
+          <div class="lg:col-span-7">
+      <div id="lead-form-container" class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8">
+        <div class="mb-6">
+          <div
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 text-black border border-gray-300 mb-2">
+            <span class="w-2 h-2 rounded-full bg-black"></span>
+            Admissions Evaluation
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Request a Test Prep Consultation</h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-1">
+            Tell us which test you are preparing for and we will schedule a diagnostic and tutor match.
+          </p>
+        </div>
+
+        <form id="oncourse-lead-form" class="space-y-4" data-segment="test-prep">
+
+          <div>
+            <label for="form-segment-selector" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">
+              Your Area of Interest *
+            </label>
+            <select id="form-segment-selector" name="segment"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white text-sm text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition-all font-medium">
+              <option value="undergraduate">Undergraduate Admissions (Class 8–12)</option>
+              <option value="masters">Master's & Postgraduate Programs</option>
+              <option value="mba">MBA & Executive Degrees</option>
+              <option value="test-prep" selected>Test Prep (SAT / ACT / GRE / GMAT)</option>
+              <option value="parents">Parents / Family Advisory</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="applicant_name" class="block text-xs font-semibold text-gray-700 mb-1">
+                Applicant Name *
+              </label>
+              <input type="text" id="applicant_name" name="applicant_name" required placeholder="e.g. Aarav Sharma"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
+            </div>
+            <div>
+              <label for="parent_name" class="block text-xs font-semibold text-gray-700 mb-1">
+                Parent / Guardian Name (Optional)
+              </label>
+              <input type="text" id="parent_name" name="parent_name" placeholder="e.g. Vikram Sharma"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
-            <span class="text-xs font-bold uppercase tracking-wider text-black">GMAT Focus Edition</span>
-            <div class="text-3xl font-black text-black my-2 font-mono">[+XX Pts]</div>
-            <p class="text-xs text-gray-600">Average Total Score Gain</p>
-            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">
-              Diagnostic: [Baseline] &rarr; Official: [Target &bull; Client to confirm]
+          <!-- Common Row 2: Email & Phone / WhatsApp -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="contact_email" class="block text-xs font-semibold text-gray-700 mb-1">
+                Email Address *
+              </label>
+              <input type="email" id="contact_email" name="email" required placeholder="name@example.com"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
+            </div>
+            <div>
+              <label for="contact_phone" class="block text-xs font-semibold text-gray-700 mb-1">
+                Phone / WhatsApp Number *
+              </label>
+              <input type="tel" id="contact_phone" name="phone" required placeholder="+91 98765 43210"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center">
-            <span class="text-xs font-bold uppercase tracking-wider text-black">GRE General</span>
-            <div class="text-3xl font-black text-black my-2 font-mono">[+XX Pts]</div>
-            <p class="text-xs text-gray-600">Average Combined Delta</p>
-            <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-500">
-              Diagnostic: [Baseline] &rarr; Official: [Target &bull; Client to confirm]
+          <!-- DYNAMIC SECTION A: Undergraduate Specific Fields -->
+          <div id="segment-fields-undergraduate" class="hidden p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
+            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+              Undergraduate Profile Context (Class 8 to 12)
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="ug_grade" class="block text-xs font-medium text-gray-700 mb-1">Current Grade / Class</label>
+                <select id="ug_grade" name="ug_grade"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="class-8">Class 8 (Early Foundation)</option>
+                  <option value="class-9">Class 9 (Early Profile Building)</option>
+                  <option value="class-10">Class 10 (Curriculum & Pre-IB/AP)</option>
+                  <option value="class-11" selected>Class 11 (Critical Admissions Year)</option>
+                  <option value="class-12">Class 12 (Active Application Cycle)</option>
+                  <option value="gap-year">Gap Year / Transfer</option>
+                </select>
+              </div>
+              <div>
+                <label for="ug_curriculum" class="block text-xs font-medium text-gray-700 mb-1">Curriculum Board</label>
+                <select id="ug_curriculum" name="ug_curriculum"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="ib">IB Diploma (IBDP)</option>
+                  <option value="cambridge">Cambridge (IGCSE / A-Levels)</option>
+                  <option value="cbse">CBSE</option>
+                  <option value="icse">ICSE / ISC</option>
+                  <option value="us-high-school">US High School / AP</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- DYNAMIC SECTION B: MBA & Master's Specific Fields -->
+          <div id="segment-fields-pg-mba" class="hidden p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
+            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+              MBA & Graduate Professional Credentials
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="gmat_gre_status" class="block text-xs font-medium text-gray-700 mb-1">GMAT / GRE Score Status
+                  *</label>
+                <select id="gmat_gre_status" name="gmat_gre_status"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="taken-720-plus">GMAT 720+ / GRE 325+ (Taken)</option>
+                  <option value="taken-650-710">GMAT 650–710 / GRE 315–324 (Taken)</option>
+                  <option value="preparing">Currently Preparing / Test Date Scheduled</option>
+                  <option value="seeking-waiver">Seeking Test Waiver / EA</option>
+                  <option value="not-started">Have Not Started Test Prep</option>
+                </select>
+              </div>
+              <div>
+                <label for="work_experience" class="block text-xs font-medium text-gray-700 mb-1">Full-Time Work Experience
+                  *</label>
+                <select id="work_experience" name="work_experience"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="under-2">Under 2 Years</option>
+                  <option value="2-4" selected>2–4 Years</option>
+                  <option value="5-7">5–7 Years</option>
+                  <option value="8-plus">8+ Years (Executive MBA)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- DYNAMIC SECTION C: Test Prep Specific Fields -->
+          <div id="segment-fields-testprep" class="p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
+            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                </path>
+              </svg>
+              Target Exam &amp; Diagnostic
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="target_exam" class="block text-xs font-medium text-gray-700 mb-1">Target Exam</label>
+                <select id="target_exam" name="target_exam"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="digital-sat">Digital SAT (Undergraduate)</option>
+                  <option value="act">ACT (Undergraduate)</option>
+                  <option value="gmat-focus">GMAT Focus Edition (MBA)</option>
+                  <option value="gre">GRE General (Master's / MBA)</option>
+                  <option value="ap-exams">Advanced Placement (AP) Subject Prep</option>
+                  <option value="transfer">Transfer Admissions Advisory</option>
+                </select>
+              </div>
+              <div>
+                <label for="exam_timeline" class="block text-xs font-medium text-gray-700 mb-1">Planned Test Date</label>
+                <select id="exam_timeline" name="exam_timeline"
+                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
+                  <option value="next-3-months">Next 1–3 Months</option>
+                  <option value="3-6-months" selected>3–6 Months</option>
+                  <option value="6-plus-months">6+ Months (Long-term foundation)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferred Office Hub -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="preferred_office" class="block text-xs font-semibold text-gray-700 mb-1">Preferred Office /
+                Mode</label>
+              <select id="preferred_office" name="office"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs text-gray-800 bg-white">
+                <option value="mumbai">Mumbai (Nariman Point / Bandra)</option>
+                <option value="delhi">New Delhi (Connaught Place)</option>
+                <option value="gurgaon">Gurgaon (Cyber City)</option>
+                <option value="dubai">Dubai (DIFC / Downtown)</option>
+                <option value="online" selected>Online / Global Virtual Consultation</option>
+              </select>
+            </div>
+            <div>
+              <label for="target_intake" class="block text-xs font-semibold text-gray-700 mb-1">Target Intake Year</label>
+              <select id="target_intake" name="target_intake"
+                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs text-gray-800 bg-white">
+                <option value="fall-2027">Fall 2027</option>
+                <option value="fall-2028" selected>Fall 2028</option>
+                <option value="fall-2029-beyond">Fall 2029 or Beyond</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2">
+            <button type="submit"
+              class="w-full py-3 px-6 rounded-lg bg-black hover:bg-gray-800 text-white font-bold text-sm tracking-wide shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+              <span>Confirm Consultation Request</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+            <p class="text-center text-xs text-gray-500 mt-2">
+              Confidential evaluation. An OnCourse Admissions Director will respond within 24 hours.
+            </p>
+          </div>
+
+        </form>
+
+        <!-- Mock Confirmation State (revealed via wireframe.js) -->
+        <div id="form-success-message" class="hidden text-center py-8 px-4">
+          <div
+            class="w-14 h-14 bg-gray-100 text-black rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-1">Consultation Request Received</h4>
+          <p class="text-sm text-gray-600 max-w-md mx-auto mb-4">
+            Thank you! Your profile details have been routed to our Senior Admissions Strategist. A dedicated mentor will
+            reach out within 24 business hours to schedule your diagnostic session.
+          </p>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-black text-xs font-semibold border border-gray-300">
+            <span>Office Selected: Virtual / Dedicated Advisor</span>
           </div>
         </div>
 
       </div>
-    </section>
-
-    <!-- 3C. HIGH SCORER PERSPECTIVES / TESTIMONIALS (Clean Low-Fidelity Wireframe Placeholders) -->
-    <section id="high-scorer-testimonials" class="py-14 bg-white border-b border-gray-200 scroll-mt-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-10">
-          <span class="text-xs font-bold uppercase tracking-widest text-gray-500 font-mono">[Social Proof Placeholder]</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">
-            Student Score Journeys &amp; Outcomes
-          </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-1.5">
-            Verified score benchmarks and admit case studies to be finalized with the client.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- SAT High Scorer -->
-          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-5 text-center bg-gray-50/60 flex flex-col justify-between">
-            <div class="py-2">
-              <div class="text-2xl mb-2 text-gray-400">🎯</div>
-              <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">Digital SAT</span>
-              <h3 class="text-xs font-bold uppercase tracking-wider text-gray-800 mt-2">[Score Jump 01]</h3>
-              <p class="text-xs text-gray-500 mt-2 leading-relaxed">
-                [Placeholder: Student quote detailing adaptive question bank, error taxonomy, and final score achievement.]
-              </p>
-            </div>
-            <div class="pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-400">
-              [Student Name &bull; SAT Target &bull; Client to confirm]
-            </div>
-          </div>
-
-          <!-- ACT High Scorer -->
-          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-5 text-center bg-gray-50/60 flex flex-col justify-between">
-            <div class="py-2">
-              <div class="text-2xl mb-2 text-gray-400">🎯</div>
-              <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">ACT Composite</span>
-              <h3 class="text-xs font-bold uppercase tracking-wider text-gray-800 mt-2">[Score Jump 02]</h3>
-              <p class="text-xs text-gray-500 mt-2 leading-relaxed">
-                [Placeholder: Student quote detailing Science section data pacing and composite elevation.]
-              </p>
-            </div>
-            <div class="pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-400">
-              [Student Name &bull; ACT Target &bull; Client to confirm]
-            </div>
-          </div>
-
-          <!-- GMAT High Scorer -->
-          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-5 text-center bg-gray-50/60 flex flex-col justify-between">
-            <div class="py-2">
-              <div class="text-2xl mb-2 text-gray-400">🎯</div>
-              <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">GMAT Focus</span>
-              <h3 class="text-xs font-bold uppercase tracking-wider text-gray-800 mt-2">[Score Jump 03]</h3>
-              <p class="text-xs text-gray-500 mt-2 leading-relaxed">
-                [Placeholder: Working professional quote detailing Data Insights mastery and executive scheduling.]
-              </p>
-            </div>
-            <div class="pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-400">
-              [Candidate Name &bull; GMAT Target &bull; Client to confirm]
-            </div>
-          </div>
-
-          <!-- GRE High Scorer -->
-          <div class="border-2 border-dashed border-gray-300 rounded-2xl p-5 text-center bg-gray-50/60 flex flex-col justify-between">
-            <div class="py-2">
-              <div class="text-2xl mb-2 text-gray-400">🎯</div>
-              <span class="px-2 py-0.5 rounded bg-gray-200 text-black text-[10px] font-bold uppercase">GRE General</span>
-              <h3 class="text-xs font-bold uppercase tracking-wider text-gray-800 mt-2">[Score Jump 04]</h3>
-              <p class="text-xs text-gray-500 mt-2 leading-relaxed">
-                [Placeholder: Candidate quote detailing quantitative precision drills and verbal cluster mastery.]
-              </p>
-            </div>
-            <div class="pt-3 border-t border-gray-200 text-[11px] font-mono text-gray-400">
-              [Candidate Name &bull; GRE Target &bull; Client to confirm]
-            </div>
           </div>
 
         </div>
-
-        <div class="mt-8 text-center">
-          <a href="test-prep-success.html" class="inline-flex items-center gap-1 text-xs font-bold text-gray-700 hover:text-black hover:underline">
-            View All Testing Score Outcomes &rarr;
-          </a>
-        </div>
-
       </div>
     </section>
 

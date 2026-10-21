@@ -60,7 +60,9 @@
           { title: 'Overview', subtitle: 'Testing diagnostic & score elevation', href: 'test-prep.html' },
           { title: 'SAT & ACT', subtitle: 'Digital SAT & ACT adaptive prep', href: 'test-prep-sat-act.html' },
           { title: 'GMAT & GRE', subtitle: 'GMAT Focus & GRE score elevation', href: 'test-prep-gmat-gre.html' },
+          { title: 'Knowledge Centre', subtitle: 'Exam guides, test dates & score planning', href: 'test-prep-knowledge.html' },
           { title: 'Success Stories', subtitle: 'SAT, ACT, GMAT & GRE admit outcomes', href: 'test-prep-success.html' },
+          { title: 'Events', subtitle: 'Test prep webinars & score workshops', href: 'test-prep-events.html' },
           { title: 'Transfer Admissions', subtitle: 'US & UK university transfer pathways', href: 'test-prep-transfer.html' }
         ]
       },
@@ -101,7 +103,9 @@
         { label: 'Overview', href: 'test-prep.html', id: 'overview' },
         { label: 'SAT & ACT', href: 'test-prep-sat-act.html', id: 'sat-act' },
         { label: 'GMAT & GRE', href: 'test-prep-gmat-gre.html', id: 'gmat-gre' },
+        { label: 'Knowledge Centre', href: 'test-prep-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'test-prep-success.html', id: 'success' },
+        { label: 'Events', href: 'test-prep-events.html', id: 'events' },
         { label: 'Transfer Admissions', href: 'test-prep-transfer.html', id: 'transfer' }
       ],
       careers: [
@@ -160,6 +164,8 @@
       category = 'test-prep';
       if (file.includes('sat-act')) subItem = 'sat-act';
       else if (file.includes('gmat-gre')) subItem = 'gmat-gre';
+      else if (file.includes('knowledge')) subItem = 'knowledge';
+      else if (file.includes('events')) subItem = 'events';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('transfer')) subItem = 'transfer';
       else subItem = 'overview';
@@ -326,7 +332,9 @@
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
           <a href="test-prep-sat-act.html" class="block py-1 hover:text-black">&bull; SAT &amp; ACT</a>
           <a href="test-prep-gmat-gre.html" class="block py-1 hover:text-black">&bull; GMAT &amp; GRE</a>
+          <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
+          <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
           <a href="test-prep-transfer.html" class="block py-1 hover:text-black">&bull; Transfer Admissions</a>
         </div>
       </div>

@@ -893,7 +893,8 @@ function initEventsController() {
   const resetBtn = document.getElementById('reset-filter-btn');
 
   if (cards.length > 0) {
-    let currentCategory = 'all';
+    const presetBtn = document.querySelector('.filter-btn.active');
+    let currentCategory = (presetBtn && presetBtn.getAttribute('data-category')) || 'all';
     let currentStatus = 'all';
     let currentQuery = '';
 
@@ -944,6 +945,9 @@ function initEventsController() {
         applyFilters();
       });
     }
+
+    // Apply any preset category (e.g. section-specific events pages)
+    if (currentCategory !== 'all') applyFilters();
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {

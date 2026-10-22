@@ -18,8 +18,7 @@
         href: 'undergraduate.html', 
         type: 'dropdown',
         items: [
-          { title: 'Overview', subtitle: 'Admissions advisory & strategy', href: 'undergraduate.html' },
-          { title: 'Program', subtitle: 'Strategic roadmaps & profile building', href: 'undergraduate-program.html' },
+          { title: 'Program Overview', subtitle: 'Admissions advisory & strategy', href: 'undergraduate.html' },
           { title: 'Knowledge Centre', subtitle: 'Ivy League & Oxbridge admissions guides', href: 'undergraduate-knowledge.html' },
           { title: 'Success Stories', subtitle: 'Harvard, Stanford, Oxford admits', href: 'undergraduate-success.html' },
           { title: 'Events', subtitle: 'Admissions events & masterclasses', href: 'undergraduate-events.html' }
@@ -31,8 +30,7 @@
         href: 'masters.html', 
         type: 'dropdown',
         items: [
-          { title: 'Overview', subtitle: 'Graduate advisory & strategy', href: 'masters.html' },
-          { title: 'Program', subtitle: 'STEM, AI/ML, Data Science, Finance', href: 'masters-program.html' },
+          { title: 'Program Overview', subtitle: 'Graduate advisory & strategy', href: 'masters.html' },
           { title: 'Knowledge Centre', subtitle: 'SOP frameworks & research funding guides', href: 'masters-knowledge.html' },
           { title: 'Success Stories', subtitle: 'MIT, ETH Zurich, CMU, Oxford admits', href: 'masters-success.html' },
           { title: 'Events', subtitle: 'Graduate admissions events', href: 'masters-events.html' }
@@ -44,8 +42,7 @@
         href: 'mba.html', 
         type: 'dropdown',
         items: [
-          { title: 'Overview', subtitle: 'Executive MBA advisory & strategy', href: 'mba.html' },
-          { title: 'Program', subtitle: 'M7 roadmaps & career transitions', href: 'mba-program.html' },
+          { title: 'Program Overview', subtitle: 'Executive MBA advisory & strategy', href: 'mba.html' },
           { title: 'Knowledge Centre', subtitle: 'M7 essay blueprints & recommender briefs', href: 'mba-knowledge.html' },
           { title: 'Success Stories', subtitle: 'Wharton, HBS, Stanford GSB, INSEAD', href: 'mba-success.html' },
           { title: 'Events', subtitle: 'Admissions director roundtables & events', href: 'mba-events.html' }
@@ -62,8 +59,7 @@
           { title: 'GMAT & GRE', subtitle: 'GMAT Focus & GRE score elevation', href: 'test-prep-gmat-gre.html' },
           { title: 'Knowledge Centre', subtitle: 'Exam guides, test dates & score planning', href: 'test-prep-knowledge.html' },
           { title: 'Success Stories', subtitle: 'SAT, ACT, GMAT & GRE admit outcomes', href: 'test-prep-success.html' },
-          { title: 'Events', subtitle: 'Test prep webinars & score workshops', href: 'test-prep-events.html' },
-          { title: 'Transfer Admissions', subtitle: 'US & UK university transfer pathways', href: 'test-prep-transfer.html' }
+          { title: 'Events', subtitle: 'Test prep webinars & score workshops', href: 'test-prep-events.html' }
         ]
       },
       { id: 'contact', label: 'Contact Us', href: 'contact.html', type: 'link' },
@@ -79,22 +75,19 @@
         { label: 'FAQ', href: 'about.html#faq', id: 'faq' }
       ],
       undergraduate: [
-        { label: 'Overview', href: 'undergraduate.html', id: 'overview' },
-        { label: 'Program', href: 'undergraduate-program.html', id: 'program' },
+        { label: 'Program Overview', href: 'undergraduate.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'undergraduate-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'undergraduate-success.html', id: 'success' },
         { label: 'Events', href: 'undergraduate-events.html', id: 'events' }
       ],
       masters: [
-        { label: 'Overview', href: 'masters.html', id: 'overview' },
-        { label: 'Program', href: 'masters-program.html', id: 'program' },
+        { label: 'Program Overview', href: 'masters.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'masters-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'masters-success.html', id: 'success' },
         { label: 'Events', href: 'masters-events.html', id: 'events' }
       ],
       mba: [
-        { label: 'Overview', href: 'mba.html', id: 'overview' },
-        { label: 'Program', href: 'mba-program.html', id: 'program' },
+        { label: 'Program Overview', href: 'mba.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'mba-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'mba-success.html', id: 'success' },
         { label: 'Events', href: 'mba-events.html', id: 'events' }
@@ -105,8 +98,7 @@
         { label: 'GMAT & GRE', href: 'test-prep-gmat-gre.html', id: 'gmat-gre' },
         { label: 'Knowledge Centre', href: 'test-prep-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'test-prep-success.html', id: 'success' },
-        { label: 'Events', href: 'test-prep-events.html', id: 'events' },
-        { label: 'Transfer Admissions', href: 'test-prep-transfer.html', id: 'transfer' }
+        { label: 'Events', href: 'test-prep-events.html', id: 'events' }
       ],
       careers: [
         { label: 'Life at OnCourse', href: 'careers.html', id: 'life' },
@@ -141,21 +133,21 @@
       subItem = 'team';
     } else if (file.startsWith('undergraduate')) {
       category = 'undergraduate';
-      if (file.includes('program')) subItem = 'program';
+      if (file.includes('program')) subItem = 'overview';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
       else subItem = 'overview';
     } else if (file.startsWith('masters')) {
       category = 'masters';
-      if (file.includes('program')) subItem = 'program';
+      if (file.includes('program')) subItem = 'overview';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
       else subItem = 'overview';
     } else if (file.startsWith('mba')) {
       category = 'mba';
-      if (file.includes('program')) subItem = 'program';
+      if (file.includes('program')) subItem = 'overview';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
@@ -290,8 +282,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
-          <a href="undergraduate-program.html" class="block py-1 hover:text-black">&bull; Program</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
@@ -303,8 +294,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
-          <a href="masters-program.html" class="block py-1 hover:text-black">&bull; Program</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
@@ -316,8 +306,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
-          <a href="mba-program.html" class="block py-1 hover:text-black">&bull; Program</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
@@ -325,7 +314,7 @@
       </div>
       <div class="border-b border-gray-100 pb-3">
         <div class="flex items-center justify-between mb-1">
-          <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep &amp; Transfer</a>
+          <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep</a>
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
@@ -335,7 +324,6 @@
           <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
-          <a href="test-prep-transfer.html" class="block py-1 hover:text-black">&bull; Transfer Admissions</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-2">

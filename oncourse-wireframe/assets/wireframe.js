@@ -1073,3 +1073,72 @@ function initMajorEventAnnouncement() {
   }
 }
 
+
+// 12. Knowledge Centre resource download gate (client: same email/phone may download up to 3 resources, then prompt to book a call)
+(function initResourceDownloadGate() {
+  const LIMIT = 3;
+  const triggers = document.querySelectorAll('[data-resource-download]');
+  if (!triggers.length) return;
+
+  function ensureModal() {
+    let m = document.getElementById('resource-gate-modal');
+    if (m) return m;
+    const w = document.createElement('div');
+    w.innerHTML = `
+<div id="resource-gate-modal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="resource-gate-title">
+  <div class="absolute inset-0 bg-black/75 backdrop-blur-sm" data-gate-close></div>
+  <div class="relative bg-white rounded-2xl shadow-2xl border border-gray-200 max-w-md w-full p-6 sm:p-8 z-10">
+    <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-black" aria-label="Close" data-gate-close>&#10005;</button>
+    <div data-gate-form>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-bold uppercase bg-gray-100 text-gray-800 border border-gray-200">Knowledge Centre</span>
+      <h3 id="resource-gate-title" class="text-xl font-black text-gray-900 mt-2">Download this resource</h3>
+      <p class="text-xs text-gray-600 mt-1">Enter your email and phone number to download. <span class="font-mono text-gray-400">[Up to ${LIMIT} downloads per contact]</span></p>
+      <form class="mt-4 space-y-3" data-gate-fields>
+        <input type="email" required placeholder="Email address" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-black focus:border-black">
+        <input type="tel" required placeholder="Phone / WhatsApp number" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-black focus:border-black">
+        <button type="submit" class="w-full py-3 rounded-lg bg-black text-white font-bold text-xs uppercase tracking-wider hover:bg-neutral-800">Download</button>
+      </form>
+    </div>
+    <div data-gate-limit class="hidden text-center py-2">
+      <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto font-black">!</div>
+      <h3 class="text-lg font-black text-gray-900 mt-3">You&rsquo;ve reached your download limit</h3>
+      <p class="text-xs text-gray-600 mt-1">You have downloaded ${LIMIT} resources with this contact. Please book a short call with our team for further information.</p>
+      <a href="contact.html#consultation-form" data-open-modal="consultation" class="mt-4 inline-flex items-center px-5 py-2.5 rounded-lg bg-black text-white font-bold text-xs uppercase tracking-wider hover:bg-neutral-800 cursor-pointer">Book a short call &rarr;</a>
+    </div>
+    <div data-gate-success class="hidden text-center py-2">
+      <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto font-black">&#10003;</div>
+      <h3 class="text-lg font-black text-gray-900 mt-3">Your download is starting</h3>
+      <p class="text-xs text-gray-600 mt-1" data-gate-remaining></p>
+    </div>
+  </div>
+</div>`;
+    document.body.appendChild(w.firstElementChild);
+    m = document.getElementById('resource-gate-modal');
+    m.querySelectorAll('[data-gate-close]').forEach(b => b.addEventListener('click', () => { m.classList.add('hidden'); m.classList.remove('flex'); }));
+    return m;
+  }
+
+  function key(email, phone) { return 'oncourse_dl_' + (email || '').trim().toLowerCase() + '|' + (phone || '').replace(/\D/g, ''); }
+  function count(k) { try { return parseInt(localStorage.getItem(k) || '0', 10); } catch (e) { return 0; } }
+  function bump(k) { try { localStorage.setItem(k, String(count(k) + 1)); } catch (e) {} }
+
+  triggers.forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
+      const m = ensureModal();
+      const formWrap = m.querySelector('[data-gate-form]'), limit = m.querySelector('[data-gate-limit]'), ok = m.querySelector('[data-gate-success]');
+      formWrap.classList.remove('hidden'); limit.classList.add('hidden'); ok.classList.add('hidden');
+      m.classList.remove('hidden'); m.classList.add('flex');
+      const form = m.querySelector('[data-gate-fields]');
+      form.onsubmit = (ev) => {
+        ev.preventDefault();
+        const [email, phone] = [form.elements[0].value, form.elements[1].value];
+        const k = key(email, phone);
+        if (count(k) >= LIMIT) { formWrap.classList.add('hidden'); limit.classList.remove('hidden'); return; }
+        bump(k);
+        formWrap.classList.add('hidden'); ok.classList.remove('hidden');
+        m.querySelector('[data-gate-remaining]').textContent = (LIMIT - count(k)) + ' download' + (LIMIT - count(k) === 1 ? '' : 's') + ' remaining for this contact. [File link: ' + (t.getAttribute('data-resource-download') || 'client to supply') + ']';
+      };
+    });
+  });
+})();

@@ -685,3 +685,92 @@ input:focus, select:focus, textarea:focus {
   pointer-events: none !important;
 }
 
+
+/* =====================================================================
+   CROSS-DEVICE RESPONSIVENESS LAYER (iOS Safari / Android Chrome)
+   1. Safe areas  2. Dynamic viewport height  3. Fluid typography  4. Auto-fit grids
+   Loaded after Tailwind utilities; !important is used only where a Tailwind
+   utility on the same element would otherwise win.
+   ===================================================================== */
+
+/* ---------- 1. Safe areas (notch, Dynamic Island, home indicator) ---------- */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+}
+/* Horizontal safe padding for every page container (landscape notch) */
+.max-w-7xl { padding-left: max(1rem, var(--safe-left)); padding-right: max(1rem, var(--safe-right)); }
+@media (min-width: 640px)  { .max-w-7xl { padding-left: max(1.5rem, var(--safe-left)); padding-right: max(1.5rem, var(--safe-right)); } }
+@media (min-width: 1024px) { .max-w-7xl { padding-left: max(2rem, var(--safe-left)); padding-right: max(2rem, var(--safe-right)); } }
+/* Fixed bottom bar: never under the home indicator / Android nav bar */
+#sticky-cta-bar { padding-bottom: var(--safe-bottom); }
+/* Top-attached event panel + strip: clear the notch */
+#event-top-panel { padding-top: var(--safe-top); }
+.event-trigger-strip { padding-top: var(--safe-top); }
+/* Mobile nav drawer and modals: keep last items reachable above the home indicator */
+#mobile-nav-drawer { padding-bottom: calc(2rem + var(--safe-bottom)) !important; }
+#consultation-modal { padding-top: max(1rem, var(--safe-top)); padding-bottom: max(1rem, var(--safe-bottom)); }
+
+/* ---------- 2. Dynamic viewport height (address-bar safe) ---------- */
+@supports (height: 100dvh) {
+  .min-h-screen { min-height: 100dvh !important; }
+  .h-screen { height: 100dvh !important; }
+  #hero.min-h-\[calc\(100vh-80px\)\] { min-height: calc(100dvh - 80px) !important; }
+  @media (min-width: 1024px) { #hero.lg\:h-\[calc\(100vh-80px\)\] { height: calc(100dvh - 80px) !important; } }
+  .max-h-\[85vh\] { max-height: 85dvh !important; }
+  .max-h-\[90vh\] { max-height: 90dvh !important; }
+  #consultation-modal { min-height: 100dvh; }
+}
+
+/* ---------- 3. Fluid typography ---------- */
+/* Root scale: 15px on an iPhone SE (320px) up to 17px on large tablets/desktops.
+   All Tailwind rem-based text utilities scale with it. */
+html { font-size: clamp(15px, 0.875rem + 0.25vw, 17px); }
+/* Headings: fluid between phone and desktop instead of 3 fixed breakpoint steps */
+h1 { font-size: clamp(1.75rem, 1.1rem + 2.8vw, 3.25rem) !important; line-height: 1.12 !important; }
+h2 { font-size: clamp(1.45rem, 1rem + 1.7vw, 2.4rem) !important; line-height: 1.18 !important; }
+h3 { font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem) !important; line-height: 1.3 !important; }
+/* Footer typographic watermark and hero slider titles opt out (decorative) */
+footer h2, footer h3, #hero h1, .no-fluid { font-size: revert !important; line-height: revert !important; }
+#hero h1 { font-size: clamp(1.9rem, 1rem + 3.6vw, 3.75rem) !important; }
+/* Readability floor on phones: nothing below 11px */
+@media (max-width: 640px) {
+  .text-\[8px\], .text-\[9px\], .text-\[10px\] { font-size: 11px !important; }
+  .text-\[11px\] { font-size: 12px !important; }
+}
+/* Long words/URLs never force horizontal scroll */
+body { overflow-wrap: anywhere; }
+h1, h2, h3, a, button { overflow-wrap: normal; word-break: normal; }
+img, video, svg { max-width: 100%; }
+
+/* ---------- 4. Auto-fit card grids (no media-query fragmentation) ---------- */
+.auto-grid, .auto-grid-2, .auto-grid-3, .auto-grid-4, .auto-grid-5 { display: grid !important; }
+.auto-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)) !important; }
+.auto-grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)) !important; }
+.auto-grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)) !important; }
+.auto-grid-5 { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)) !important; }
+/* Keep the desktop column count as a ceiling so a 4-card row never becomes 5 on ultra-wide screens */
+@media (min-width: 1280px) {
+  .auto-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .auto-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .auto-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .auto-grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+}
+
+/* Small-phone header fit (iPhone SE 320px): tighter gutter + smaller logo so logo + Book + menu never overflow */
+@media (max-width: 400px) {
+  #global-header .max-w-7xl { padding-left: max(0.75rem, var(--safe-left)) !important; padding-right: max(0.75rem, var(--safe-right)) !important; }
+  #global-header img[alt="OnCourse"] { height: 1.6rem !important; }
+  #global-header .flex.items-center.space-x-2 > a { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+}
+/* Prevent any stray horizontal scroll on phones (marquees are clipped by their own containers) */
+html, body { overflow-x: clip; }
+/* Fixed 2/3/4-column grids with no mobile breakpoint: stack on narrow phones so numbers/labels don't break mid-word */
+@media (max-width: 400px) {
+  .grid.grid-cols-3:not([class*="sm:grid-cols"]):not([class*="md:grid-cols"]):not([class*="lg:grid-cols"]) { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important; }
+  .grid.grid-cols-4:not([class*="sm:grid-cols"]):not([class*="md:grid-cols"]):not([class*="lg:grid-cols"]) { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+/* Stat figures and short labels never hyphenate mid-word */
+.font-black, .font-extrabold, .font-bold { overflow-wrap: normal; }

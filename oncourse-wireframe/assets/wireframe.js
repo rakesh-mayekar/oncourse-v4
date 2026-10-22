@@ -35,6 +35,10 @@ function initMobileMenu() {
   if (!mobileNav) return;
 
   toggleButtons.forEach(btn => {
+    // Guard: navigation.js and the DOMContentLoaded init both call this; binding twice made the two
+    // handlers cancel each other out (menu toggled open then closed on one tap).
+    if (btn.dataset.menuBound === 'true') return;
+    btn.dataset.menuBound = 'true';
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';

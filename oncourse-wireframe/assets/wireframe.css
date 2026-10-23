@@ -457,6 +457,18 @@ nav .border-amber-400 {
 .hover\:text-black:hover {
   color: #1A1A1A !important;
 }
+/* The .text-* palette rules above use !important, which would otherwise beat Tailwind's non-important
+   hover/group-hover colour utilities (e.g. segment cards: black background, black text on hover). */
+.hover\:text-white:hover,
+.group:hover .group-hover\:text-white {
+  color: #FFFFFF !important;
+}
+.group:hover .group-hover\:text-gray-300 {
+  color: #DADADA !important;
+}
+.group:hover .group-hover\:text-black {
+  color: #1A1A1A !important;
+}
 .hover\:border-black:hover {
   border-color: #1A1A1A !important;
 }

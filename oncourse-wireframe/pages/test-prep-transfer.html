@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>University Transfer Admissions Advisory | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=3">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=5">
   <script src="../assets/navigation.js"></script>
   <script src="../assets/event-panel.js"></script>
 </head>
@@ -18,153 +18,174 @@
 
   <!-- ================= GLOBAL MEGA-MENU HEADER (Shared Component) ================= -->
   <!-- Standardized 80px fixed height, identical across 100% of pages -->
-  <header id="global-header" data-active="test-prep" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
+  <!-- @component:header active="test-prep" -->
+<header id="global-header" data-active="test-prep" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
     <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
       <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
-        
+
         <!-- Section 1: Brand Logo -->
-        <div class="flex items-center flex-shrink-0 mr-3 xl:mr-6 header-brand-logo">
+        <div class="flex items-center flex-shrink-0 mr-2 xl:mr-6 header-brand-logo">
           <a href="home.html" title="OnCourse Home" class="flex items-center group">
-            <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 w-auto object-contain">
+            <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 lg:h-7 xl:h-9 w-auto object-contain">
           </a>
         </div>
 
         <!-- Section 2: Nav Links & CTA Button -->
-        <div class="flex items-center space-x-5 xl:space-x-7 2xl:space-x-8 h-full">
-          
+        <div class="flex items-center space-x-3 xl:space-x-7 2xl:space-x-8 h-full min-w-0">
+
           <!-- Desktop Nav Links -->
-          <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-5 2xl:space-x-6 text-[13px] font-semibold text-gray-700 h-full whitespace-nowrap">
-            
-            <!-- 0. HOME (Direct Link) -->
-            <a href="home.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">Home</a>
+          <nav class="hidden lg:flex flex-nowrap items-center space-x-2.5 xl:space-x-5 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
 
-            <!-- 1. ABOUT US (Direct Link, No Dropdown) -->
-            <a href="about.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">About Us</a>
+          <a href="home.html" data-nav-id="home" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
+            Home
+          </a>
 
-            <!-- 2. UNDERGRADUATE (With Programs Dropdown) -->
-            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
-              <a href="undergraduate.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
-                <span>Undergraduate</span>
-                <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </a>
-              <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
-                <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Program Overview</span>
-                  <span class="text-[11px] text-gray-500 block">Admissions advisory &amp; strategy</span>
-                </a>
-                <a href="undergraduate-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
-                  <span class="text-[11px] text-gray-500 block">Ivy League &amp; Oxbridge admissions guides</span>
-                </a>
-                <a href="undergraduate-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
-                  <span class="text-[11px] text-gray-500 block">Harvard, Stanford, Oxford admits</span>
-                </a>
-                <a href="undergraduate-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Events</span>
-                  <span class="text-[11px] text-gray-500 block">Admissions events &amp; masterclasses</span>
-                </a>
-              </div>
-            </div>
+          <a href="about.html" data-nav-id="about" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
+            About Us
+          </a>
 
-            <!-- 3. MASTER'S (With Programs Dropdown) -->
-            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
-              <a href="masters.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
-                <span>Master's</span>
-                <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </a>
-              <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
-                <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Program Overview</span>
-                  <span class="text-[11px] text-gray-500 block">Graduate advisory &amp; strategy</span>
-                </a>
-                <a href="masters-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
-                  <span class="text-[11px] text-gray-500 block">SOP frameworks &amp; research funding guides</span>
-                </a>
-                <a href="masters-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
-                  <span class="text-[11px] text-gray-500 block">MIT, ETH Zurich, CMU, Oxford admits</span>
-                </a>
-                <a href="masters-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Events</span>
-                  <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- 4. MBA (With Programs Dropdown) -->
-            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
-              <a href="mba.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
-                <span>MBA</span>
-                <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </a>
-              <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
-                <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Program Overview</span>
-                  <span class="text-[11px] text-gray-500 block">Executive MBA advisory &amp; strategy</span>
-                </a>
-                <a href="mba-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
-                  <span class="text-[11px] text-gray-500 block">M7 essay blueprints &amp; recommender briefs</span>
-                </a>
-                <a href="mba-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
-                  <span class="text-[11px] text-gray-500 block">Wharton, HBS, Stanford GSB, INSEAD</span>
-                </a>
-                <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Events</span>
-                  <span class="text-[11px] text-gray-500 block">Admissions director roundtables &amp; events</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- 5. TEST PREP (With Programs Dropdown) -->
-            <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
-              <a href="test-prep.html" class="inline-flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap shrink-0 text-black font-bold border-b-2 border-black pb-0.5">
-                <span>Test Prep</span>
-                <svg class="w-3.5 h-3.5 text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </a>
-              <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
-                <a href="test-prep.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Overview</span>
-                  <span class="text-[11px] text-gray-500 block">Testing diagnostic &amp; score elevation</span>
-                </a>
-                <a href="test-prep-sat-act.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">SAT &amp; ACT</span>
-                  <span class="text-[11px] text-gray-500 block">Digital SAT &amp; ACT adaptive prep</span>
-                </a>
-                <a href="test-prep-gmat-gre.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">GMAT &amp; GRE</span>
-                  <span class="text-[11px] text-gray-500 block">GMAT Focus &amp; GRE score elevation</span>
-                </a>
-                <a href="test-prep-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
-                  <span class="text-[11px] text-gray-500 block">Exam guides, test dates &amp; score planning</span>
-                </a>
-                <a href="test-prep-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
-                  <span class="text-[11px] text-gray-500 block">SAT, ACT, GMAT &amp; GRE admit outcomes</span>
-                </a>
-                <a href="test-prep-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                  <span class="text-xs font-bold text-gray-900 block">Events</span>
-                  <span class="text-[11px] text-gray-500 block">Test prep webinars &amp; score workshops</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- 6. CONTACT US (Direct Link, No Dropdown) -->
-            <a href="contact.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">Contact Us</a>
-
-            <!-- 7. JOIN OUR TEAM (Direct Link, No Dropdown) -->
-            <a href="careers.html" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 transition-colors whitespace-nowrap shrink-0">
-              Join Our Team
+          <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+            <a href="undergraduate.html" data-nav-id="undergraduate" class="inline-flex items-center gap-1 xl:gap-1.5 py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
+              <span>Undergraduate</span>
+              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </a>
+            <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
+
+            <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
+            </a>
+
+            <a href="undergraduate-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
+              <span class="text-[11px] text-gray-500 block">Ivy League & Oxbridge admissions guides</span>
+            </a>
+
+            <a href="undergraduate-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
+              <span class="text-[11px] text-gray-500 block">Harvard, Stanford, Oxford admits</span>
+            </a>
+
+            <a href="undergraduate-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Events</span>
+              <span class="text-[11px] text-gray-500 block">Admissions events & masterclasses</span>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+            <a href="masters.html" data-nav-id="masters" class="inline-flex items-center gap-1 xl:gap-1.5 py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
+              <span>Master's</span>
+              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
+
+            <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
+            </a>
+
+            <a href="masters-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
+              <span class="text-[11px] text-gray-500 block">SOP frameworks & research funding guides</span>
+            </a>
+
+            <a href="masters-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
+              <span class="text-[11px] text-gray-500 block">MIT, ETH Zurich, CMU, Oxford admits</span>
+            </a>
+
+            <a href="masters-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Events</span>
+              <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+            <a href="mba.html" data-nav-id="mba" class="inline-flex items-center gap-1 xl:gap-1.5 py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors">
+              <span>MBA</span>
+              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
+
+            <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
+            </a>
+
+            <a href="mba-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
+              <span class="text-[11px] text-gray-500 block">M7 essay blueprints & recommender briefs</span>
+            </a>
+
+            <a href="mba-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
+              <span class="text-[11px] text-gray-500 block">Wharton, HBS, Stanford GSB, INSEAD</span>
+            </a>
+
+            <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Events</span>
+              <span class="text-[11px] text-gray-500 block">Admissions director roundtables & events</span>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center nav-item-has-menu shrink-0">
+            <a href="test-prep.html" data-nav-id="test-prep" class="inline-flex items-center gap-1 xl:gap-1.5 py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap text-black font-bold border-b-2 border-black pb-0.5">
+              <span>Test Prep</span>
+              <svg class="w-3.5 h-3.5 text-black transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
+
+            <a href="test-prep.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Overview</span>
+              <span class="text-[11px] text-gray-500 block">Testing diagnostic & score elevation</span>
+            </a>
+
+            <a href="test-prep-sat-act.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">SAT & ACT</span>
+              <span class="text-[11px] text-gray-500 block">Digital SAT & ACT adaptive prep</span>
+            </a>
+
+            <a href="test-prep-gmat-gre.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">GMAT & GRE</span>
+              <span class="text-[11px] text-gray-500 block">GMAT Focus & GRE score elevation</span>
+            </a>
+
+            <a href="test-prep-knowledge.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Knowledge Centre</span>
+              <span class="text-[11px] text-gray-500 block">Exam guides, test dates & score planning</span>
+            </a>
+
+            <a href="test-prep-success.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Success Stories</span>
+              <span class="text-[11px] text-gray-500 block">SAT, ACT, GMAT & GRE admit outcomes</span>
+            </a>
+
+            <a href="test-prep-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">Events</span>
+              <span class="text-[11px] text-gray-500 block">Test prep webinars & score workshops</span>
+            </a>
+
+            </div>
+          </div>
+
+          <a href="contact.html" data-nav-id="contact" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
+            Contact Us
+          </a>
+
+          <a href="careers.html" data-nav-id="careers" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
+            Join Our Team
+          </a>
 
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-3 xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
             Book Consultation
           </a>
 
@@ -197,7 +218,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
@@ -209,7 +230,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
@@ -221,7 +242,7 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program Overview</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
@@ -256,7 +277,8 @@
         </a>
       </div>
     </div>
-  </header>
+</header>
+  <!-- /@component:header -->
 
   <!-- ================= STANDARDIZED SECONDARY NAVIGATION ================= -->
   <nav id="secondary-nav" data-section="test-prep" data-active="transfer" class="bg-black text-white border-b border-gray-800 sticky top-20 z-30 shadow-xs h-12 secondary-nav-bar">
@@ -435,7 +457,7 @@
     </div>
   </main>
 
-  <!-- ================= GLOBAL FOOTER ================= -->
+  <!-- @component:footer -->
 <section id="instagram-feed-wrapper" class="bg-black text-neutral-300 relative overflow-hidden">
   <!-- ================= INSTAGRAM REELS & POSTS FEED (PLACED ABOVE THE FOOTER, PER CLIENT FEEDBACK) ================= -->
   <div class="border-b border-neutral-800 bg-[#0c0d11] py-8 sm:py-10 relative overflow-hidden" id="instagram-feed-section">
@@ -662,7 +684,7 @@
 </section>
 
 <section id="ambition-cta-wrapper" class="bg-black text-neutral-300 relative overflow-hidden">
-  <!-- ================= "YOUR AMBITION" CTA BAND (above Instagram, per client feedback) (single Book a Consultation button, per client feedback) ================= -->
+  <!-- ================= CTA BAND (single Book a Consultation button, per client feedback). Slots "cta" (copy) and "cta-secondary" (second button) can be overridden per page via components/footer-cta-<name>.html ================= -->
   <!-- #6d6d6d Grey Background with Compact Spacing & Crisp Contrast -->
   <div class="border-b border-neutral-600/70 bg-[#6d6d6d] py-10 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
     
@@ -672,6 +694,7 @@
     
     <div class="max-w-4xl mx-auto text-center relative z-10 space-y-4">
       
+      <!-- @slot:cta -->
       <!-- Brand Device Pill -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black text-white text-xs font-mono font-bold uppercase tracking-widest shadow-md">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -687,6 +710,7 @@
       <p class="text-sm sm:text-base text-neutral-100 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-sm">
         Explore what&rsquo;s possible with guidance shaped around your ambitions.
       </p>
+      <!-- /@slot:cta -->
 
       <!-- Primary & Secondary CTAs -->
       <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
@@ -694,10 +718,12 @@
           <span>Book a Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
+        <!-- @slot:cta-secondary -->
         <a href="home.html#pathways" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-black hover:bg-neutral-900 text-white border border-black/80 font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2">
           <span>Explore Our Programmes</span>
           <span>&rarr;</span>
         </a>
+        <!-- /@slot:cta-secondary -->
       </div>
 
     </div>
@@ -706,7 +732,7 @@
 
 </section>
 
-  <footer class="bg-black text-neutral-300 relative overflow-hidden border-t border-neutral-800">
+<footer class="bg-black text-neutral-300 relative overflow-hidden border-t border-neutral-800">
 
   <!-- ================= TIER 2: ONCOURSE BRAND BLOCK + REORGANIZED NAVIGATION ================= -->
   <!-- Deep Graphite Background (#121316) with Reduced Vertical Space -->
@@ -1132,6 +1158,7 @@
   </div>
 
 </footer>
+  <!-- /@component:footer -->
 
   <script src="../assets/wireframe.js"></script>
 </body>

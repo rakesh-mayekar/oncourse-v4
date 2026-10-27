@@ -6,8 +6,8 @@
   <title>Undergraduate Admissions (Class 8–12) | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=5">
-  <script src="../assets/navigation.js"></script>
-  <script src="../assets/event-panel.js"></script>
+  <script src="../assets/navigation.js?v=6"></script>
+  <script src="../assets/event-panel.js?v=6"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
@@ -21,20 +21,20 @@
   <!-- @component:header active="undergraduate" -->
 <header id="global-header" data-active="undergraduate" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
     <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
-      <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
+      <div class="flex items-center justify-between h-full gap-3 xl:gap-5 2xl:gap-8">
 
         <!-- Section 1: Brand Logo -->
-        <div class="flex items-center flex-shrink-0 mr-2 xl:mr-6 header-brand-logo">
+        <div class="flex items-center flex-shrink-0 mr-1 xl:mr-3 2xl:mr-6 header-brand-logo">
           <a href="home.html" title="OnCourse Home" class="flex items-center group">
             <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 lg:h-7 xl:h-9 w-auto object-contain">
           </a>
         </div>
 
         <!-- Section 2: Nav Links & CTA Button -->
-        <div class="flex items-center space-x-3 xl:space-x-7 2xl:space-x-8 h-full min-w-0">
+        <div class="flex items-center space-x-2 xl:space-x-4 2xl:space-x-8 h-full min-w-0">
 
           <!-- Desktop Nav Links -->
-          <nav class="hidden lg:flex flex-nowrap items-center space-x-2.5 xl:space-x-5 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
+          <nav class="hidden lg:flex flex-nowrap items-center space-x-2 xl:space-x-4 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
 
           <a href="home.html" data-nav-id="home" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
             Home
@@ -52,7 +52,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
             </a>
 
@@ -70,6 +70,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions events & masterclasses</span>
             </a>
+            <a href="undergraduate-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -82,7 +86,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
             </a>
 
@@ -100,6 +104,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
             </a>
+            <a href="masters-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -112,7 +120,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
             </a>
 
@@ -129,6 +137,10 @@
             <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions director roundtables & events</span>
+            </a>
+            <a href="mba-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
             </a>
 
             </div>
@@ -170,6 +182,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Test prep webinars & score workshops</span>
             </a>
+            <a href="test-prep-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Test prep questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -185,8 +201,8 @@
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-3 xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
-            Book Consultation
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-2 xl:px-3.5 2xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs xl:text-[13px] tracking-normal shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
+            Book a Consultation
           </a>
 
           <!-- Mobile / Tablet Hamburger (< lg) -->
@@ -218,10 +234,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="undergraduate-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -230,10 +247,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
+          <a href="masters-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -242,16 +260,17 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="mba-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
         <div class="flex items-center justify-between mb-1">
           <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep</a>
-          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardised Testing</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
@@ -260,6 +279,7 @@
           <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="test-prep-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-2">
@@ -272,7 +292,7 @@
         <a href="careers.html" class="w-full text-center px-4 py-2.5 rounded-md border-2 border-black text-black font-bold text-xs uppercase tracking-wider">
           Join Our Team
         </a>
-        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md">
+        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-sm shadow-md">
           Book a Consultation
         </a>
       </div>
@@ -300,6 +320,16 @@
     </div>
   </nav>
 
+  <!-- @component:breadcrumb trail="Undergraduate Programme" -->
+<nav aria-label="Breadcrumb" class="bg-gray-100/80 border-b border-gray-200 py-2.5 text-xs font-mono text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <a href="home.html" class="hover:text-black transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Undergraduate Programme</span>
+      </div>
+    </nav>
+  <!-- /@component:breadcrumb -->
+
   <main class="flex-grow">
     
     <!-- 1. HERO BLOCK (Low-to-Mid Fidelity Wireframe: Class 8 to 12 framing) -->
@@ -318,8 +348,8 @@
             </h1>
 
             <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Longitudinal admissions mentoring for high school students (Class 8–12) and parents. Structured around a dual-mentor model pairing roadmap governance with individualized student narrative development.
-              <span class="text-xs text-gray-400 font-mono block mt-1.5">[Hero copy and program positioning to be finalized with client]</span>
+              Longitudinal admissions mentoring for high school students (Class 8–12) and parents. Structured around a dual-mentor model pairing roadmap governance with individualised student narrative development.
+              <span class="text-xs text-gray-400 font-mono block mt-1.5">[Hero copy and programme positioning to be finalised with client]</span>
             </p>
 
             <!-- Actions with Primary CTA: Book a Parent Consultation -->
@@ -328,7 +358,7 @@
                 Book a Parent Consultation
               </a>
               <a href="undergraduate.html" class="w-full sm:w-auto px-6 py-3.5 rounded-lg border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-all text-center">
-                View Program &rarr;
+                View Programme &rarr;
               </a>
             </div>
 
@@ -361,7 +391,7 @@
         <div class="text-center max-w-3xl mx-auto mb-10">
           <span class="text-xs font-bold uppercase tracking-widest text-gray-800">UG Placements &amp; Stats</span>
           <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Where Our Undergraduate Students Have Been Admitted</h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2">Verified admits and outcomes from OnCourse Class 8 to 12 students. [College list to be finalised with the client]</p>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Verified admits and outcomes from OnCourse Class 8 to 12 students. </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 auto-grid-4">
           <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-xs text-center">
@@ -385,25 +415,153 @@
             <div class="text-[10px] text-gray-400 font-mono mt-0.5">[Client to confirm]</div>
           </div>
         </div>
-        <div class="bg-white rounded-xl border border-gray-200 shadow-xs overflow-hidden">
-          <table class="w-full text-left">
-            <thead class="bg-gray-50"><tr><th class="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-gray-600 border-b border-gray-200">University</th><th class="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-gray-600 border-b border-gray-200">Programmes</th><th class="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-gray-600 border-b border-gray-200">OnCourse admits</th><th class="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-gray-600 border-b border-gray-200">Latest intake</th></tr></thead>
-            <tbody>
-            <tr class="placement-row"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 1]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 2]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 3]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 4]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 5]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 6]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 7]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 8]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 9]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 10]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 11]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            <tr class="placement-row hidden"><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top font-bold text-gray-900">[University 12]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Programmes]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[VERIFIED RESULT]</td><td class="px-4 py-3 text-xs text-gray-700 border-b border-gray-100 align-top">[Year]</td></tr>
-            </tbody>
-          </table>
+        <div id="college-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/harvard-university.svg" alt="Harvard University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Harvard University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">17</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/stanford-university.svg" alt="Stanford University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Stanford University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">20</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/massachusetts-institute-of-technology.svg" alt="Massachusetts Institute of Technology logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Massachusetts Institute of Technology</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">17</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/yale-university.svg" alt="Yale University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Yale University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">17</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/princeton-university.svg" alt="Princeton University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Princeton University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">19</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/columbia-university.svg" alt="Columbia University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Columbia University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">21</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-of-pennsylvania.svg" alt="University of Pennsylvania logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University of Pennsylvania</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">9</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/brown-university.svg" alt="Brown University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Brown University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">8</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/cornell-university.svg" alt="Cornell University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Cornell University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">19</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/dartmouth-college.svg" alt="Dartmouth College logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Dartmouth College</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">18</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/duke-university.svg" alt="Duke University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Duke University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">8</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/northwestern-university.svg" alt="Northwestern University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Northwestern University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">6</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-of-chicago.svg" alt="University of Chicago logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University of Chicago</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">17</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/new-york-university.svg" alt="New York University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">New York University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">12</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/johns-hopkins-university.svg" alt="Johns Hopkins University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Johns Hopkins University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">7</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/uc-berkeley.svg" alt="UC Berkeley logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">UC Berkeley</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">5</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-of-oxford.svg" alt="University of Oxford logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University of Oxford</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">20</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-of-cambridge.svg" alt="University of Cambridge logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University of Cambridge</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">4</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/imperial-college-london.svg" alt="Imperial College London logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Imperial College London</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">15</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-college-london.svg" alt="University College London logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University College London</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">17</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/london-school-of-economics.svg" alt="London School of Economics logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">London School of Economics</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">8</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/king-s-college-london.svg" alt="King's College London logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">King&rsquo;s College London</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">3</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/university-of-toronto.svg" alt="University of Toronto logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">University of Toronto</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">19</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile college-extra hidden bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/mcgill-university.svg" alt="McGill University logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">McGill University</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">5</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
         </div>
+        <p class="text-[11px] font-mono text-gray-400 mt-3 text-center">Illustrative placeholder data: logos are stand-in marks and admit counts are sample numbers. Replace with the client&rsquo;s official logos and verified figures.</p>
         <div class="mt-6 text-center">
           <button type="button" id="placements-more-btn" aria-expanded="false" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer">
             <span data-more>Know more</span><span data-less class="hidden">Show less</span><span>&darr;</span>
@@ -414,9 +572,8 @@
           (function () {
             var btn = document.getElementById('placements-more-btn'); if (!btn) return;
             btn.addEventListener('click', function () {
-              var rows = document.querySelectorAll('#placements .placement-row.hidden, #placements .placement-row[data-extra="true"]');
               var open = btn.getAttribute('aria-expanded') !== 'true';
-              document.querySelectorAll('#placements tbody tr').forEach(function (r, i) { if (i >= 4) { r.classList.toggle('hidden', !open); r.setAttribute('data-extra','true'); } });
+              document.querySelectorAll('#placements .college-extra').forEach(function (t) { t.classList.toggle('hidden', !open); });
               btn.setAttribute('aria-expanded', open ? 'true' : 'false');
               btn.querySelector('[data-more]').classList.toggle('hidden', open);
               btn.querySelector('[data-less]').classList.toggle('hidden', !open);
@@ -477,7 +634,7 @@
               </p>
               <div class="space-y-1.5 text-xs text-gray-500 font-mono">
                 <div>&bull; [Independent projects &amp; research advisory &mdash; TBD]</div>
-                <div>&bull; [Standardized testing benchmark &amp; timeline &mdash; TBD]</div>
+                <div>&bull; [Standardised testing benchmark &amp; timeline &mdash; TBD]</div>
               </div>
             </div>
             <div class="pt-4 border-t border-gray-200 mt-5">
@@ -579,7 +736,7 @@
         </div>
 
         <!-- TEXT CASES -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 items-stretch auto-grid-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 items-stretch auto-grid-4">
           <!-- Case 01: Undergraduate -->
           <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="undergraduate">
             <div>
@@ -642,6 +799,34 @@
               <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
                 <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-800 border border-gray-200 text-[10px] font-bold uppercase font-mono tracking-wider flex items-center gap-1.5">
                   <span class="font-extrabold">03</span>
+                  <span>UNDERGRADUATE</span>
+                </span>
+                <span class="text-[10px] font-mono text-gray-400">[Outcome]</span>
+              </div>
+              <div class="text-3xl font-serif text-gray-300 leading-none select-none">&ldquo;</div>
+              <blockquote class="text-xs sm:text-[13px] font-medium text-gray-800 leading-relaxed italic mt-1.5">
+                [VERIFIED TESTIMONIAL: Undergraduate student or parent quote. CLIENT TO CONFIRM]
+              </blockquote>
+            </div>
+
+            <div class="mt-6 pt-3.5 border-t border-gray-100 flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+                <div>
+                  <div class="font-bold text-xs text-gray-900 leading-tight">[Student Name]</div>
+                  <div class="text-[10px] text-gray-500">[Programme &bull; University &bull; Client to confirm]</div>
+                </div>
+              </div>
+              <a href="undergraduate-success.html" class="text-black font-bold text-[10px] font-mono hover:underline whitespace-nowrap shrink-0">Read Story &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Case 04: Undergraduate -->
+          <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="undergraduate">
+            <div>
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-800 border border-gray-200 text-[10px] font-bold uppercase font-mono tracking-wider flex items-center gap-1.5">
+                  <span class="font-extrabold">04</span>
                   <span>UNDERGRADUATE</span>
                 </span>
                 <span class="text-[10px] font-mono text-gray-400">[Outcome]</span>
@@ -863,7 +1048,10 @@
             <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed"><span class="font-mono text-gray-400">[CLIENT TO CONFIRM: parent updates and meetings]</span></div>
           </div>
           </div>
+                <div class="mt-8 text-center">
+          <a href="undergraduate-faqs.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors">View all Undergraduate FAQs &rarr;</a>
         </div>
+      </div>
       </div>
     </section>
 
@@ -1146,7 +1334,7 @@
 
       <!-- Primary & Secondary CTAs -->
       <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 group">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
           <span>Book a Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -1316,7 +1504,7 @@
                 <li><a href="careers-openings.html" class="text-neutral-200 hover:text-white transition-colors">Open Positions</a></li>
                 <li><a href="careers-apply.html" class="text-neutral-200 hover:text-white transition-colors">Apply Now</a></li>
                 <li><a href="contact.html" class="text-neutral-200 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book Consultation</a></li>
+                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book a Consultation</a></li>
               </ul>
             </div>
 
@@ -1395,7 +1583,7 @@
                 <a href="careers-openings.html" class="block text-neutral-200 hover:text-white py-0.5">Open Positions</a>
                 <a href="careers-apply.html" class="block text-neutral-200 hover:text-white py-0.5">Apply Now</a>
                 <a href="contact.html" class="block text-neutral-200 hover:text-white py-0.5">Contact Us</a>
-                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book Consultation</a>
+                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book a Consultation</a>
               </div>
             </details>
           </div>
@@ -1477,7 +1665,7 @@
               <span class="text-white font-extrabold text-sm group-hover:text-white">New Delhi</span>
             </div>
             <div class="text-xs font-semibold text-neutral-200">Connaught Place Central Hub</div>
-            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy center.</p>
+            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy centre.</p>
             <div class="mt-3 pt-3 border-t border-neutral-800 text-[11px] font-mono space-y-1 text-neutral-300">
               <div class="flex items-center gap-1.5">
                 <span class="text-neutral-500 font-sans text-xs">T:</span>
@@ -1605,7 +1793,7 @@
             Plan your global admissions roadmap with senior mentors
           </p>
           <p class="text-xs text-gray-400 hidden md:block">
-            Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programs.
+            Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programmes.
           </p>
         </div>
       </div>
@@ -1772,6 +1960,6 @@
   </div>
 </div>
 
-  <script src="../assets/wireframe.js"></script>
+  <script src="../assets/wireframe.js?v=6"></script>
 </body>
 </html>

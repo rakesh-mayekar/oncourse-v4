@@ -18,7 +18,7 @@ A coded structural UX wireframe prototype with client-side interactivity for the
   - **Dismissible Sticky CTA**: Scroll-triggered sticky consultation bar that coordinates with the slide-in pop-up.
   - **FAQ Accordion**: Accessible expand/collapse accordion.
   - **Interactive Outcome Slider**: Success stories carousel with multi-slide navigation.
-- **Master Prototype Hub (`index.html`)**: Built-in interactive viewport switcher (375px mobile, 768px tablet, 1280px desktop, and fluid full screen) with quick page navigation across all 29 pages.
+- **Master Prototype Hub (`index.html`)**: Built-in interactive viewport switcher (375px mobile, 768px tablet, 1280px desktop, and fluid full screen) with quick page navigation across all 33 pages.
 
 ---
 
@@ -41,10 +41,10 @@ A coded structural UX wireframe prototype with client-side interactivity for the
     │   └── segment-landing-template.html, content-hub-template.html
     ├── pages/
     │   ├── home.html, about.html, team.html, testimonials.html
-    │   ├── undergraduate[-knowledge|-success|-events].html
-    │   ├── masters[-knowledge|-success|-events].html
-    │   ├── mba[-knowledge|-success|-events].html
-    │   ├── test-prep[-sat-act|-gmat-gre|-transfer|-knowledge|-success|-events].html
+    │   ├── undergraduate[-knowledge|-success|-events|-faqs].html
+    │   ├── masters[-knowledge|-success|-events|-faqs].html
+    │   ├── mba[-knowledge|-success|-events|-faqs].html
+    │   ├── test-prep[-sat-act|-gmat-gre|-transfer|-knowledge|-success|-events|-faqs].html
     │   ├── upcoming-events.html, masterclasses.html
     │   ├── contact.html, careers.html, careers-openings.html, careers-apply.html
     │   └── *-program.html           # Redirect stubs → segment overview (Program + Overview merged, Oct 2026)
@@ -68,6 +68,10 @@ The header and footer are **not** edited inside pages. Every page contains gener
   …generated — do not edit…
 <!-- /@component:header -->
 
+<!-- @component:breadcrumb trail="Undergraduate|undergraduate.html~Events" -->
+  …generated — do not edit… (label|link~label|link~current page)
+<!-- /@component:breadcrumb -->
+
 <!-- @component:footer -->            <!-- home.html uses cta="home" -->
   …generated — do not edit…
 <!-- /@component:footer -->
@@ -85,6 +89,8 @@ The header and footer are **not** edited inside pages. Every page contains gener
 - **New page:** copy an existing page, adjust the `active` value, run the sync script, and add it to the hub list in `/index.html`.
 
 ---
+
+> **Cache note:** page scripts and styles carry a version string (e.g. `navigation.js?v=6`, `wireframe.css?v=5`). Bump it on every page after changing a JS/CSS file, otherwise browsers may keep showing the old version.
 
 ## 🚀 How to Run Locally
 

@@ -19,22 +19,25 @@
         { label: 'FAQ', href: 'about.html#faq', id: 'faq' }
       ],
       undergraduate: [
-        { label: 'Program Overview', href: 'undergraduate.html', id: 'overview' },
+        { label: 'Programme', href: 'undergraduate.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'undergraduate-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'undergraduate-success.html', id: 'success' },
-        { label: 'Events', href: 'undergraduate-events.html', id: 'events' }
+        { label: 'Events', href: 'undergraduate-events.html', id: 'events' },
+        { label: 'FAQs', href: 'undergraduate-faqs.html', id: 'faqs' }
       ],
       masters: [
-        { label: 'Program Overview', href: 'masters.html', id: 'overview' },
+        { label: 'Programme', href: 'masters.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'masters-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'masters-success.html', id: 'success' },
-        { label: 'Events', href: 'masters-events.html', id: 'events' }
+        { label: 'Events', href: 'masters-events.html', id: 'events' },
+        { label: 'FAQs', href: 'masters-faqs.html', id: 'faqs' }
       ],
       mba: [
-        { label: 'Program Overview', href: 'mba.html', id: 'overview' },
+        { label: 'Programme', href: 'mba.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'mba-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'mba-success.html', id: 'success' },
-        { label: 'Events', href: 'mba-events.html', id: 'events' }
+        { label: 'Events', href: 'mba-events.html', id: 'events' },
+        { label: 'FAQs', href: 'mba-faqs.html', id: 'faqs' }
       ],
       'test-prep': [
         { label: 'Overview', href: 'test-prep.html', id: 'overview' },
@@ -42,7 +45,8 @@
         { label: 'GMAT & GRE', href: 'test-prep-gmat-gre.html', id: 'gmat-gre' },
         { label: 'Knowledge Centre', href: 'test-prep-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'test-prep-success.html', id: 'success' },
-        { label: 'Events', href: 'test-prep-events.html', id: 'events' }
+        { label: 'Events', href: 'test-prep-events.html', id: 'events' },
+        { label: 'FAQs', href: 'test-prep-faqs.html', id: 'faqs' }
       ],
       careers: [
         { label: 'Life at OnCourse', href: 'careers.html', id: 'life' },
@@ -78,6 +82,7 @@
     } else if (file.startsWith('undergraduate')) {
       category = 'undergraduate';
       if (file.includes('program')) subItem = 'overview';
+      else if (file.includes('faq')) subItem = 'faqs';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
@@ -85,6 +90,7 @@
     } else if (file.startsWith('masters')) {
       category = 'masters';
       if (file.includes('program')) subItem = 'overview';
+      else if (file.includes('faq')) subItem = 'faqs';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
@@ -92,13 +98,15 @@
     } else if (file.startsWith('mba')) {
       category = 'mba';
       if (file.includes('program')) subItem = 'overview';
+      else if (file.includes('faq')) subItem = 'faqs';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('success')) subItem = 'success';
       else if (file.includes('events')) subItem = 'events';
       else subItem = 'overview';
     } else if (file.startsWith('test-prep')) {
       category = 'test-prep';
-      if (file.includes('sat-act')) subItem = 'sat-act';
+      if (file.includes('faq')) subItem = 'faqs';
+      else if (file.includes('sat-act')) subItem = 'sat-act';
       else if (file.includes('gmat-gre')) subItem = 'gmat-gre';
       else if (file.includes('knowledge')) subItem = 'knowledge';
       else if (file.includes('events')) subItem = 'events';

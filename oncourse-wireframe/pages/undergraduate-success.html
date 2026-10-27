@@ -6,8 +6,8 @@
   <title>Undergraduate Success Stories & Case Studies | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=5">
-  <script src="../assets/navigation.js"></script>
-  <script src="../assets/event-panel.js"></script>
+  <script src="../assets/navigation.js?v=6"></script>
+  <script src="../assets/event-panel.js?v=6"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
@@ -21,20 +21,20 @@
   <!-- @component:header active="undergraduate" -->
 <header id="global-header" data-active="undergraduate" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
     <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
-      <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
+      <div class="flex items-center justify-between h-full gap-3 xl:gap-5 2xl:gap-8">
 
         <!-- Section 1: Brand Logo -->
-        <div class="flex items-center flex-shrink-0 mr-2 xl:mr-6 header-brand-logo">
+        <div class="flex items-center flex-shrink-0 mr-1 xl:mr-3 2xl:mr-6 header-brand-logo">
           <a href="home.html" title="OnCourse Home" class="flex items-center group">
             <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 lg:h-7 xl:h-9 w-auto object-contain">
           </a>
         </div>
 
         <!-- Section 2: Nav Links & CTA Button -->
-        <div class="flex items-center space-x-3 xl:space-x-7 2xl:space-x-8 h-full min-w-0">
+        <div class="flex items-center space-x-2 xl:space-x-4 2xl:space-x-8 h-full min-w-0">
 
           <!-- Desktop Nav Links -->
-          <nav class="hidden lg:flex flex-nowrap items-center space-x-2.5 xl:space-x-5 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
+          <nav class="hidden lg:flex flex-nowrap items-center space-x-2 xl:space-x-4 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
 
           <a href="home.html" data-nav-id="home" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
             Home
@@ -52,7 +52,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
             </a>
 
@@ -70,6 +70,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions events & masterclasses</span>
             </a>
+            <a href="undergraduate-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -82,7 +86,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
             </a>
 
@@ -100,6 +104,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
             </a>
+            <a href="masters-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -112,7 +120,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
             </a>
 
@@ -129,6 +137,10 @@
             <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions director roundtables & events</span>
+            </a>
+            <a href="mba-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
             </a>
 
             </div>
@@ -170,6 +182,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Test prep webinars & score workshops</span>
             </a>
+            <a href="test-prep-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Test prep questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -185,8 +201,8 @@
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-3 xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
-            Book Consultation
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-2 xl:px-3.5 2xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs xl:text-[13px] tracking-normal shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
+            Book a Consultation
           </a>
 
           <!-- Mobile / Tablet Hamburger (< lg) -->
@@ -218,10 +234,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="undergraduate-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -230,10 +247,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
+          <a href="masters-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -242,16 +260,17 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="mba-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
         <div class="flex items-center justify-between mb-1">
           <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep</a>
-          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardised Testing</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
@@ -260,6 +279,7 @@
           <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="test-prep-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-2">
@@ -272,7 +292,7 @@
         <a href="careers.html" class="w-full text-center px-4 py-2.5 rounded-md border-2 border-black text-black font-bold text-xs uppercase tracking-wider">
           Join Our Team
         </a>
-        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md">
+        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-sm shadow-md">
           Book a Consultation
         </a>
       </div>
@@ -300,6 +320,18 @@
       </div>
     </div>
   </nav>
+
+  <!-- @component:breadcrumb trail="Undergraduate|undergraduate.html~Success Stories" -->
+<nav aria-label="Breadcrumb" class="bg-gray-100/80 border-b border-gray-200 py-2.5 text-xs font-mono text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <a href="home.html" class="hover:text-black transition-colors">Home</a>
+        <span>/</span>
+        <a href="undergraduate.html" class="hover:text-black transition-colors">Undergraduate</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Success Stories</span>
+      </div>
+    </nav>
+  <!-- /@component:breadcrumb -->
 
   <main class="flex-grow">
 
@@ -348,49 +380,30 @@
     </div>
   </section>
 
-  <section class="bg-[#f8f9fa] border-b border-gray-200 py-6 sticky top-20 z-40 backdrop-blur-md bg-[#f8f9fa]/95 shadow-xs">
+  <section class="bg-[#f8f9fa] border-b border-gray-200 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
-        
-        <!-- Category Filter Buttons including "All" as requested -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-          <!-- All (active) -->
-          <button type="button" class="testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-black text-white shadow-xs cursor-pointer flex items-center gap-1.5" data-category="all">
-            <span>✨</span>
-            <span>All Undergraduate (8)</span>
-          </button>
-          <button type="button" class="testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5" data-category="ivy">
-            <span>🏛️</span>
-            <span>Ivy League</span>
-          </button>
-          <button type="button" class="testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5" data-category="oxbridge">
-            <span>🇬🇧</span>
-            <span>Oxbridge &amp; UK</span>
-          </button>
-          <button type="button" class="testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5" data-category="top30">
-            <span>🇺🇸</span>
-            <span>Top 30 US</span>
-          </button>
-          <button type="button" class="testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5" data-category="global">
-            <span>🌍</span>
-            <span>Canada &amp; Europe</span>
-          </button>
+      <!-- Search (left) and category dropdown (right) -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <div class="relative w-full sm:max-w-md">
+          <input type="text" id="testimonial-search-input" placeholder="Search student, university, score..." class="w-full pl-9 pr-4 py-2.5 rounded-lg text-sm bg-white border border-gray-200 focus:outline-none focus:border-black transition-all">
+          <span class="absolute left-3 top-3 text-gray-400 text-xs">&#128269;</span>
         </div>
-
-        <!-- Search & Filter Count -->
-        <div class="flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-end">
-          <div class="relative w-full sm:w-72">
-            <input type="text" id="testimonial-search-input" placeholder="Search student, university, score..." class="w-full pl-9 pr-4 py-2 rounded-full text-xs bg-white border border-gray-200 focus:outline-none focus:border-black transition-all">
-            <span class="absolute left-3 top-2.5 text-gray-400 text-xs">🔍</span>
-          </div>
-
-          <a href="#" class="px-3 py-1.5 rounded-full text-[11px] font-bold bg-white border border-gray-200 text-gray-700 hover:border-black shrink-0 shadow-2xs" title="[Google review link: pending integration check]">&#11088; Review us on Google</a>
-          <span id="results-count-badge" class="px-3 py-1.5 rounded-full text-[11px] font-mono font-bold bg-white border border-gray-200 text-gray-700 shrink-0 shadow-2xs">Showing 8 of 8</span>
+        <div class="w-full sm:w-64">
+          <label for="testimonial-category-select" class="sr-only">Filter stories</label>
+          <select id="testimonial-category-select" class="w-full px-3 py-2.5 rounded-lg text-sm bg-white border border-gray-200 text-gray-800 focus:outline-none focus:border-black cursor-pointer">
+              <option value="all">All Undergraduate</option>
+              <option value="ivy">Ivy League</option>
+              <option value="oxbridge">Oxbridge &amp; UK</option>
+              <option value="top30">Top 30 US</option>
+              <option value="global">Canada &amp; Europe</option>
+          </select>
         </div>
-
       </div>
-
+      <!-- Result count (plain text) -->
+      <div class="mt-3 flex items-center justify-between gap-3 text-xs text-gray-500">
+        <p id="results-count-badge">Showing 8 of 8</p>
+        <a href="#" class="font-semibold text-gray-700 hover:text-black hover:underline" title="[Google review link: pending integration check]">&#11088; Review us on Google</a>
+      </div>
     </div>
   </section>
 
@@ -405,13 +418,7 @@
             </div>
           </a>
           <div>
-            <div class="flex items-center gap-2">
-              <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-rose-600 block">AUTHENTIC ADMISSIONS REELS</span>
-              <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-pink-100 text-pink-700 border border-pink-200">@oncourse</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-0.5">
-              Student Admit Stories &amp; Mentor Breakdowns
-            </h2>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">@oncourse</h2>
           </div>
         </div>
 
@@ -523,31 +530,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 1. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">AM</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Aarav Mehta</div>
+                <div class="text-[10px] text-gray-500">Greenwood International School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -568,31 +569,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 2. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">AI</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Ananya Iyer</div>
+                <div class="text-[10px] text-gray-500">Riverdale Senior School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -613,31 +608,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 3. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">KM</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Kabir Malhotra</div>
+                <div class="text-[10px] text-gray-500">Lakeview Academy</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -658,31 +647,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 4. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">IR</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Ishita Rao</div>
+                <div class="text-[10px] text-gray-500">Hillcrest International School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -703,31 +686,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 5. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">VS</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Vihaan Shah</div>
+                <div class="text-[10px] text-gray-500">Sunrise Global School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -748,31 +725,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 6. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">MN</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Meera Nair</div>
+                <div class="text-[10px] text-gray-500">Oakridge Public School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -793,31 +764,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 7. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">AK</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Arjun Kapoor</div>
+                <div class="text-[10px] text-gray-500">Maplewood High School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -838,31 +803,25 @@
               [VERIFIED TESTIMONIAL: Undergraduate case 8. CLIENT TO CONFIRM]
             </blockquote>
 
-            <div class="space-y-1.5 py-2.5 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
-              <div class="flex items-center justify-between">
-                <span>Course:</span>
-                <span class="font-bold text-gray-900">[Programme]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Institution:</span>
-                <span class="font-bold text-gray-900">[University]</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Score / outcome:</span>
-                <span class="font-bold text-gray-900">[baseline] &rarr; [final] &bull; [Offer]</span>
-              </div>
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start py-3 px-3 rounded-xl bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-600">
+              <span class="whitespace-nowrap">Course:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Programme]</span>
+              <span class="whitespace-nowrap">Institution:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[University]</span>
+              <span class="whitespace-nowrap">Outcome:</span>
+              <span class="font-bold text-gray-900 text-right break-words">[Outcome]</span>
             </div>
           </div>
 
-          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between gap-2 min-h-[4.75rem]">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">SB</div>
               <div>
-                <div class="font-bold text-xs text-gray-900">[Student Name]</div>
-                <div class="text-[10px] text-gray-500">[School]</div>
+                <div class="font-bold text-xs text-gray-900">Saanvi Bhatt</div>
+                <div class="text-[10px] text-gray-500">Crestview International School</div>
               </div>
             </div>
-            <span class="text-[10px] font-mono text-gray-400">Class of '28</span>
+            <span class="text-[10px] font-mono text-gray-400 whitespace-nowrap shrink-0">Class of '28</span>
           </div>
         </div>
 
@@ -1199,7 +1158,7 @@
 
       <!-- Primary & Secondary CTAs -->
       <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 group">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
           <span>Book a Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -1369,7 +1328,7 @@
                 <li><a href="careers-openings.html" class="text-neutral-200 hover:text-white transition-colors">Open Positions</a></li>
                 <li><a href="careers-apply.html" class="text-neutral-200 hover:text-white transition-colors">Apply Now</a></li>
                 <li><a href="contact.html" class="text-neutral-200 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book Consultation</a></li>
+                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book a Consultation</a></li>
               </ul>
             </div>
 
@@ -1448,7 +1407,7 @@
                 <a href="careers-openings.html" class="block text-neutral-200 hover:text-white py-0.5">Open Positions</a>
                 <a href="careers-apply.html" class="block text-neutral-200 hover:text-white py-0.5">Apply Now</a>
                 <a href="contact.html" class="block text-neutral-200 hover:text-white py-0.5">Contact Us</a>
-                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book Consultation</a>
+                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book a Consultation</a>
               </div>
             </details>
           </div>
@@ -1530,7 +1489,7 @@
               <span class="text-white font-extrabold text-sm group-hover:text-white">New Delhi</span>
             </div>
             <div class="text-xs font-semibold text-neutral-200">Connaught Place Central Hub</div>
-            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy center.</p>
+            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy centre.</p>
             <div class="mt-3 pt-3 border-t border-neutral-800 text-[11px] font-mono space-y-1 text-neutral-300">
               <div class="flex items-center gap-1.5">
                 <span class="text-neutral-500 font-sans text-xs">T:</span>
@@ -1645,90 +1604,39 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js"></script>
+  <script src="../assets/wireframe.js?v=6"></script>
   <script>
     (function initTestimonialsPage() {
-      const tabs = document.querySelectorAll('.testimonial-filter-tab');
+      const select = document.getElementById('testimonial-category-select');
       const cards = document.querySelectorAll('.testimonial-item-card');
       const searchInput = document.getElementById('testimonial-search-input');
-      const countBadge = document.getElementById('results-count-badge');
+      const countText = document.getElementById('results-count-badge');
       const noResults = document.getElementById('no-results-state');
       const resetBtn = document.getElementById('reset-filters-btn');
 
-      let currentCategory = 'all';
-      let currentQuery = '';
-
       function filterAndSearch() {
+        const category = select ? select.value : 'all';
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
         let visibleCount = 0;
-
         cards.forEach(card => {
-          const cat = card.getAttribute('data-category');
           const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
           const text = card.textContent.toLowerCase();
-
-          const matchesCat = (currentCategory === 'all' || cat === currentCategory);
-          const matchesQuery = (!currentQuery || text.includes(currentQuery) || keywords.includes(currentQuery));
-
-          if (matchesCat && matchesQuery) {
-            card.classList.remove('hidden');
-            visibleCount++;
-          } else {
-            card.classList.add('hidden');
-          }
+          const matchesCat = (category === 'all' || card.getAttribute('data-category') === category);
+          const matchesQuery = (!query || text.includes(query) || keywords.includes(query));
+          card.classList.toggle('hidden', !(matchesCat && matchesQuery));
+          if (matchesCat && matchesQuery) visibleCount++;
         });
-
-        if (countBadge) {
-          countBadge.textContent = `Showing ${visibleCount} of ${cards.length}`;
-        }
-
-        if (noResults) {
-          if (visibleCount === 0) {
-            noResults.classList.remove('hidden');
-          } else {
-            noResults.classList.add('hidden');
-          }
-        }
+        if (countText) countText.textContent = 'Showing ' + visibleCount + ' of ' + cards.length;
+        if (noResults) noResults.classList.toggle('hidden', visibleCount !== 0);
       }
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const cat = tab.getAttribute('data-category');
-          currentCategory = cat;
-
-          tabs.forEach(t => {
-            if (t === tab) {
-              t.className = 'testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-black text-white shadow-xs cursor-pointer flex items-center gap-1.5';
-            } else {
-              t.className = 'testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5';
-            }
-          });
-
-          filterAndSearch();
-        });
+      if (select) select.addEventListener('change', filterAndSearch);
+      if (searchInput) searchInput.addEventListener('input', filterAndSearch);
+      if (resetBtn) resetBtn.addEventListener('click', () => {
+        if (select) select.value = 'all';
+        if (searchInput) searchInput.value = '';
+        filterAndSearch();
       });
-
-      if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-          currentQuery = e.target.value.trim().toLowerCase();
-          filterAndSearch();
-        });
-      }
-
-      if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-          currentCategory = 'all';
-          currentQuery = '';
-          if (searchInput) searchInput.value = '';
-          tabs.forEach((t, idx) => {
-            if (idx === 0) {
-              t.className = 'testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-black text-white shadow-xs cursor-pointer flex items-center gap-1.5';
-            } else {
-              t.className = 'testimonial-filter-tab px-4 py-2 rounded-full text-xs font-bold transition-all bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer flex items-center gap-1.5';
-            }
-          });
-          filterAndSearch();
-        });
-      }
     })();
   </script>
 </body>

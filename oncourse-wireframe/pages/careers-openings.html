@@ -6,8 +6,8 @@
   <title>Open Positions & Job Openings | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=5">
-  <script src="../assets/navigation.js"></script>
-  <script src="../assets/event-panel.js"></script>
+  <script src="../assets/navigation.js?v=6"></script>
+  <script src="../assets/event-panel.js?v=6"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
@@ -21,20 +21,20 @@
   <!-- @component:header active="careers" -->
 <header id="global-header" data-active="careers" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
     <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
-      <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
+      <div class="flex items-center justify-between h-full gap-3 xl:gap-5 2xl:gap-8">
 
         <!-- Section 1: Brand Logo -->
-        <div class="flex items-center flex-shrink-0 mr-2 xl:mr-6 header-brand-logo">
+        <div class="flex items-center flex-shrink-0 mr-1 xl:mr-3 2xl:mr-6 header-brand-logo">
           <a href="home.html" title="OnCourse Home" class="flex items-center group">
             <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 lg:h-7 xl:h-9 w-auto object-contain">
           </a>
         </div>
 
         <!-- Section 2: Nav Links & CTA Button -->
-        <div class="flex items-center space-x-3 xl:space-x-7 2xl:space-x-8 h-full min-w-0">
+        <div class="flex items-center space-x-2 xl:space-x-4 2xl:space-x-8 h-full min-w-0">
 
           <!-- Desktop Nav Links -->
-          <nav class="hidden lg:flex flex-nowrap items-center space-x-2.5 xl:space-x-5 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
+          <nav class="hidden lg:flex flex-nowrap items-center space-x-2 xl:space-x-4 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
 
           <a href="home.html" data-nav-id="home" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
             Home
@@ -52,7 +52,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
             </a>
 
@@ -70,6 +70,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions events & masterclasses</span>
             </a>
+            <a href="undergraduate-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -82,7 +86,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
             </a>
 
@@ -100,6 +104,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
             </a>
+            <a href="masters-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -112,7 +120,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
             </a>
 
@@ -129,6 +137,10 @@
             <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions director roundtables & events</span>
+            </a>
+            <a href="mba-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
             </a>
 
             </div>
@@ -170,6 +182,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Test prep webinars & score workshops</span>
             </a>
+            <a href="test-prep-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Test prep questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -185,8 +201,8 @@
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-3 xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
-            Book Consultation
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-2 xl:px-3.5 2xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs xl:text-[13px] tracking-normal shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
+            Book a Consultation
           </a>
 
           <!-- Mobile / Tablet Hamburger (< lg) -->
@@ -218,10 +234,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="undergraduate-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -230,10 +247,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
+          <a href="masters-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -242,16 +260,17 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="mba-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
         <div class="flex items-center justify-between mb-1">
           <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep</a>
-          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardised Testing</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
@@ -260,6 +279,7 @@
           <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="test-prep-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-2">
@@ -272,7 +292,7 @@
         <a href="careers.html" class="w-full text-center px-4 py-2.5 rounded-md border-2 border-black text-black font-bold text-xs uppercase tracking-wider">
           Join Our Team
         </a>
-        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md">
+        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-sm shadow-md">
           Book a Consultation
         </a>
       </div>
@@ -298,17 +318,22 @@
     </div>
   </nav>
 
+  <!-- @component:breadcrumb trail="Join Our Team|careers.html~Open Positions" -->
+<nav aria-label="Breadcrumb" class="bg-gray-100/80 border-b border-gray-200 py-2.5 text-xs font-mono text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <a href="home.html" class="hover:text-black transition-colors">Home</a>
+        <span>/</span>
+        <a href="careers.html" class="hover:text-black transition-colors">Join Our Team</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Open Positions</span>
+      </div>
+    </nav>
+  <!-- /@component:breadcrumb -->
+
   <main class="flex-grow py-10 lg:py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Breadcrumb -->
-      <nav class="text-xs text-gray-500 mb-4 flex items-center space-x-2">
-        <a href="home.html" class="hover:text-black">Home</a>
-        <span>/</span>
-        <a href="careers.html" class="hover:text-black">Careers</a>
-        <span>/</span>
-        <span class="text-gray-800 font-semibold">Open Positions</span>
-      </nav>
 
       <!-- Hub Header Title Block -->
       <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-200 pb-6 mb-8 gap-4">
@@ -321,7 +346,7 @@
           </h1>
           <p class="text-sm sm:text-base text-gray-600 mt-2 max-w-2xl leading-relaxed">
             We are hiring admissions consultants, test prep faculty, student success managers, and editorial researchers.
-            <span class="text-xs text-gray-400 font-mono block mt-1.5">[Career openings and job criteria to be finalized with client]</span>
+            <span class="text-xs text-gray-400 font-mono block mt-1.5">[Career openings and job criteria to be finalised with client]</span>
           </p>
         </div>
         <div>
@@ -380,7 +405,7 @@
             <h3 class="text-lg font-bold text-gray-900 mb-1">Managing Director (MBA Admissions)</h3>
             <div class="text-xs text-black font-semibold mb-3">Location: Dubai (DIFC) / Mumbai</div>
             <p class="text-xs text-gray-600 leading-relaxed mb-4">
-              Drive M7 and European top business school admissions consulting for executives and mid-career leaders. Top MBA degree and senior counseling background required.
+              Drive M7 and European top business school admissions consulting for executives and mid-career leaders. Top MBA degree and senior counselling background required.
             </p>
           </div>
           <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
@@ -464,7 +489,7 @@
             <h3 class="text-lg font-bold text-gray-900 mb-1">Admissions Content & Research Associate</h3>
             <div class="text-xs text-black font-semibold mb-3">Location: Remote / Mumbai</div>
             <p class="text-xs text-gray-600 leading-relaxed mb-4">
-              Author high-level admissions reports, analyze global higher education datasets, and curate our Knowledge Centre whitepapers and guides.
+              Author high-level admissions reports, analyse global higher education datasets, and curate our Knowledge Centre whitepapers and guides.
             </p>
           </div>
           <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
@@ -737,7 +762,7 @@
 
       <!-- Primary & Secondary CTAs -->
       <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 group">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
           <span>Book a Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -907,7 +932,7 @@
                 <li><a href="careers-openings.html" class="text-neutral-200 hover:text-white transition-colors">Open Positions</a></li>
                 <li><a href="careers-apply.html" class="text-neutral-200 hover:text-white transition-colors">Apply Now</a></li>
                 <li><a href="contact.html" class="text-neutral-200 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book Consultation</a></li>
+                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book a Consultation</a></li>
               </ul>
             </div>
 
@@ -986,7 +1011,7 @@
                 <a href="careers-openings.html" class="block text-neutral-200 hover:text-white py-0.5">Open Positions</a>
                 <a href="careers-apply.html" class="block text-neutral-200 hover:text-white py-0.5">Apply Now</a>
                 <a href="contact.html" class="block text-neutral-200 hover:text-white py-0.5">Contact Us</a>
-                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book Consultation</a>
+                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book a Consultation</a>
               </div>
             </details>
           </div>
@@ -1068,7 +1093,7 @@
               <span class="text-white font-extrabold text-sm group-hover:text-white">New Delhi</span>
             </div>
             <div class="text-xs font-semibold text-neutral-200">Connaught Place Central Hub</div>
-            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy center.</p>
+            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy centre.</p>
             <div class="mt-3 pt-3 border-t border-neutral-800 text-[11px] font-mono space-y-1 text-neutral-300">
               <div class="flex items-center gap-1.5">
                 <span class="text-neutral-500 font-sans text-xs">T:</span>
@@ -1183,6 +1208,6 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js"></script>
+  <script src="../assets/wireframe.js?v=6"></script>
 </body>
 </html>

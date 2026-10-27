@@ -9,6 +9,10 @@ Each page marks where they go:
     ...generated, do not edit...
     <!-- /@component:header -->
 
+    <!-- @component:breadcrumb trail="Undergraduate|undergraduate.html~Events" -->
+    ...generated, do not edit...
+    <!-- /@component:breadcrumb -->
+
     <!-- @component:footer -->            (or cta="home" to apply the slot overrides in components/footer-cta-home.html)
     ...generated, do not edit...
     <!-- /@component:footer -->
@@ -79,7 +83,25 @@ def render_footer(attrs):
     return html
 
 
-RENDERERS = {'header': render_header, 'footer': render_footer}
+def render_breadcrumb(attrs):
+    """Home / ... / current page. trail="Label|href~Label|href~Current" (last item has no link)."""
+    items = [i.split('|') for i in attrs['trail'].split('~')]
+    parts = ['<a href="home.html" class="hover:text-black transition-colors">Home</a>']
+    for i, item in enumerate(items):
+        parts.append('<span>/</span>')
+        if i == len(items) - 1:
+            parts.append(f'<span class="text-gray-900 font-bold">{item[0]}</span>')
+        else:
+            parts.append(f'<a href="{item[1]}" class="hover:text-black transition-colors">{item[0]}</a>')
+    body = '\n        '.join(parts)
+    return ('<nav aria-label="Breadcrumb" class="bg-gray-100/80 border-b border-gray-200 py-2.5 text-xs font-mono text-gray-500">\n'
+            '      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-2 gap-y-1">\n'
+            f'        {body}\n'
+            '      </div>\n'
+            '    </nav>')
+
+
+RENDERERS = {'header': render_header, 'footer': render_footer, 'breadcrumb': render_breadcrumb}
 
 
 def sync_page(text):

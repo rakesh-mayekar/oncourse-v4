@@ -6,8 +6,8 @@
   <title>MBA & Executive Admissions Advisory | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=5">
-  <script src="../assets/navigation.js"></script>
-  <script src="../assets/event-panel.js"></script>
+  <script src="../assets/navigation.js?v=6"></script>
+  <script src="../assets/event-panel.js?v=6"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
@@ -21,20 +21,20 @@
   <!-- @component:header active="mba" -->
 <header id="global-header" data-active="mba" class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs h-20 global-header">
     <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
-      <div class="flex items-center justify-between h-full gap-4 xl:gap-8">
+      <div class="flex items-center justify-between h-full gap-3 xl:gap-5 2xl:gap-8">
 
         <!-- Section 1: Brand Logo -->
-        <div class="flex items-center flex-shrink-0 mr-2 xl:mr-6 header-brand-logo">
+        <div class="flex items-center flex-shrink-0 mr-1 xl:mr-3 2xl:mr-6 header-brand-logo">
           <a href="home.html" title="OnCourse Home" class="flex items-center group">
             <img src="../assets/images/oncourse-logo.png" alt="OnCourse" class="h-8 sm:h-9 lg:h-7 xl:h-9 w-auto object-contain">
           </a>
         </div>
 
         <!-- Section 2: Nav Links & CTA Button -->
-        <div class="flex items-center space-x-3 xl:space-x-7 2xl:space-x-8 h-full min-w-0">
+        <div class="flex items-center space-x-2 xl:space-x-4 2xl:space-x-8 h-full min-w-0">
 
           <!-- Desktop Nav Links -->
-          <nav class="hidden lg:flex flex-nowrap items-center space-x-2.5 xl:space-x-5 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
+          <nav class="hidden lg:flex flex-nowrap items-center space-x-2 xl:space-x-4 2xl:space-x-6 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-gray-700 h-full whitespace-nowrap">
 
           <a href="home.html" data-nav-id="home" class="text-gray-700 hover:text-black border-b-2 border-transparent pb-0.5 transition-colors py-2 text-xs xl:text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
             Home
@@ -52,7 +52,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="undergraduate.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Admissions advisory & strategy</span>
             </a>
 
@@ -70,6 +70,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions events & masterclasses</span>
             </a>
+            <a href="undergraduate-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -82,7 +86,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="masters.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Graduate advisory & strategy</span>
             </a>
 
@@ -100,6 +104,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Graduate admissions events</span>
             </a>
+            <a href="masters-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -112,7 +120,7 @@
             <div class="absolute top-20 left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 space-y-1">
 
             <a href="mba.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-xs font-bold text-gray-900 block">Program</span>
+              <span class="text-xs font-bold text-gray-900 block">Programme</span>
               <span class="text-[11px] text-gray-500 block">Executive MBA advisory & strategy</span>
             </a>
 
@@ -129,6 +137,10 @@
             <a href="mba-events.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Admissions director roundtables & events</span>
+            </a>
+            <a href="mba-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Admissions questions answered</span>
             </a>
 
             </div>
@@ -170,6 +182,10 @@
               <span class="text-xs font-bold text-gray-900 block">Events</span>
               <span class="text-[11px] text-gray-500 block">Test prep webinars & score workshops</span>
             </a>
+            <a href="test-prep-faqs.html" class="block p-2 rounded-lg hover:bg-gray-50 transition-colors">
+              <span class="text-xs font-bold text-gray-900 block">FAQs</span>
+              <span class="text-[11px] text-gray-500 block">Test prep questions answered</span>
+            </a>
 
             </div>
           </div>
@@ -185,8 +201,8 @@
           </nav>
 
           <!-- CTA Button -->
-          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-3 xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
-            Book Consultation
+          <a href="contact.html#consultation-form" class="hidden sm:inline-flex items-center px-2 xl:px-3.5 2xl:px-4 py-2.5 rounded-md bg-black text-white hover:bg-gray-800 font-bold text-xs xl:text-[13px] tracking-normal shadow-sm hover:shadow-md transition-all whitespace-nowrap shrink-0">
+            Book a Consultation
           </a>
 
           <!-- Mobile / Tablet Hamburger (< lg) -->
@@ -218,10 +234,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">For Parents</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="undergraduate.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="undergraduate-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="undergraduate-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="undergraduate-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="undergraduate-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -230,10 +247,11 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="masters.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="masters-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="masters-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="masters-events.html" class="block py-1 hover:text-black">&bull; Graduate Events</a>
+          <a href="masters-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
@@ -242,16 +260,17 @@
           <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black text-white font-bold">For Students</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
-          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Program</a>
+          <a href="mba.html" class="block py-1 hover:text-black font-semibold">&bull; Programme</a>
           <a href="mba-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="mba-success.html" class="block py-1 hover:text-black">&bull; MBA Success Stories</a>
           <a href="mba-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="mba-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-3">
         <div class="flex items-center justify-between mb-1">
           <a href="test-prep.html" class="text-xs font-black uppercase tracking-wider text-black">Test Prep</a>
-          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardized Testing</span>
+          <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-300 font-bold">Standardised Testing</span>
         </div>
         <div class="space-y-1 pl-2 text-xs text-gray-700">
           <a href="test-prep.html" class="block py-1 hover:text-black font-semibold">&bull; Overview</a>
@@ -260,6 +279,7 @@
           <a href="test-prep-knowledge.html" class="block py-1 hover:text-black">&bull; Knowledge Centre</a>
           <a href="test-prep-success.html" class="block py-1 hover:text-black">&bull; Success Stories</a>
           <a href="test-prep-events.html" class="block py-1 hover:text-black">&bull; Events</a>
+          <a href="test-prep-faqs.html" class="block py-1 hover:text-black">&bull; FAQs</a>
         </div>
       </div>
       <div class="border-b border-gray-100 pb-2">
@@ -272,7 +292,7 @@
         <a href="careers.html" class="w-full text-center px-4 py-2.5 rounded-md border-2 border-black text-black font-bold text-xs uppercase tracking-wider">
           Join Our Team
         </a>
-        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-xs uppercase tracking-wider shadow-md">
+        <a href="contact.html#consultation-form" class="w-full text-center px-4 py-3 rounded-md bg-black text-white font-bold text-sm shadow-md">
           Book a Consultation
         </a>
       </div>
@@ -300,6 +320,16 @@
     </div>
   </nav>
 
+  <!-- @component:breadcrumb trail="MBA Programme" -->
+<nav aria-label="Breadcrumb" class="bg-gray-100/80 border-b border-gray-200 py-2.5 text-xs font-mono text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <a href="home.html" class="hover:text-black transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">MBA Programme</span>
+      </div>
+    </nav>
+  <!-- /@component:breadcrumb -->
+
   <main class="flex-grow">
     
     <!-- 1. HERO / INTRO BLOCK -->
@@ -314,12 +344,12 @@
             </div>
 
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-              Strategic Advisory for Elite MBA Programs
+              Strategic Advisory for Elite MBA Programmes
             </h1>
 
             <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Executive admissions advisory for professionals targeting M7, INSEAD, and premier business schools. Structured around a dual-mentor model pairing portfolio calibration with alumni interview preparation.
-              <span class="text-xs text-gray-400 font-mono block mt-1.5">[Hero copy and program positioning to be finalized with client]</span>
+              <span class="text-xs text-gray-400 font-mono block mt-1.5">[Hero copy and programme positioning to be finalised with client]</span>
             </p>
 
             <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
@@ -327,7 +357,7 @@
                 Book MBA Consultation &rarr;
               </a>
               <a href="mba.html" class="w-full sm:w-auto px-6 py-3.5 rounded-lg border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-all text-center">
-                View Program &rarr;
+                View Programme &rarr;
               </a>
             </div>
 
@@ -383,87 +413,88 @@
     </section>
 
     <!-- 2B. M7 & GLOBAL TOP 10 MBA BENCHMARK MATRIX (Simplified Wireframe) -->
-    <section class="py-14 bg-white border-b border-gray-200">
+    <section id="placements" class="py-14 bg-white border-b border-gray-200 scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-gray-500 font-mono">ROI &amp; Career Outcome Data</span>
-            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">
-              M7 &amp; European Top 10 Benchmark Matrix
-            </h2>
-            <p class="text-xs sm:text-sm text-gray-500 mt-1.5">
-              Comparative cohort positioning across global business schools. [Detailed metrics and medians to be confirmed by client]
-            </p>
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">MBA Placements &amp; Stats</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Where Our MBA Students Have Been Admitted</h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Verified admits from OnCourse MBA applicants, shown by school and number of students.</p>
+        </div>
+        <div id="college-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/wharton-school.svg" alt="Wharton School logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Wharton School</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">6</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
           </div>
-          <div class="text-right">
-            <span class="text-xs text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 inline-block font-mono">
-              [Cohort Benchmarks &mdash; Client to confirm]
-            </span>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/harvard-business-school.svg" alt="Harvard Business School logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Harvard Business School</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">6</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/stanford-gsb.svg" alt="Stanford GSB logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Stanford GSB</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">12</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/chicago-booth.svg" alt="Chicago Booth logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Chicago Booth</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">12</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/kellogg-school-of-management.svg" alt="Kellogg School of Management logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Kellogg School of Management</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">14</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/mit-sloan.svg" alt="MIT Sloan logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">MIT Sloan</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">15</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/columbia-business-school.svg" alt="Columbia Business School logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Columbia Business School</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">4</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/insead.svg" alt="INSEAD logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">INSEAD</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">12</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/london-business-school.svg" alt="London Business School logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">London Business School</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">5</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/sa-d-business-school-oxford.svg" alt="Saïd Business School, Oxford logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Saïd Business School, Oxford</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">12</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/cambridge-judge-business-school.svg" alt="Cambridge Judge Business School logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Cambridge Judge Business School</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">4</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
+          </div>
+          <div class="college-tile bg-white rounded-xl border border-gray-200 p-4 text-center hover:border-black hover:shadow-md transition-all">
+            <img src="../assets/images/colleges/indian-school-of-business.svg" alt="Indian School of Business logo" class="mx-auto w-14 h-14" loading="lazy">
+            <div class="text-xs font-bold text-gray-900 mt-3 leading-snug min-h-[2rem] flex items-center justify-center">Indian School of Business</div>
+            <div class="text-2xl font-black text-black mt-1 leading-none">15</div>
+            <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mt-1">students admitted</div>
           </div>
         </div>
-
-        <!-- Comparative Data Table (Wireframe State) -->
-        <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-xs bg-white">
-          <table class="w-full text-left text-xs border-collapse">
-            <thead>
-              <tr class="bg-gray-50 border-b border-gray-200 text-gray-700 font-bold uppercase tracking-wider text-[11px]">
-                <th class="py-3.5 px-4">Business School</th>
-                <th class="py-3.5 px-4">Program Format</th>
-                <th class="py-3.5 px-4">Test Benchmark</th>
-                <th class="py-3.5 px-4">Work Experience</th>
-                <th class="py-3.5 px-4">Admit Rate</th>
-                <th class="py-3.5 px-4 text-right">Merit Aid Range</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-100 font-medium text-gray-800">
-              <tr class="hover:bg-gray-50/30 transition-colors">
-                <td class="py-3.5 px-4 font-bold text-gray-900 flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-black"></span>
-                  Harvard Business School (HBS)
-                </td>
-                <td class="py-3.5 px-4 text-gray-600">2-Year Full-Time</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[Client to confirm]</td>
-                <td class="py-3.5 px-4 text-gray-500">[4–6 Yrs]</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[TBD]</td>
-                <td class="py-3.5 px-4 text-right font-mono text-gray-500">[TBD]</td>
-              </tr>
-              <tr class="hover:bg-gray-50/30 transition-colors">
-                <td class="py-3.5 px-4 font-bold text-gray-900 flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-black"></span>
-                  Stanford Graduate School of Business (GSB)
-                </td>
-                <td class="py-3.5 px-4 text-gray-600">2-Year Full-Time</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[Client to confirm]</td>
-                <td class="py-3.5 px-4 text-gray-500">[4–5 Yrs]</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[TBD]</td>
-                <td class="py-3.5 px-4 text-right font-mono text-gray-500">[TBD]</td>
-              </tr>
-              <tr class="hover:bg-gray-50/30 transition-colors">
-                <td class="py-3.5 px-4 font-bold text-gray-900 flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-black"></span>
-                  The Wharton School (UPenn)
-                </td>
-                <td class="py-3.5 px-4 text-gray-600">2-Year Full-Time</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[Client to confirm]</td>
-                <td class="py-3.5 px-4 text-gray-500">[5 Yrs]</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[TBD]</td>
-                <td class="py-3.5 px-4 text-right font-mono text-gray-500">[TBD]</td>
-              </tr>
-              <tr class="hover:bg-gray-50/30 transition-colors">
-                <td class="py-3.5 px-4 font-bold text-gray-900 flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-black"></span>
-                  INSEAD / London Business School
-                </td>
-                <td class="py-3.5 px-4 text-gray-600">10–15 Months</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[Client to confirm]</td>
-                <td class="py-3.5 px-4 text-gray-500">[5–6 Yrs]</td>
-                <td class="py-3.5 px-4 font-mono text-gray-500">[TBD]</td>
-                <td class="py-3.5 px-4 text-right font-mono text-gray-500">[TBD]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p class="text-[11px] font-mono text-gray-400 mt-3 text-center">Illustrative placeholder data: logos are stand-in marks and admit counts are sample numbers. Replace with the client&rsquo;s official logos and verified figures.</p>
       </div>
     </section>
 
@@ -476,7 +507,7 @@
             MBA-specific case studies
           </h2>
           <p class="text-xs sm:text-sm text-gray-600 mt-1">
-            Top MBA programs scrutinize career goal plausibility. We help you construct an airtight link between your past achievements and post-MBA ambitions.
+            Top MBA programmes scrutinise career goal plausibility. We help you construct an airtight link between your past achievements and post-MBA ambitions.
           </p>
         </div>
 
@@ -499,7 +530,7 @@
               <span class="text-[10px] font-bold uppercase tracking-wider text-black bg-gray-100 px-2 py-0.5 rounded">Pivot 02</span>
               <h4 class="font-bold text-sm text-gray-900 mt-3">Finance / Banking &rarr; Private Equity & Climate Tech</h4>
               <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                Standing out from overrepresented financial analyst pools by emphasizing ESG thesis, portfolio operations, and proprietary deal sourcing.
+                Standing out from overrepresented financial analyst pools by emphasising ESG thesis, portfolio operations, and proprietary deal sourcing.
               </p>
             </div>
             <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-black">
@@ -566,7 +597,7 @@
               <span class="px-2.5 py-1 rounded bg-black text-white text-xs font-bold whitespace-nowrap mt-0.5">Class 8 &amp; 9</span>
               <div>
                 <h4 class="text-sm font-bold text-gray-900">Foundational Discovery &amp; Academic Curriculum Planning</h4>
-                <p class="text-xs text-gray-600 mt-1">Diagnostic aptitude testing, IB/IGCSE/CBSE subject selection optimization, structured reading lists, and early extracurricular exploration without premature performance pressure.</p>
+                <p class="text-xs text-gray-600 mt-1">Diagnostic aptitude testing, IB/IGCSE/CBSE subject selection optimisation, structured reading lists, and early extracurricular exploration without premature performance pressure.</p>
               </div>
             </div>
             <span class="text-xs font-semibold text-gray-500 whitespace-nowrap bg-gray-50 px-3 py-1.5 rounded border border-gray-200">Year 1 &amp; 2 Blueprint</span>
@@ -576,7 +607,7 @@
             <div class="flex items-start gap-3">
               <span class="px-2.5 py-1 rounded bg-black text-white text-xs font-bold whitespace-nowrap mt-0.5">Class 10</span>
               <div>
-                <h4 class="text-sm font-bold text-gray-900">Academic Rigor &amp; Extracurricular Spike Initiation</h4>
+                <h4 class="text-sm font-bold text-gray-900">Academic Rigour &amp; Extracurricular Spike Initiation</h4>
                 <p class="text-xs text-gray-600 mt-1">Transitioning from broad activities to a distinctive passion spike (research paper, social enterprise, Olympiad), baseline diagnostic test for SAT/ACT, and competitive summer school applications.</p>
               </div>
             </div>
@@ -587,7 +618,7 @@
             <div class="flex items-start gap-3">
               <span class="px-2.5 py-1 rounded bg-black text-white text-xs font-bold whitespace-nowrap mt-0.5">Class 11</span>
               <div>
-                <h4 class="text-sm font-bold text-gray-900">Standardized Test Lock-In &amp; Extracurricular Capstone Scaling</h4>
+                <h4 class="text-sm font-bold text-gray-900">Standardised Test Lock-In &amp; Extracurricular Capstone Scaling</h4>
                 <p class="text-xs text-gray-600 mt-1">Completing Digital SAT or ACT [Target Score Benchmarks &bull; Client to confirm], scaling independent research or capstone projects to state/national impact, curating preliminary university lists, and teacher recommendation positioning.</p>
               </div>
             </div>
@@ -687,7 +718,7 @@
         </div>
 
         <!-- TEXT CASES -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 items-stretch auto-grid-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 items-stretch auto-grid-4">
           <!-- Case 01: MBA -->
           <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="mba">
             <div>
@@ -750,6 +781,34 @@
               <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
                 <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-800 border border-gray-200 text-[10px] font-bold uppercase font-mono tracking-wider flex items-center gap-1.5">
                   <span class="font-extrabold">03</span>
+                  <span>MBA</span>
+                </span>
+                <span class="text-[10px] font-mono text-gray-400">[Outcome]</span>
+              </div>
+              <div class="text-3xl font-serif text-gray-300 leading-none select-none">&ldquo;</div>
+              <blockquote class="text-xs sm:text-[13px] font-medium text-gray-800 leading-relaxed italic mt-1.5">
+                [VERIFIED TESTIMONIAL: MBA student or parent quote. CLIENT TO CONFIRM]
+              </blockquote>
+            </div>
+
+            <div class="mt-6 pt-3.5 border-t border-gray-100 flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-[#0d121c] text-white flex items-center justify-center font-bold text-xs shrink-0">--</div>
+                <div>
+                  <div class="font-bold text-xs text-gray-900 leading-tight">[Student Name]</div>
+                  <div class="text-[10px] text-gray-500">[Programme &bull; University &bull; Client to confirm]</div>
+                </div>
+              </div>
+              <a href="mba-success.html" class="text-black font-bold text-[10px] font-mono hover:underline whitespace-nowrap shrink-0">Read Story &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Case 04: MBA -->
+          <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="mba">
+            <div>
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                <span class="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-800 border border-gray-200 text-[10px] font-bold uppercase font-mono tracking-wider flex items-center gap-1.5">
+                  <span class="font-extrabold">04</span>
                   <span>MBA</span>
                 </span>
                 <span class="text-[10px] font-mono text-gray-400">[Outcome]</span>
@@ -971,7 +1030,10 @@
             <div class="faq-panel hidden p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-600 leading-relaxed"><span class="font-mono text-gray-400">[CLIENT TO CONFIRM: round timeline]</span></div>
           </div>
           </div>
+                <div class="mt-8 text-center">
+          <a href="mba-faqs.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors">View all MBA FAQs &rarr;</a>
         </div>
+      </div>
       </div>
     </section>
 
@@ -1257,7 +1319,7 @@
 
       <!-- Primary & Secondary CTAs -->
       <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 group">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
           <span>Book a Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -1427,7 +1489,7 @@
                 <li><a href="careers-openings.html" class="text-neutral-200 hover:text-white transition-colors">Open Positions</a></li>
                 <li><a href="careers-apply.html" class="text-neutral-200 hover:text-white transition-colors">Apply Now</a></li>
                 <li><a href="contact.html" class="text-neutral-200 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book Consultation</a></li>
+                <li><a href="contact.html#consultation-form" class="text-neutral-200 hover:text-white transition-colors">Book a Consultation</a></li>
               </ul>
             </div>
 
@@ -1506,7 +1568,7 @@
                 <a href="careers-openings.html" class="block text-neutral-200 hover:text-white py-0.5">Open Positions</a>
                 <a href="careers-apply.html" class="block text-neutral-200 hover:text-white py-0.5">Apply Now</a>
                 <a href="contact.html" class="block text-neutral-200 hover:text-white py-0.5">Contact Us</a>
-                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book Consultation</a>
+                <a href="contact.html#consultation-form" class="block text-neutral-200 hover:text-white py-0.5">Book a Consultation</a>
               </div>
             </details>
           </div>
@@ -1588,7 +1650,7 @@
               <span class="text-white font-extrabold text-sm group-hover:text-white">New Delhi</span>
             </div>
             <div class="text-xs font-semibold text-neutral-200">Connaught Place Central Hub</div>
-            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy center.</p>
+            <p class="text-[11px] text-neutral-400 mt-1 leading-relaxed">North India admissions strategy centre.</p>
             <div class="mt-3 pt-3 border-t border-neutral-800 text-[11px] font-mono space-y-1 text-neutral-300">
               <div class="flex items-center gap-1.5">
                 <span class="text-neutral-500 font-sans text-xs">T:</span>
@@ -1716,7 +1778,7 @@
             Plan your global admissions roadmap with senior mentors
           </p>
           <p class="text-xs text-gray-400 hidden md:block">
-            Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programs.
+            Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programmes.
           </p>
         </div>
       </div>
@@ -1883,6 +1945,6 @@
   </div>
 </div>
 
-  <script src="../assets/wireframe.js"></script>
+  <script src="../assets/wireframe.js?v=6"></script>
 </body>
 </html>

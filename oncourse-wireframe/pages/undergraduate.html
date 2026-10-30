@@ -721,21 +721,19 @@
       </div>
     </section>
 
-    <!-- 5b. BOARDING SCHOOL (school-level, Class 10-11 - kept separate from the college-level pathways above) -->
-    <section id="boarding-school" class="py-12 bg-white border-b border-gray-200 scroll-mt-32">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-gray-800">For Students in Classes 10&ndash;11</span>
-              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-tight mt-1">Boarding School Admissions</h2>
-              <p class="text-sm text-gray-600 mt-2 max-w-2xl">Guidance for students applying to boarding schools abroad. [Short copy to be supplied by the client, same format as Athletic Recruitment.]</p>
-            </div>
-            <button type="button" id="boarding-toggle" aria-expanded="false" aria-controls="boarding-more" class="shrink-0 px-5 py-2.5 rounded-lg border border-black text-black font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors">Read more</button>
+    <!-- 5b. BOARDING SCHOOL (school-level, Class 10-11; same banner style as the SAT/ACT cross-promo above) -->
+    <section id="boarding-school" class="py-14 bg-white border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl bg-black text-white p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <span class="px-3 py-1 rounded-full bg-white/10 text-white text-[10px] font-mono font-bold uppercase tracking-wider">For Classes 10&ndash;11</span>
+            <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Boarding School Admissions</h2>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">Guidance for students applying to boarding schools abroad, from school selection to interviews and timelines. [Short copy to be supplied by the client, same format as Athletic Recruitment.]</p>
+            <p id="boarding-more" class="hidden text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">[Two to three more lines on school selection, interviews and application timelines &mdash; client to confirm.]</p>
           </div>
-          <div id="boarding-more" class="hidden mt-5 pt-5 border-t border-gray-200 text-sm text-gray-600">
-            <p>[Two to three more lines on school selection, interviews and timelines &mdash; client to confirm.]</p>
-            <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="inline-flex items-center gap-2 mt-4 px-5 py-2.5 rounded-lg bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer">Book a Consultation &rarr;</a>
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <button type="button" id="boarding-toggle" aria-expanded="false" aria-controls="boarding-more" class="w-full text-center px-6 py-3.5 rounded-lg bg-white text-black font-extrabold text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">Read more &rarr;</button>
+            <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="w-full text-center px-6 py-3.5 rounded-lg border border-gray-500 text-white font-semibold text-xs uppercase tracking-wider hover:bg-gray-800 transition-colors cursor-pointer">Book a Consultation</a>
           </div>
         </div>
       </div>
@@ -746,7 +744,7 @@
           b.addEventListener('click', function () {
             var open = m.classList.toggle('hidden') === false;
             b.setAttribute('aria-expanded', open);
-            b.textContent = open ? 'Show less' : 'Read more';
+            b.innerHTML = open ? 'Show less' : 'Read more &rarr;';
           });
         })();
       </script>

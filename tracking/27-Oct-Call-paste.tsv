@@ -1,0 +1,15 @@
+Undergraduate	Boarding School	"Boarding School is school-level (Classes 10-11), so it moves out of ""Specialist Admissions Pathways"" into its own short section; Law School added to the pathways"	Done	undergraduate.html
+Undergraduate	Boarding School	Keep text short: 1-2 sentences with a Read more toggle, no long scroll	Done	undergraduate.html; copy to follow the Athletic Recruitment format (client to supply)
+Master's	Overview	Broader categories: Business, Social Sciences, STEM, Policy; remove 'Areas of Expertise' headers	Done	masters.html; category copy pending master's team
+Master's	Program	Add Scope of Services with bullet points	Pending	masters.html; structure in place, bullet copy pending Arkopriya / master's team
+Master's	Overview	Remove M7, add top placements	Done	masters.html
+Master's	Program	Remove visa guidance section	Done	masters.html; no visa section on the page
+Careers	Sub-nav	Keep only 'Join Our Team'; remove 'Open Positions' and 'Apply Now'	Done	careers.html, careers-openings.html, careers-apply.html
+Undergraduate / Master's / MBA	Linking	'Explore undergrad programme' opens the SAT page; should open the undergraduate page (same for Master's and MBA)	Need Clarification	Exact page/button not identified; Rakesh to confirm
+All pages	Consultation form / buttons	'Diagnostic Consultation' only for Test Prep; other segments use 'Book / Schedule a Consultation'	Done	Consultation modal (all pages); Test Prep keeps Diagnostic
+All pages	Get Started popup	Scroll-triggered 'Get Started' panel (Ivy Coach style): first name, last name, admissions need	Done	Demo only: add ?getstarted=1 to any page URL. Show to management on Friday
+Home / About / Team / UG / Master's / MBA / Test Prep	Sticky bar	Remove 'Plan your global admissions roadmap with senior mentors'	Pending	Removed from contact.html only; confirm whether to remove from the other 7 pages
+All pages	Placeholder logos	Placeholder 'Encourse Global' logos distract from structure	Pending	Logos/branding updated in the design phase
+Master's / MBA	Wireframe	Keep full Master's and MBA wireframes ready even if copy is unchanged	Done	masters.html, mba.html
+Undergraduate	Copy	Arkopriya to send UG basic copy and athletic recruitment copy	Pending	Client action
+All	Final review	Final review meeting Friday 31 Oct, 3 PM	Pending	Group meeting

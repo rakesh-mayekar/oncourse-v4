@@ -703,10 +703,6 @@
             <div class="text-[11px] text-gray-500 font-mono mt-1">[College A] &bull; [College B]</div>
           </div>
           <div class="px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-black transition-colors">
-            <div class="text-sm font-bold text-gray-900">Boarding School</div>
-            <div class="text-[11px] text-gray-500 font-mono mt-1">[School A] &bull; [School B]</div>
-          </div>
-          <div class="px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-black transition-colors">
             <div class="text-sm font-bold text-gray-900">Transfer Students</div>
             <div class="text-[11px] text-gray-500 font-mono mt-1">[College A] &bull; [College B]</div>
           </div>
@@ -714,11 +710,46 @@
             <div class="text-sm font-bold text-gray-900">Art &amp; Design</div>
             <div class="text-[11px] text-gray-500 font-mono mt-1">[College A] &bull; [College B]</div>
           </div>
+          <div class="px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-black transition-colors">
+            <div class="text-sm font-bold text-gray-900">Law School</div>
+            <div class="text-[11px] text-gray-500 font-mono mt-1">[College A] &bull; [College B]</div>
+          </div>
         </div>
         <div class="mt-8 text-center">
           <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer">Connect with the team to know more &rarr;</a>
         </div>
       </div>
+    </section>
+
+    <!-- 5b. BOARDING SCHOOL (school-level, Class 10-11 - kept separate from the college-level pathways above) -->
+    <section id="boarding-school" class="py-12 bg-white border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-gray-800">For Students in Classes 10&ndash;11</span>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-tight mt-1">Boarding School Admissions</h2>
+              <p class="text-sm text-gray-600 mt-2 max-w-2xl">Guidance for students applying to boarding schools abroad. [Short copy to be supplied by the client, same format as Athletic Recruitment.]</p>
+            </div>
+            <button type="button" id="boarding-toggle" aria-expanded="false" aria-controls="boarding-more" class="shrink-0 px-5 py-2.5 rounded-lg border border-black text-black font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors">Read more</button>
+          </div>
+          <div id="boarding-more" class="hidden mt-5 pt-5 border-t border-gray-200 text-sm text-gray-600">
+            <p>[Two to three more lines on school selection, interviews and timelines &mdash; client to confirm.]</p>
+            <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="inline-flex items-center gap-2 mt-4 px-5 py-2.5 rounded-lg bg-black text-white font-extrabold text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer">Book a Consultation &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var b = document.getElementById('boarding-toggle'), m = document.getElementById('boarding-more');
+          if (!b || !m) return;
+          b.addEventListener('click', function () {
+            var open = m.classList.toggle('hidden') === false;
+            b.setAttribute('aria-expanded', open);
+            b.textContent = open ? 'Show less' : 'Read more';
+          });
+        })();
+      </script>
     </section>
 
     <!-- PROVEN RESULTS: UNDERGRADUATE (styled as the home page "Proven Results" section: text cases + video reels) -->

@@ -49,9 +49,7 @@
         { label: 'FAQs', href: 'test-prep-faqs.html', id: 'faqs' }
       ],
       careers: [
-        { label: 'Life at OnCourse', href: 'careers.html', id: 'life' },
-        { label: 'Open Positions', href: 'careers-openings.html', id: 'openings' },
-        { label: 'Apply Now', href: 'careers-apply.html', id: 'apply' }
+        { label: 'Join Our Team', href: 'careers.html', id: 'life' }
       ],
       contact: [
         { label: 'Overview', href: 'contact.html', id: 'overview' },

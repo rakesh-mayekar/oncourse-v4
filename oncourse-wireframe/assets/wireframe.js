@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelineDownloadModal();
   initEventsController();
   initMajorEventAnnouncement();
+  initGetStartedPopup();
 });
 
 // 1. Mobile Menu Toggle
@@ -539,7 +540,7 @@ function initConsultationModal() {
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<span>Schedule Diagnostic Consultation</span> <span class=\"transition-transform group-hover:translate-x-1\">&rarr;</span>';
+            submitBtn.innerHTML = '<span>' + ((form.closest('#consultation-modal') || {dataset:{}}).dataset.consultButton || 'Schedule a Consultation') + '</span> <span class=\"transition-transform group-hover:translate-x-1\">&rarr;</span>';
           }
           form.classList.add('hidden');
           if (successState) {
@@ -550,9 +551,28 @@ function initConsultationModal() {
     }
   }
 
+  // "Diagnostic" wording is Test Prep only; every other segment says "Schedule a Consultation"
+  function consultLabels(modal) {
+    const seg = modal.querySelector('#popup-segment');
+    const isTestPrep = (seg && seg.value === 'test-prep') || /test-prep/.test(window.location.pathname);
+    return isTestPrep
+      ? { badge: 'Diagnostic Consultation', button: 'Schedule Diagnostic Consultation' }
+      : { badge: 'Consultation', button: 'Schedule a Consultation' };
+  }
+
+  function applyConsultLabels(modal) {
+    const labels = consultLabels(modal);
+    const badge = modal.querySelector('#modal-title') && modal.querySelector('#modal-title').previousElementSibling;
+    if (badge) badge.textContent = labels.badge;
+    const btnLabel = modal.querySelector('form button[type="submit"] span');
+    if (btnLabel) btnLabel.textContent = labels.button;
+    modal.dataset.consultButton = labels.button;
+  }
+
   function openModal() {
     const modal = ensureModal();
     setupModalEvents(modal);
+    applyConsultLabels(modal);
     const dialogWin = modal.querySelector('.relative.bg-white');
     modal.classList.remove('hidden');
     requestAnimationFrame(() => {
@@ -590,6 +610,10 @@ function initConsultationModal() {
         else if (dataSeg === 'mba') segmentSelect.value = 'mba';
         else if (dataSeg === 'masters') segmentSelect.value = 'masters';
         else if (dataSeg === 'test-prep') segmentSelect.value = 'test-prep';
+      }
+      if (segmentSelect && !segmentSelect.dataset.labelBound) {
+        segmentSelect.dataset.labelBound = '1';
+        segmentSelect.addEventListener('change', () => applyConsultLabels(modalEl));
       }
       openModal();
     }
@@ -1142,3 +1166,61 @@ function initMajorEventAnnouncement() {
     });
   });
 })();
+
+
+// 10. "Get Started" scroll-triggered panel (Ivy Coach style) - DEMO for the management review.
+// Off by default; open any page with ?getstarted=1 to see it. It opens after ~25% scroll and
+// captures only first name, last name and admissions need.
+function initGetStartedPopup() {
+  let enabled = false;
+  try { enabled = new URLSearchParams(window.location.search).get('getstarted') === '1'; } catch (e) {}
+  if (!enabled) return;
+
+  // The demo replaces the other floating prompts so only one panel is on screen
+  ['segment-popup', 'sticky-cta-bar'].forEach(id => { const el = document.getElementById(id); if (el) el.style.display = 'none'; });
+
+  const panel = document.createElement('aside');
+  panel.id = 'get-started-panel';
+  panel.setAttribute('aria-label', 'Get started');
+  panel.className = 'fixed z-50 bottom-0 inset-x-0 sm:inset-x-auto sm:right-6 sm:bottom-6 sm:w-80 bg-white text-gray-900 border border-gray-200 sm:rounded-2xl shadow-2xl p-5 transition-all duration-300 translate-y-8 opacity-0 pointer-events-none';
+  panel.innerHTML = `
+    <button type="button" id="gs-close" class="absolute top-3 right-3 p-1 text-gray-400 hover:text-black" aria-label="Close">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <h3 class="text-base font-black tracking-tight">Schedule a Consultation</h3>
+    <form id="gs-form" class="mt-3 space-y-3">
+      <div class="grid grid-cols-2 gap-2">
+        <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-600">First name
+          <input type="text" required class="mt-1 w-full px-2.5 py-2 rounded-md border border-gray-300 text-sm font-normal normal-case tracking-normal focus:ring-2 focus:ring-black focus:border-black"></label>
+        <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-600">Last name
+          <input type="text" required class="mt-1 w-full px-2.5 py-2 rounded-md border border-gray-300 text-sm font-normal normal-case tracking-normal focus:ring-2 focus:ring-black focus:border-black"></label>
+      </div>
+      <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-600">Admissions need
+        <select required class="mt-1 w-full px-2.5 py-2 rounded-md border border-gray-300 text-sm font-normal normal-case tracking-normal bg-white focus:ring-2 focus:ring-black focus:border-black">
+          <option value="">Select&hellip;</option>
+          <option>Undergraduate (College)</option>
+          <option>Master&rsquo;s</option>
+          <option>MBA</option>
+          <option>Test Prep</option>
+          <option>Boarding School</option>
+        </select></label>
+      <button type="submit" class="w-full py-2.5 rounded-lg bg-black hover:bg-neutral-800 text-white font-extrabold text-xs uppercase tracking-wider transition-colors">Get Started &rarr;</button>
+    </form>
+    <p id="gs-thanks" class="hidden mt-3 text-sm text-gray-700">Thank you &mdash; our team will be in touch shortly. <span class="block text-[11px] font-mono text-gray-400 mt-1">(Demo: nothing is sent)</span></p>`;
+  document.body.appendChild(panel);
+
+  let shown = false, closed = false;
+  const show = () => { if (shown || closed) return; shown = true; panel.classList.remove('translate-y-8', 'opacity-0', 'pointer-events-none'); };
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max > 0 && (window.scrollY / max) * 100 > 25) show();
+  }, { passive: true });
+  panel.querySelector('#gs-close').addEventListener('click', () => {
+    closed = true; panel.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+  });
+  panel.querySelector('#gs-form').addEventListener('submit', e => {
+    e.preventDefault();
+    e.target.classList.add('hidden');
+    panel.querySelector('#gs-thanks').classList.remove('hidden');
+  });
+}

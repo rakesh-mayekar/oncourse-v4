@@ -729,25 +729,12 @@
             <span class="px-3 py-1 rounded-full bg-white/10 text-white text-[10px] font-mono font-bold uppercase tracking-wider">For Classes 10&ndash;11</span>
             <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Boarding School Admissions</h2>
             <p class="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">Guidance for students applying to boarding schools abroad, from school selection to interviews and timelines. [Short copy to be supplied by the client, same format as Athletic Recruitment.]</p>
-            <p id="boarding-more" class="hidden text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">[Two to three more lines on school selection, interviews and application timelines &mdash; client to confirm.]</p>
           </div>
           <div class="lg:col-span-4 flex flex-col gap-3">
-            <button type="button" id="boarding-toggle" aria-expanded="false" aria-controls="boarding-more" class="w-full text-center px-6 py-3.5 rounded-lg bg-white text-black font-extrabold text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">Read more &rarr;</button>
             <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="w-full text-center px-6 py-3.5 rounded-lg border border-gray-500 text-white font-semibold text-xs uppercase tracking-wider hover:bg-gray-800 transition-colors cursor-pointer">Book a Consultation</a>
           </div>
         </div>
       </div>
-      <script>
-        (function () {
-          var b = document.getElementById('boarding-toggle'), m = document.getElementById('boarding-more');
-          if (!b || !m) return;
-          b.addEventListener('click', function () {
-            var open = m.classList.toggle('hidden') === false;
-            b.setAttribute('aria-expanded', open);
-            b.innerHTML = open ? 'Show less' : 'Read more &rarr;';
-          });
-        })();
-      </script>
     </section>
 
     <!-- PROVEN RESULTS: UNDERGRADUATE (styled as the home page "Proven Results" section: text cases + video reels) -->

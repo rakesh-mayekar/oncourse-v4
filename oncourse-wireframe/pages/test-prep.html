@@ -927,6 +927,55 @@
   </main>
 
   <!-- @component:footer cta="test-prep" -->
+<section id="ambition-cta-wrapper" class="bg-black text-neutral-300 relative overflow-hidden">
+  <!-- ================= CTA BAND (single Book a Consultation button, per client feedback). Slots "cta" (copy) and "cta-secondary" (second button) can be overridden per page via components/footer-cta-<name>.html ================= -->
+  <!-- #6d6d6d Grey Background with Compact Spacing & Crisp Contrast -->
+  <div class="border-b border-neutral-600/70 bg-[#6d6d6d] py-10 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    
+    <!-- Architectural grid texture with subtle dark lines on grey -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,255,255,0.18),transparent_75%)] pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-10 space-y-4">
+      
+      <!-- @slot:cta -->
+      <!-- Brand Device Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black text-white text-xs font-mono font-bold uppercase tracking-widest shadow-md">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Endless Possibility &bull; Senior Admissions Advisory</span>
+      </div>
+
+      <!-- Headline -->
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-md">
+        Your Next Chapter Starts Here.
+      </h2>
+
+      <!-- Supporting Copy -->
+      <p class="text-sm sm:text-base text-neutral-100 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-sm">
+        Explore what&rsquo;s possible with guidance shaped around your ambitions.
+      </p>
+      <!-- /@slot:cta -->
+
+      <!-- Primary & Secondary CTAs -->
+      <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
+          <span>Book a Consultation</span>
+          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </a>
+        <!-- @slot:cta-secondary -->
+        <a href="test-prep.html#consultation-form" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-black hover:bg-neutral-900 text-white border border-black/80 font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
+          <span>Book a Diagnostic Assessment</span>
+          <span>&rarr;</span>
+        </a>
+        <!-- /@slot:cta-secondary -->
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
 <section id="instagram-feed-wrapper" class="bg-black text-neutral-300 relative overflow-hidden">
   <!-- ================= INSTAGRAM REELS & POSTS FEED (PLACED ABOVE THE FOOTER, PER CLIENT FEEDBACK) ================= -->
   <div class="border-b border-neutral-800 bg-[#0c0d11] py-8 sm:py-10 relative overflow-hidden" id="instagram-feed-section">
@@ -1152,55 +1201,6 @@
 
 </section>
 
-<section id="ambition-cta-wrapper" class="bg-black text-neutral-300 relative overflow-hidden">
-  <!-- ================= CTA BAND (single Book a Consultation button, per client feedback). Slots "cta" (copy) and "cta-secondary" (second button) can be overridden per page via components/footer-cta-<name>.html ================= -->
-  <!-- #6d6d6d Grey Background with Compact Spacing & Crisp Contrast -->
-  <div class="border-b border-neutral-600/70 bg-[#6d6d6d] py-10 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-    
-    <!-- Architectural grid texture with subtle dark lines on grey -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,255,255,0.18),transparent_75%)] pointer-events-none"></div>
-    
-    <div class="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-      
-      <!-- @slot:cta -->
-      <!-- Brand Device Pill -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black text-white text-xs font-mono font-bold uppercase tracking-widest shadow-md">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Endless Possibility &bull; Senior Admissions Advisory</span>
-      </div>
-
-      <!-- Headline -->
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-md">
-        Your Next Chapter Starts Here.
-      </h2>
-
-      <!-- Supporting Copy -->
-      <p class="text-sm sm:text-base text-neutral-100 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-sm">
-        Explore what&rsquo;s possible with guidance shaped around your ambitions.
-      </p>
-      <!-- /@slot:cta -->
-
-      <!-- Primary & Secondary CTAs -->
-      <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-        <a href="contact.html#consultation-form" data-open-modal="consultation" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-black font-extrabold text-xs transition-all shadow-xl flex items-center justify-center gap-2 group">
-          <span>Book a Consultation</span>
-          <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
-        </a>
-        <!-- @slot:cta-secondary -->
-        <a href="test-prep.html#consultation-form" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-black hover:bg-neutral-900 text-white border border-black/80 font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
-          <span>Book a Diagnostic Assessment</span>
-          <span>&rarr;</span>
-        </a>
-        <!-- /@slot:cta-secondary -->
-      </div>
-
-    </div>
-  </div>
-
-
-</section>
-
 <footer class="bg-black text-neutral-300 relative overflow-hidden border-t border-neutral-800">
 
   <!-- ================= TIER 2: ONCOURSE BRAND BLOCK + REORGANIZED NAVIGATION ================= -->
@@ -1214,7 +1214,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
         
         <!-- Brand Column Card (5 Cols) -->
-        <div class="lg:col-span-5 bg-neutral-900/85 border border-neutral-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-xl backdrop-blur-md relative overflow-hidden space-y-5">
+        <div class="lg:col-span-4 bg-neutral-900/85 border border-neutral-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-xl backdrop-blur-md relative overflow-hidden space-y-5">
           <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-neutral-500 to-transparent"></div>
           
           <div class="space-y-4">
@@ -1278,17 +1278,17 @@
         </div>
 
         <!-- Navigation Columns Card (7 Cols) -->
-        <div class="lg:col-span-7 bg-neutral-900/65 border border-neutral-800 rounded-2xl p-6 sm:p-7 shadow-xl backdrop-blur-md relative overflow-hidden flex flex-col justify-between">
+        <div class="lg:col-span-8 bg-neutral-900/65 border border-neutral-800 rounded-2xl p-6 sm:p-7 shadow-xl backdrop-blur-md relative overflow-hidden flex flex-col justify-between">
           <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-neutral-600 to-transparent"></div>
           
           <!-- Desktop Grid View (Visible on sm and larger) -->
-          <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="hidden sm:grid sm:grid-cols-3 xl:grid-cols-5 gap-x-6 gap-y-8 xl:gap-x-5">
             <!-- Column 1: Undergraduate -->
             <div>
-              <h4 class="text-white font-extrabold text-xs uppercase tracking-widest mb-3.5 border-l-2 border-white pl-2">
+              <h4 class="text-white font-extrabold text-[11px] uppercase tracking-wider mb-3.5 border-l-2 border-white pl-2 leading-tight min-h-[1rem] whitespace-nowrap">
                 Undergraduate
               </h4>
-              <ul class="space-y-2 text-xs">
+              <ul class="space-y-2.5 text-xs leading-snug pl-[10px] pr-1">
                 <li><a href="undergraduate.html" class="text-neutral-200 hover:text-white transition-colors">Overview</a></li>
                 <li><a href="undergraduate-knowledge.html" class="text-neutral-200 hover:text-white transition-colors">Knowledge Centre</a></li>
                 <li><a href="undergraduate-success.html" class="text-neutral-200 hover:text-white transition-colors">Success Stories</a></li>
@@ -1298,10 +1298,10 @@
 
             <!-- Column 2: Master's -->
             <div>
-              <h4 class="text-white font-extrabold text-xs uppercase tracking-widest mb-3.5 border-l-2 border-white pl-2">
+              <h4 class="text-white font-extrabold text-[11px] uppercase tracking-wider mb-3.5 border-l-2 border-white pl-2 leading-tight min-h-[1rem] whitespace-nowrap">
                 Master's
               </h4>
-              <ul class="space-y-2 text-xs">
+              <ul class="space-y-2.5 text-xs leading-snug pl-[10px] pr-1">
                 <li><a href="masters.html" class="text-neutral-200 hover:text-white transition-colors">Overview</a></li>
                 <li><a href="masters-knowledge.html" class="text-neutral-200 hover:text-white transition-colors">Knowledge Centre</a></li>
                 <li><a href="masters-success.html" class="text-neutral-200 hover:text-white transition-colors">Success Stories</a></li>
@@ -1311,10 +1311,10 @@
 
             <!-- Column 3: MBA -->
             <div>
-              <h4 class="text-white font-extrabold text-xs uppercase tracking-widest mb-3.5 border-l-2 border-white pl-2">
+              <h4 class="text-white font-extrabold text-[11px] uppercase tracking-wider mb-3.5 border-l-2 border-white pl-2 leading-tight min-h-[1rem] whitespace-nowrap">
                 MBA
               </h4>
-              <ul class="space-y-2 text-xs">
+              <ul class="space-y-2.5 text-xs leading-snug pl-[10px] pr-1">
                 <li><a href="mba.html" class="text-neutral-200 hover:text-white transition-colors">Overview</a></li>
                 <li><a href="mba-knowledge.html" class="text-neutral-200 hover:text-white transition-colors">Knowledge Centre</a></li>
                 <li><a href="mba-success.html" class="text-neutral-200 hover:text-white transition-colors">Success Stories</a></li>
@@ -1324,10 +1324,10 @@
 
             <!-- Column 4: Test Prep -->
             <div>
-              <h4 class="text-white font-extrabold text-xs uppercase tracking-widest mb-3.5 border-l-2 border-white pl-2">
+              <h4 class="text-white font-extrabold text-[11px] uppercase tracking-wider mb-3.5 border-l-2 border-white pl-2 leading-tight min-h-[1rem] whitespace-nowrap">
                 Test Prep
               </h4>
-              <ul class="space-y-2 text-xs">
+              <ul class="space-y-2.5 text-xs leading-snug pl-[10px] pr-1">
                 <li><a href="test-prep.html" class="text-neutral-200 hover:text-white transition-colors">Overview</a></li>
                 <li><a href="test-prep-sat-act.html" class="text-neutral-200 hover:text-white transition-colors">SAT &amp; ACT</a></li>
                 <li><a href="test-prep-gmat-gre.html" class="text-neutral-200 hover:text-white transition-colors">GMAT &amp; GRE</a></li>
@@ -1339,10 +1339,10 @@
 
             <!-- Column 5: Company -->
             <div>
-              <h4 class="text-white font-extrabold text-xs uppercase tracking-widest mb-3.5 border-l-2 border-white pl-2">
+              <h4 class="text-white font-extrabold text-[11px] uppercase tracking-wider mb-3.5 border-l-2 border-white pl-2 leading-tight min-h-[1rem] whitespace-nowrap">
                 Company
               </h4>
-              <ul class="space-y-2 text-xs">
+              <ul class="space-y-2.5 text-xs leading-snug pl-[10px] pr-1">
                 <li><a href="home.html" class="text-neutral-200 hover:text-white transition-colors">Home</a></li>
                 <li><a href="about.html" class="text-neutral-200 hover:text-white transition-colors">About Us</a></li>
                 <li><a href="team.html" class="text-neutral-200 hover:text-white transition-colors">Our Team</a></li>
@@ -1804,6 +1804,6 @@
   </div>
 </div>
 
-  <script src="../assets/wireframe.js?v=6"></script>
+  <script src="../assets/wireframe.js?v=10"></script>
 </body>
 </html>

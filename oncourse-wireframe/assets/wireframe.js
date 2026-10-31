@@ -63,7 +63,19 @@ function initStickyCTA() {
   const dismissBtn = document.getElementById('sticky-cta-dismiss');
   if (!stickyBar) return;
 
+  const DISMISS_KEY = 'oncourse_sticky_dismissed';
   let isDismissed = false;
+  try { isDismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch (e) {}
+
+  // Remove the bar from layout and from the hit-test entirely once dismissed.
+  const hideForGood = () => {
+    isDismissed = true;
+    stickyBar.classList.remove('translate-y-0', 'opacity-100');
+    stickyBar.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none', 'hidden');
+    stickyBar.style.display = 'none';
+    stickyBar.setAttribute('aria-hidden', 'true');
+  };
+  if (isDismissed) { hideForGood(); return; }
 
   window.addEventListener('scroll', () => {
     if (isDismissed) return;
@@ -78,9 +90,11 @@ function initStickyCTA() {
   }, { passive: true });
 
   if (dismissBtn) {
-    dismissBtn.addEventListener('click', () => {
-      isDismissed = true;
-      stickyBar.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+    dismissBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      hideForGood();
+      try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (err) {}
     });
   }
 }

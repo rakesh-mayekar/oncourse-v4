@@ -63,9 +63,8 @@ function initStickyCTA() {
   const dismissBtn = document.getElementById('sticky-cta-dismiss');
   if (!stickyBar) return;
 
-  const DISMISS_KEY = 'oncourse_sticky_dismissed';
+  // Dismissal lasts for this page view only: the bar returns on the next page or reload.
   let isDismissed = false;
-  try { isDismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch (e) {}
 
   // Remove the bar from layout and from the hit-test entirely once dismissed.
   const hideForGood = () => {
@@ -94,7 +93,6 @@ function initStickyCTA() {
       e.preventDefault();
       e.stopPropagation();
       hideForGood();
-      try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (err) {}
     });
   }
 }

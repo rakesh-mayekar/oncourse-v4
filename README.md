@@ -116,6 +116,7 @@ The wireframe is static HTML. The following are **front-end only** and need real
 |---|---|---|
 | Resource download limit (Knowledge Centres) | Counts downloads per email + phone in `localStorage`; after the 3rd download shows the "book a short call" message | Server-side counter keyed by email + phone (normalised/hashed), stored in the CMS/CRM; the limit must not be bypassable by clearing the browser; download links issued only by the server |
 | Consultation / contact / career forms | Show a success state, nothing is sent | Form endpoint, spam protection, CRM/email routing |
+| Footer newsletter subscription | Validates the email and shows a demo success message, nothing is sent | Email-service integration (Mailchimp or similar), double opt-in, consent wording |
 | Get Started scroll popup (`?getstarted=1`) | Demo only, nothing is sent | Same form endpoint; client to decide whether to keep it |
 | Instagram feed | Placeholder cards (`[Views]`, `[Likes]`, `[Reel caption]`) | Instagram API integration |
 | Success Stories | Filters + search + "Load More" over static cards (6 at a time) | Paginated CMS query; same UI contract (`.testimonial-item-card`, `#load-more-btn`) |

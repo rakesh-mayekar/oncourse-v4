@@ -1243,6 +1243,34 @@
             </div>
           </div>
 
+          <!-- Newsletter subscription (front-end only; needs an email-service endpoint, see README "Backend requirements") -->
+          <div class="mt-auto pt-5 border-t border-neutral-800">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block font-semibold mb-1.5">Stay Updated</span>
+            <p class="text-xs text-neutral-300 leading-relaxed mb-3">Subscribe for admissions insights, event invitations and guides from our mentors.</p>
+            <form id="footer-subscribe-form" novalidate class="flex items-stretch border border-neutral-600 rounded-lg overflow-hidden focus-within:border-white transition-colors">
+              <label for="footer-subscribe-email" class="sr-only">Email address</label>
+              <input id="footer-subscribe-email" type="email" name="email" autocomplete="email" placeholder="Enter your email" required class="flex-1 min-w-0 placeholder-neutral-500 text-xs px-3.5 py-2.5 outline-none">
+              <button type="submit" aria-label="Subscribe" class="shrink-0 px-4 bg-black hover:bg-neutral-800 text-white border-l border-neutral-600 font-bold text-xs transition-colors cursor-pointer">Subscribe</button>
+            </form>
+            <p id="footer-subscribe-msg" class="text-[11px] mt-2 min-h-[1rem] text-neutral-400" role="status" aria-live="polite"></p>
+            <script>
+            (function () {
+              var f = document.getElementById('footer-subscribe-form');
+              if (!f || f.dataset.bound) return;
+              f.dataset.bound = '1';
+              f.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var inp = document.getElementById('footer-subscribe-email');
+                var msg = document.getElementById('footer-subscribe-msg');
+                var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(inp.value.trim());
+                msg.className = 'text-[11px] mt-2 min-h-[1rem] ' + (ok ? 'text-emerald-400' : 'text-red-400');
+                msg.textContent = ok ? 'Thank you. You are subscribed (demo: no email is sent from this wireframe).' : 'Please enter a valid email address.';
+                if (ok) inp.value = '';
+              });
+            })();
+            </script>
+          </div>
+
         </div>
 
         <!-- Navigation Columns Card (7 Cols) -->

@@ -436,7 +436,7 @@ function initConsultationModal() {
             Preferred Hub *
           </label>
           <select id="popup-hub" name="hub" required class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs sm:text-sm text-neutral-900 bg-white focus:ring-2 focus:ring-black focus:border-black font-medium">
-            <option value="mumbai">Mumbai (Headquarters)</option>
+            <option value="mumbai">Mumbai</option>
             <option value="delhi">Delhi</option>
             <option value="gurgaon">Gurgaon</option>
             <option value="dubai">Dubai</option>

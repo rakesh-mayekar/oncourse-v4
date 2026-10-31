@@ -105,3 +105,25 @@ Because this prototype is built with standard HTML5, Tailwind CSS (CDN), and Van
    python3 -m http.server 4200
    ```
    Navigate to `http://localhost:4200/` to explore all pages with responsive device frames.
+
+---
+
+## 🔌 Backend requirements (not built in the wireframe)
+
+The wireframe is static HTML. The following are **front-end only** and need real infrastructure in the WordPress phase:
+
+| Feature | What the wireframe does | What production needs |
+|---|---|---|
+| Resource download limit (Knowledge Centres) | Counts downloads per email + phone in `localStorage`; after the 3rd download shows the "book a short call" message | Server-side counter keyed by email + phone (normalised/hashed), stored in the CMS/CRM; the limit must not be bypassable by clearing the browser; download links issued only by the server |
+| Consultation / contact / career forms | Show a success state, nothing is sent | Form endpoint, spam protection, CRM/email routing |
+| Get Started scroll popup (`?getstarted=1`) | Demo only, nothing is sent | Same form endpoint; client to decide whether to keep it |
+| Instagram feed | Placeholder cards (`[Views]`, `[Likes]`, `[Reel caption]`) | Instagram API integration |
+| Success Stories | Filters + search + "Load More" over static cards (6 at a time) | Paginated CMS query; same UI contract (`.testimonial-item-card`, `#load-more-btn`) |
+
+## ❓ Awaiting client confirmation
+
+- **CLIENT CONFIRMATION REQUIRED:** Test Prep Success Stories filter: Option A `SAT / ACT / GMAT / GRE` (current) or Option B `SAT / ACT` and `GMAT / GRE` (grouped). Marked with a comment in `test-prep-success.html`.
+- Real placements data (logos, names, counts), testimonials, student names, score results, target scores, test dates.
+- MBA roadmap copy, Master's and MBA USP copy, Master's programme lists (only Business has example programmes).
+- Additional specialist services: popup used for UG pathways, confirm the pattern.
+- OS link, "Remove Baseline" meaning, hero video file, LinkedIn URLs, senior-team brochure content.

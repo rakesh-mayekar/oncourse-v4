@@ -20,11 +20,11 @@
     badge: 'Live Virtual',
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
     primaryCta: {
-      text: 'Register for live panel',
+      text: 'Register for Live Panel',
       url: 'upcoming-events.html'
     },
     secondaryCta: {
-      text: 'View full agenda',
+      text: 'View Full Agenda',
       url: 'upcoming-events.html#agenda'
     },
     autoOpenOnFirstVisit: true
@@ -37,7 +37,7 @@
     const hasSecondary = cfg.secondaryCta && cfg.secondaryCta.text && cfg.secondaryCta.url;
     const secondaryHTML = hasSecondary
       ? `<a id="event-panel-secondary-cta" href="${cfg.secondaryCta.url}" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-white font-bold text-xs transition-all">
-           <span id="event-panel-secondary-cta-text">${Cfg.secondaryCta.text}</span>
+           <span id="event-panel-secondary-cta-text">${Cfg.secondaryCta.Text}</span>
          </a>`
       : '';
 
@@ -101,7 +101,7 @@
             <!-- CTAs -->
             <div class="pt-2 flex flex-wrap items-center gap-3">
               <a id="event-panel-primary-cta" href="${cfg.primaryCta.url}" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-black hover:bg-neutral-200 font-extrabold text-xs shadow-md hover:shadow-lg transition-all group">
-                <span id="event-panel-primary-cta-text">${Cfg.primaryCta.text}</span>
+                <span id="event-panel-primary-cta-text">${Cfg.primaryCta.Text}</span>
                 <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
               </a>
               ${secondaryHTML}
@@ -115,7 +115,7 @@
 
       <!-- BOTTOM / EDGE: Clear "Close" control anchored to bottom edge -->
       <button id="event-panel-close-bottom" type="button" class="event-panel-collapse-tab absolute -bottom-9 left-1/2 -translate-x-1/2 bg-[#0F1117] hover:bg-[#1A1D26] text-neutral-300 hover:text-white px-5 py-1.5 border-b border-x border-neutral-700 hover:border-neutral-500 rounded-b-xl text-[11px] font-mono font-bold flex items-center gap-2 cursor-pointer shadow-xl transition-all z-70" aria-label="Close and collapse panel upward">
-        <span>Close panel</span>
+        <span>Close Panel</span>
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
       </button>
     </aside>
@@ -134,7 +134,7 @@
         </div>
         <div class="flex items-center gap-2 shrink-0">
           <button id="event-panel-expand-btn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/10 hover:bg-white text-white hover:text-black font-mono font-bold text-[11px] transition-colors cursor-pointer border border-white/20 hover:border-white">
-            <span>View update</span>
+            <span>View Update</span>
             <svg class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <button id="event-trigger-dismiss-btn" type="button" class="text-neutral-500 hover:text-white p-1 rounded hover:bg-neutral-800 transition-colors cursor-pointer" aria-label="Dismiss event notice">

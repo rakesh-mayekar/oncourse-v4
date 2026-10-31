@@ -442,7 +442,7 @@ function initConsultationModal() {
       <!-- Submit CTA -->
       <div class="pt-2">
         <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-black hover:bg-neutral-800 text-white font-extrabold text-xs transition-all shadow-lg flex items-center justify-center gap-2 group cursor-pointer">
-          <span>Schedule diagnostic consultation</span>
+          <span>Schedule Diagnostic Consultation</span>
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </button>
       </div>
@@ -475,7 +475,7 @@ function initConsultationModal() {
       </div>
       <div class="pt-2">
         <button id="consultation-success-close" type="button" class="px-6 py-2.5 rounded-lg bg-black text-white font-bold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">
-          Close window
+          Close Window
         </button>
       </div>
     </div>
@@ -540,7 +540,7 @@ function initConsultationModal() {
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<span>' + ((form.closest('#consultation-modal') || {dataset:{}}).dataset.consultButton || 'Schedule a consultation') + '</span> <span class=\"transition-transform group-hover:translate-x-1\">&rarr;</span>';
+            submitBtn.innerHTML = '<span>' + ((form.closest('#consultation-modal') || {dataset:{}}).dataset.consultButton || 'Schedule a Consultation') + '</span> <span class=\"transition-transform group-hover:translate-x-1\">&rarr;</span>';
           }
           form.classList.add('hidden');
           if (successState) {
@@ -556,8 +556,8 @@ function initConsultationModal() {
     const seg = modal.querySelector('#popup-segment');
     const isTestPrep = (seg && seg.value === 'test-prep') || /test-prep/.test(window.location.pathname);
     return isTestPrep
-      ? { badge: 'Diagnostic consultation', button: 'Schedule diagnostic consultation' }
-      : { badge: 'Consultation', button: 'Schedule a consultation' };
+      ? { badge: 'Diagnostic Consultation', button: 'Schedule Diagnostic Consultation' }
+      : { badge: 'Consultation', button: 'Schedule a Consultation' };
   }
 
   function applyConsultLabels(modal) {
@@ -1127,7 +1127,7 @@ function initMajorEventAnnouncement() {
       <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto font-black">!</div>
       <h3 class="text-lg font-black text-gray-900 mt-3">You&rsquo;ve reached your download limit</h3>
       <p class="text-xs text-gray-600 mt-1">You have downloaded ${LIMIT} resources with this contact. Please book a short call with our team for further information.</p>
-      <a href="contact.html#consultation-form" data-open-modal="consultation" class="mt-4 inline-flex items-center px-5 py-2.5 rounded-lg bg-black text-white font-bold text-xs hover:bg-neutral-800 cursor-pointer">Book a short call &rarr;</a>
+      <a href="contact.html#consultation-form" data-open-modal="consultation" class="mt-4 inline-flex items-center px-5 py-2.5 rounded-lg bg-black text-white font-bold text-xs hover:bg-neutral-800 cursor-pointer">Book a Short Call &rarr;</a>
     </div>
     <div data-gate-success class="hidden text-center py-2">
       <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mx-auto font-black">&#10003;</div>
@@ -1204,7 +1204,7 @@ function initGetStartedPopup() {
           <option>Test Prep</option>
           <option>Boarding School</option>
         </select></label>
-      <button type="submit" class="w-full py-2.5 rounded-lg bg-black hover:bg-neutral-800 text-white font-extrabold text-xs transition-colors">Get started &rarr;</button>
+      <button type="submit" class="w-full py-2.5 rounded-lg bg-black hover:bg-neutral-800 text-white font-extrabold text-xs transition-colors">Get Started &rarr;</button>
     </form>
     <p id="gs-thanks" class="hidden mt-3 text-sm text-gray-700">Thank you &mdash; our team will be in touch shortly. <span class="block text-[11px] font-mono text-gray-400 mt-1">(Demo: nothing is sent)</span></p>`;
   document.body.appendChild(panel);

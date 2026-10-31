@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/wireframe.css?v=6">
   <script src="../assets/navigation.js?v=6"></script>
-  <script src="../assets/event-panel.js?v=7"></script>
+  <script src="../assets/event-panel.js?v=8"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
@@ -826,6 +826,10 @@
       </div>
 
       <!-- No Results Fallback State (Hidden by default) -->
+            <!-- Progressive loading: reveals the next batch of matching stories (works with filters and search) -->
+      <div id="load-more-wrap" class="mt-8 text-center hidden">
+        <button type="button" id="load-more-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">Load More Stories <span>&darr;</span></button>
+      </div>
       <div id="no-results-state" class="hidden text-center py-16 bg-white rounded-2xl border border-gray-200 my-8">
         <span class="text-3xl mb-2 block">🔍</span>
         <h3 class="text-lg font-bold text-gray-900">No testimonials found matching your criteria</h3>

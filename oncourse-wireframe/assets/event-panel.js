@@ -37,7 +37,7 @@
     const hasSecondary = cfg.secondaryCta && cfg.secondaryCta.text && cfg.secondaryCta.url;
     const secondaryHTML = hasSecondary
       ? `<a id="event-panel-secondary-cta" href="${cfg.secondaryCta.url}" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-neutral-700 hover:border-neutral-400 text-neutral-300 hover:text-white font-bold text-xs transition-all">
-           <span id="event-panel-secondary-cta-text">${Cfg.secondaryCta.Text}</span>
+           <span id="event-panel-secondary-cta-text">${cfg.secondaryCta.text}</span>
          </a>`
       : '';
 
@@ -101,7 +101,7 @@
             <!-- CTAs -->
             <div class="pt-2 flex flex-wrap items-center gap-3">
               <a id="event-panel-primary-cta" href="${cfg.primaryCta.url}" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white text-black hover:bg-neutral-200 font-extrabold text-xs shadow-md hover:shadow-lg transition-all group">
-                <span id="event-panel-primary-cta-text">${Cfg.primaryCta.Text}</span>
+                <span id="event-panel-primary-cta-text">${cfg.primaryCta.text}</span>
                 <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
               </a>
               ${secondaryHTML}

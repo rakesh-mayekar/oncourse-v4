@@ -90,7 +90,7 @@ The header and footer are **not** edited inside pages. Every page contains gener
 
 ---
 
-> **Cache note:** page scripts and styles carry a version string (e.g. `navigation.js?v=7`, `wireframe.css?v=5`). Bump it on every page after changing a JS/CSS file, otherwise browsers may keep showing the old version.
+> **Cache note:** page scripts and styles carry a version string (e.g. `navigation.js?v=7`, `wireframe.css?v=6`). Bump it on every page after changing a JS/CSS file, otherwise browsers may keep showing the old version.
 
 ## 🚀 How to Run Locally
 

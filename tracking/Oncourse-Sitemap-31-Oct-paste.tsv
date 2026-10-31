@@ -1,92 +1,92 @@
-1	All pages	Wording	"Replace ""coaching"" with ""preparation"" everywhere"	Done	Complex
-2	All pages	Wording	"Remove parent-focused wording; consultation copy should only say ""Book a Consultation"""	Done	Complex
-3	Undergraduate / Master's / MBA	Cross-page block	Large prominent block (not a small button) linking related programme pages, placed after the roadmap/process sections	Done	
-4	Master's / MBA	Mentors	Mentor information stays on the Undergraduate page only; remove from Master's and MBA pages	Done	
-5	Master's	USP section	Add a USP section below Placements (Master's only; MBA may not have one)	Done	
-6	Master's	Programmes We Advise On	"Remove ""Master's Programmes We Advise On"" section (Feedback Doc, Master's item 6)"	Done	
-7	Master's	Program advice	"Remove ""program advice"" wording to avoid confusion"	Done	
-8	GMAT & GRE	Test dates	Remove test dates and scheduling	Done	
-9	SAT & ACT / GMAT & GRE	Knowledge Centre	Add a Knowledge Centre link on each exam page	Done	
-10	Master's	Page order	Order: header, Placements (with scroll / show-more button), USP, Admissions roadmap, Programme overview	Done	
-11	Master's	Programme overview	Broad subject headers with the programmes listed under each (e.g. Business: Marketing, Management & OB, Operations & Supply Chain); lorem ipsum copy	Done	
-12	Undergraduate	Specialist pathways	Full card copy for Medical School, Athletic Recruitment, Transfer, Art & Design, Law, Boarding School, with up to 6 college logos each	Done	
-13	Home / Relevant Pages	Senior Team	Harp on Sr team’s experience – take from the brochure.	Pending	
-14	Team	LinkedIn	LinkedIn link to be added for each team member.	Pending	
-15	Test Prep Overview	Proof Strip	3–4 big numbers with context	Pending	
-16	Test Prep Overview	Results	Results	Pending	
+1	All pages	Wording	"Replace ""coaching"" with ""preparation"" everywhere"	Pending	Done
+2	All pages	Wording	"Remove parent-focused wording; consultation copy should only say ""Book a Consultation"""	Pending	Done
+3	Undergraduate / Master's / MBA	Cross-page block	Large prominent block (not a small button) linking related programme pages, placed after the roadmap/process sections	Pending	Done
+4	Master's / MBA	Mentors	Mentor information stays on the Undergraduate page only; remove from Master's and MBA pages	Pending	Done
+5	Master's	USP section	Add a USP section below Placements (Master's only; MBA may not have one)	Pending	Done
+6	Master's	Programmes We Advise On	"Remove ""Master's Programmes We Advise On"" section (Feedback Doc, Master's item 6)"	Pending	Done
+7	Master's	Program advice	"Remove ""program advice"" wording to avoid confusion"	Pending	Done
+8	GMAT & GRE	Test dates	Remove test dates and scheduling	Pending	Done
+9	SAT & ACT / GMAT & GRE	Knowledge Centre	Add a Knowledge Centre link on each exam page	Pending	Done
+10	Master's	Page order	Order: header, Placements (with scroll / show-more button), USP, Admissions roadmap, Programme overview	Pending	Done
+11	Master's	Programme overview	Broad subject headers with the programmes listed under each (e.g. Business: Marketing, Management & OB, Operations & Supply Chain); lorem ipsum copy	Pending	Done
+12	Undergraduate	Specialist pathways	Full card copy for Medical School, Athletic Recruitment, Transfer, Art & Design, Law, Boarding School, with up to 6 college logos each	Pending	Done
+13	Home / Relevant Pages	Senior Team	Harp on Sr team’s experience – take from the brochure.	Pending	Pending
+14	Team	LinkedIn	LinkedIn link to be added for each team member.	Pending	Pending
+15	Test Prep Overview	Proof Strip	3–4 big numbers with context	Pending	Pending
+16	Test Prep Overview	Results	Results	Pending	Pending
 17	Test Prep Overview	FAQ	FAQ accordion	Pending	Complex
 18	Each Exam Page	Target Scores	Target scores for common schools	Pending	Complex
-19	Home	Hero video	Doc: short video ending with a group photo of the students.	Done	
-20	UG / Master's / MBA	Placements	Show college logo + name + number of students admitted; no programme names or long text. One list applies across UG, PG and MBA.	Pending	
-21	Undergraduate	Medical School	Add 1-2 lines on how OnCourse helps with medical school, 2-3 points only, and a Book a Consultation option.	Done	
-22	Success Stories (all 4)	Student and school names	Use student names and school names on the cards.	Pending	
-23	Master's	Program	Add Scope of Services with bullet points	Pending	
-24	All pages	Placeholder logos	"Placeholder ""Encourse Global"" logos distract from structure"	Pending	
-25	Undergraduate	Copy	Arkopriya to send UG basic copy and athletic recruitment copy	Pending	
-26	Master's / MBA	Core sections	Every programme page: what the programme is, why choose it (placements + USPs), how we help (process overview)	Done	
-27	All pages	Live review	Push changes to the live site and ask Arkopriya to review	Pending	
-28	All pages	Copy timeline	Final copy not expected before January; design proceeds in parallel using placeholder copy	Pending	
-29	Sub Pages	OS Link	Link our OS.	Need Clarification	
-30	Footer	Our 4 Strategic Hubs	"Doc: ""Remove HQ""."	Done	
-31	Test Prep Success Stories	Baseline section	"Doc: ""Remove Baseline. This section will include top scores and testimonials."""	Need Clarification	
-32	Undergraduate / Master's / MBA	Linking	"""Explore undergrad programme"" opens the SAT page; should open the undergraduate page (same for Master's and MBA)"	Need Clarification	
-33	Home / About / Team / UG / Master's / MBA / Test Prep	Sticky bar	"Remove ""Plan your global admissions roadmap with senior mentors"""	Done	
-34	Master's	Programmes box section	Remove the Master's programmes box section; roadmap already answers the question	Done	
-35	Undergraduate	Additional services popup	Popup / expandable detail for the additional services (to manage space)	Need Clarification	
-36	Undergraduate	Hero buttons	"Remove ""Parent""; decide whether ""View Programme"" is needed since the page is the programme page"	Done	
-37	Home	Resource Centre	Same email ID and contact number can be used up to 3 times to download resources. After that, show a popup mentioning the limit and ask them to book a short call.	Done	
-38	Home / Global	Event Update	Event update pop up on the top – Check Crimson (Soul of Hospitality ref)	Done	
-39	All Pages	Branding	Everywhere only mention OnCourse (remove Global and Vantage).	Done	
-40	All Pages	2:1 Messaging	2:1 ratio should not be there everywhere.	Done	
-41	Contact Us	Office Details	Remove HQ from Contact Us.	Done	
-42	Home	Instagram	Move Instagram to above the bottom panel.	Done	
-43	Home	Testimonials	Static testimonials: UG, PG/MBA, Test Prep side by side.	Done	
-44	Home	Stats	Reduce size of the stats box.	Done	
-45	Events / Global	Major Events	When major events happen, how do we do that? – Yes we can.	Done	
-46	About Us	Overview	Remove Overview	Done	
-47	About Us	5 Pillars	Remove 5 pillars	Done	
-48	About Us	Meet the Team	Team should have a dedicated page. Only Founders and VPs on the smaller section.	Done	
-49	Team	Dedicated Team Page	Meet the Team button opens to a full page with all the pictures of the team members.	Done	
-50	Team	Team Member Cards	2–3 liners on each team member should appear when you hover over the picture.	Done	
-51	Test Prep	Filter	Filter – What does it filter?	Done	
-52	Test Prep	Navigation	Events and Knowledge Centre – missing	Done	
-53	SAT & ACT	Cross Navigation	Tab to UG (from SAT and ACT)	Done	
-54	GRE / GMAT	Cross Navigation	Tab to Master’s and MBA	Done	
-55	Test Prep Overview	Hero	1 on 1 SAT, ACT, GMAT & GRE coaching...	Done	
-56	Test Prep Overview	Exam Cards	1 per test	Done	
-57	Test Prep Overview	Roadmap	Roadmap / How it works	Done	
-58	Test Prep Overview	Closing CTA	Closing CTA and form	Done	
-59	Each Exam Page	Test Snapshot	Format, sections, timing, scoring	Done	
-60	SAT / ACT	Comparison	SAT vs ACT	Done	
-61	GMAT / GRE	Comparison	GMAT vs GRE	Done	
-62	SAT / ACT	Test Dates	Test Dates – SAT/ACT	Done	
-63	Test Prep Overview	USP CTA band	"Doc: ""Can we add book a diagnostic assessment?"" Secondary CTA on the band reads ""Book a Diagnostic Assessment"" (links to the form on the page)."	Done	
-64	About Us	Master Banner	"Doc gives banner copy ""Every Student Has a Story. We're Here to Help Shape What's Next."" + CTA ""Speak with our team""."	Done	
-65	All Pages	Header CTA	"Client call (Arkopriya, 23 Oct): top navigation button should read ""Book a Consultation""."	Done	
-66	All Pages	Spelling	Use British English throughout (e.g. programme, centre, standardised, counsellor).	Done	
-67	Each Segment	FAQs	Dedicated FAQ page for every segment (Undergraduate, Master's, MBA, Test Prep).	Done	
-68	Test Prep Knowledge Centre	Resources	Resources shown as a listing with a filter (e.g. only ACT) and a clear way to download; no scrolling to hunt for items.	Done	
-69	Success Stories / Knowledge Centre	Filters	Add filters so visitors can find relevant stories and resources.	Done	
-70	All Pages	Book a Consultation	Button text still all caps in places (footer CTA band, FAQ and Knowledge pages, Home).	Done	
-71	All Pages	Breadcrumbs	Breadcrumb styling/position inconsistent (strip on Events pages, inline on FAQ/Knowledge, missing on Success, Overview, About, Contact, Careers).	Done	
-72	Success Stories (all 4)	Filter bar	"Search on the left, one dropdown with all filters on the right, ""Showing 8 of 8"" below as plain text."	Done	
-73	Success Stories (all 4)	Instagram block	"Remove ""Student Admit Stories & Mentor Breakdowns""; keep only the Instagram page name."	Done	
-74	Success Stories (all 4)	Card details	Align Course / Institution / Outcome rows (label left, value right).	Done	
-75	Undergraduate	Boarding School	"Move Boarding School out of ""Specialist Admissions Pathways"" into its own school-level section (Classes 10-11); add Law School to the pathways"	Done	
-76	Undergraduate	Boarding School	Keep text short with a Read more toggle (no long scroll)	Done	
-77	Master's	Overview	"Broader categories (Business, Social Sciences, STEM, Policy); remove ""Areas of Expertise"" headers"	Done	
-78	Master's	Overview	Remove M7, add top placements	Done	
-79	Master's	Program	Remove visa guidance section	Done	
-80	Careers	Sub-nav	"Keep only ""Join Our Team""; remove ""Open Positions"" and ""Apply Now"""	Done	
-81	All pages	Consultation form / buttons	"""Diagnostic Consultation"" only for Test Prep; other segments use ""Schedule a Consultation"""	Done	
-82	All pages	Get Started popup	Scroll-triggered Get Started panel (Ivy Coach style): first name, last name, admissions need	Done	
-83	Master's / MBA	Wireframe	Keep full Master's and MBA wireframes ready even if copy is unchanged	Done	
-84	Test Prep	Exam cards	(Rakesh request) Merge SAT & ACT into one card and GMAT & GRE into one card, generic button, full width	Done	
-85	Undergraduate	Test-package block	Keep the SAT/ACT test-package block prominent, after roadmap/process	Done	
-86	Home	Homepage	Leave the homepage as it is for now	Done	
-87	Exam pages	Filter	Remove filter from SAT/ACT and GMAT/GRE pages	Done	
-88	undergraduate.html	Hero	"Copy: ""UNDERGRADUATE ADMISSIONS | CLASSES 8-12 / Every Application Tells a Story. Let's Make Yours Stand Out."" + paragraph"	Done	
-89	undergraduate.html	A More Personal Approach	"Section ""A More Personal Approach to Undergraduate Admissions"" with 4 numbered items: Two Dedicated Mentors for Every Student, Planning That Starts Early, A Profile That Reflects You, End-to-End Application Guidance"	Done	
-90	undergraduate.html	Process overview	Grade-wise 3 stages: Grades 8-9 (Discover & Explore), Grades 10-11 (Develop & Differentiate), Grade 12 (Apply with Purpose)	Done	
-91	undergraduate.html	Boarding School banner	"Replace placeholder with the doc copy: ""For families considering an international boarding school..."""	Done	
-92	undergraduate-knowledge.html	Resource headers	"Remove the old master heads (""Application Timelines"" heading); keep lorem ipsum copy. No external layout reference."	Done	
+19	Home	Hero video	Doc: short video ending with a group photo of the students.	Done	Pending
+20	UG / Master's / MBA	Placements	Show college logo + name + number of students admitted; no programme names or long text. One list applies across UG, PG and MBA.	Pending	Pending
+21	Undergraduate	Medical School	Add 1-2 lines on how OnCourse helps with medical school, 2-3 points only, and a Book a Consultation option.	Pending	Done
+22	Success Stories (all 4)	Student and school names	Use student names and school names on the cards.	Pending	Pending
+23	Master's	Program	Add Scope of Services with bullet points	Pending	Pending
+24	All pages	Placeholder logos	"Placeholder ""Encourse Global"" logos distract from structure"	Pending	Pending
+25	Undergraduate	Copy	Arkopriya to send UG basic copy and athletic recruitment copy	Pending	Pending
+26	Master's / MBA	Core sections	Every programme page: what the programme is, why choose it (placements + USPs), how we help (process overview)	Pending	Done
+27	All pages	Live review	Push changes to the live site and ask Arkopriya to review	Pending	Pending
+28	All pages	Copy timeline	Final copy not expected before January; design proceeds in parallel using placeholder copy	Pending	Pending
+29	Sub Pages	OS Link	Link our OS.	Pending	Need Clarification
+30	Footer	Our 4 Strategic Hubs	"Doc: ""Remove HQ""."	Pending	Done
+31	Test Prep Success Stories	Baseline section	"Doc: ""Remove Baseline. This section will include top scores and testimonials."""	Pending	Need Clarification
+32	Undergraduate / Master's / MBA	Linking	"""Explore undergrad programme"" opens the SAT page; should open the undergraduate page (same for Master's and MBA)"	Pending	Need Clarification
+33	Home / About / Team / UG / Master's / MBA / Test Prep	Sticky bar	"Remove ""Plan your global admissions roadmap with senior mentors"""	Done	Need Clarification
+34	Master's	Programmes box section	Remove the Master's programmes box section; roadmap already answers the question	Pending	Done
+35	Undergraduate	Additional services popup	Popup / expandable detail for the additional services (to manage space)	Pending	Need Clarification
+36	Undergraduate	Hero buttons	"Remove ""Parent""; decide whether ""View Programme"" is needed since the page is the programme page"	Pending	Done
+37	Home	Resource Centre	Same email ID and contact number can be used up to 3 times to download resources. After that, show a popup mentioning the limit and ask them to book a short call.	Done	Done
+38	Home / Global	Event Update	Event update pop up on the top – Check Crimson (Soul of Hospitality ref)	Done	Done
+39	All Pages	Branding	Everywhere only mention OnCourse (remove Global and Vantage).	Done	Done
+40	All Pages	2:1 Messaging	2:1 ratio should not be there everywhere.	Done	Done
+41	Contact Us	Office Details	Remove HQ from Contact Us.	Done	Done
+42	Home	Instagram	Move Instagram to above the bottom panel.	Done	Done
+43	Home	Testimonials	Static testimonials: UG, PG/MBA, Test Prep side by side.	Done	Done
+44	Home	Stats	Reduce size of the stats box.	Done	Done
+45	Events / Global	Major Events	When major events happen, how do we do that? – Yes we can.	Done	Done
+46	About Us	Overview	Remove Overview	Done	Done
+47	About Us	5 Pillars	Remove 5 pillars	Done	Done
+48	About Us	Meet the Team	Team should have a dedicated page. Only Founders and VPs on the smaller section.	Done	Done
+49	Team	Dedicated Team Page	Meet the Team button opens to a full page with all the pictures of the team members.	Done	Done
+50	Team	Team Member Cards	2–3 liners on each team member should appear when you hover over the picture.	Done	Done
+51	Test Prep	Filter	Filter – What does it filter?	Done	Done
+52	Test Prep	Navigation	Events and Knowledge Centre – missing	Done	Done
+53	SAT & ACT	Cross Navigation	Tab to UG (from SAT and ACT)	Done	Done
+54	GRE / GMAT	Cross Navigation	Tab to Master’s and MBA	Done	Done
+55	Test Prep Overview	Hero	1 on 1 SAT, ACT, GMAT & GRE coaching...	Done	Done
+56	Test Prep Overview	Exam Cards	1 per test	Done	Done
+57	Test Prep Overview	Roadmap	Roadmap / How it works	Done	Done
+58	Test Prep Overview	Closing CTA	Closing CTA and form	Done	Done
+59	Each Exam Page	Test Snapshot	Format, sections, timing, scoring	Done	Done
+60	SAT / ACT	Comparison	SAT vs ACT	Done	Done
+61	GMAT / GRE	Comparison	GMAT vs GRE	Done	Done
+62	SAT / ACT	Test Dates	Test Dates – SAT/ACT	Done	Done
+63	Test Prep Overview	USP CTA band	"Doc: ""Can we add book a diagnostic assessment?"" Secondary CTA on the band reads ""Book a Diagnostic Assessment"" (links to the form on the page)."	Done	Done
+64	About Us	Master Banner	"Doc gives banner copy ""Every Student Has a Story. We're Here to Help Shape What's Next."" + CTA ""Speak with our team""."	Done	Done
+65	All Pages	Header CTA	"Client call (Arkopriya, 23 Oct): top navigation button should read ""Book a Consultation""."	Done	Done
+66	All Pages	Spelling	Use British English throughout (e.g. programme, centre, standardised, counsellor).	Done	Done
+67	Each Segment	FAQs	Dedicated FAQ page for every segment (Undergraduate, Master's, MBA, Test Prep).	Done	Done
+68	Test Prep Knowledge Centre	Resources	Resources shown as a listing with a filter (e.g. only ACT) and a clear way to download; no scrolling to hunt for items.	Done	Done
+69	Success Stories / Knowledge Centre	Filters	Add filters so visitors can find relevant stories and resources.	Done	Done
+70	All Pages	Book a Consultation	Button text still all caps in places (footer CTA band, FAQ and Knowledge pages, Home).	Done	Done
+71	All Pages	Breadcrumbs	Breadcrumb styling/position inconsistent (strip on Events pages, inline on FAQ/Knowledge, missing on Success, Overview, About, Contact, Careers).	Done	Done
+72	Success Stories (all 4)	Filter bar	"Search on the left, one dropdown with all filters on the right, ""Showing 8 of 8"" below as plain text."	Done	Done
+73	Success Stories (all 4)	Instagram block	"Remove ""Student Admit Stories & Mentor Breakdowns""; keep only the Instagram page name."	Done	Done
+74	Success Stories (all 4)	Card details	Align Course / Institution / Outcome rows (label left, value right).	Done	Done
+75	Undergraduate	Boarding School	"Move Boarding School out of ""Specialist Admissions Pathways"" into its own school-level section (Classes 10-11); add Law School to the pathways"	Done	Done
+76	Undergraduate	Boarding School	Keep text short with a Read more toggle (no long scroll)	Done	Done
+77	Master's	Overview	"Broader categories (Business, Social Sciences, STEM, Policy); remove ""Areas of Expertise"" headers"	Done	Done
+78	Master's	Overview	Remove M7, add top placements	Done	Done
+79	Master's	Program	Remove visa guidance section	Done	Done
+80	Careers	Sub-nav	"Keep only ""Join Our Team""; remove ""Open Positions"" and ""Apply Now"""	Done	Done
+81	All pages	Consultation form / buttons	"""Diagnostic Consultation"" only for Test Prep; other segments use ""Schedule a Consultation"""	Done	Done
+82	All pages	Get Started popup	Scroll-triggered Get Started panel (Ivy Coach style): first name, last name, admissions need	Done	Done
+83	Master's / MBA	Wireframe	Keep full Master's and MBA wireframes ready even if copy is unchanged	Done	Done
+84	Test Prep	Exam cards	(Rakesh request) Merge SAT & ACT into one card and GMAT & GRE into one card, generic button, full width	Done	Done
+85	Undergraduate	Test-package block	Keep the SAT/ACT test-package block prominent, after roadmap/process	Done	Done
+86	Home	Homepage	Leave the homepage as it is for now	Done	Done
+87	Exam pages	Filter	Remove filter from SAT/ACT and GMAT/GRE pages	Done	Done
+88	undergraduate.html	Hero	"Copy: ""UNDERGRADUATE ADMISSIONS | CLASSES 8-12 / Every Application Tells a Story. Let's Make Yours Stand Out."" + paragraph"	Pending	Done
+89	undergraduate.html	A More Personal Approach	"Section ""A More Personal Approach to Undergraduate Admissions"" with 4 numbered items: Two Dedicated Mentors for Every Student, Planning That Starts Early, A Profile That Reflects You, End-to-End Application Guidance"	Pending	Done
+90	undergraduate.html	Process overview	Grade-wise 3 stages: Grades 8-9 (Discover & Explore), Grades 10-11 (Develop & Differentiate), Grade 12 (Apply with Purpose)	Pending	Done
+91	undergraduate.html	Boarding School banner	"Replace placeholder with the doc copy: ""For families considering an international boarding school..."""	Pending	Done
+92	undergraduate-knowledge.html	Resource headers	"Remove the old master heads (""Application Timelines"" heading); keep lorem ipsum copy. No external layout reference."	Pending	Done

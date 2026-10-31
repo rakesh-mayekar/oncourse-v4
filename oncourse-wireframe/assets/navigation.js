@@ -15,25 +15,24 @@
       about: [
         { label: 'Our Story', href: 'about.html#story', id: 'story' },
         { label: 'Team', href: 'team.html', id: 'team' },
-        { label: 'Offices', href: 'about.html#offices', id: 'offices' },
-        { label: 'FAQ', href: 'about.html#faq', id: 'faq' }
+        { label: 'Offices', href: 'about.html#offices', id: 'offices' }
       ],
       undergraduate: [
-        { label: 'Programme', href: 'undergraduate.html', id: 'overview' },
+        { label: 'Programme Overview', href: 'undergraduate.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'undergraduate-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'undergraduate-success.html', id: 'success' },
         { label: 'Events', href: 'undergraduate-events.html', id: 'events' },
         { label: 'FAQs', href: 'undergraduate-faqs.html', id: 'faqs' }
       ],
       masters: [
-        { label: 'Programme', href: 'masters.html', id: 'overview' },
+        { label: 'Programme Overview', href: 'masters.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'masters-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'masters-success.html', id: 'success' },
         { label: 'Events', href: 'masters-events.html', id: 'events' },
         { label: 'FAQs', href: 'masters-faqs.html', id: 'faqs' }
       ],
       mba: [
-        { label: 'Programme', href: 'mba.html', id: 'overview' },
+        { label: 'Programme Overview', href: 'mba.html', id: 'overview' },
         { label: 'Knowledge Centre', href: 'mba-knowledge.html', id: 'knowledge' },
         { label: 'Success Stories', href: 'mba-success.html', id: 'success' },
         { label: 'Events', href: 'mba-events.html', id: 'events' },

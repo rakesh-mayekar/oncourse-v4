@@ -661,29 +661,7 @@
       </div>
     </section>
 
-    <!-- 4b. RELATED PROGRAMMES BLOCK (large block per 30 Oct call; same pattern on UG, Master's and MBA) -->
-    <section id="related-programmes" class="py-14 bg-gray-50 border-b border-gray-200 scroll-mt-32">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Explore More</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Looking Beyond Undergraduate?</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 auto-grid-2">
-          <a href="masters.html" class="group block rounded-2xl bg-white border-2 border-gray-200 hover:border-black p-8 transition-colors">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-gray-500">Master&rsquo;s</span>
-            <h3 class="text-xl sm:text-2xl font-black text-gray-900 mt-2">Want to know more about our Master&rsquo;s Programme?</h3>
-            <span class="inline-flex items-center gap-2 mt-4 text-sm font-extrabold text-black">Explore Master&rsquo;s <span class="transition-transform group-hover:translate-x-1">&rarr;</span></span>
-          </a>
-          <a href="mba.html" class="group block rounded-2xl bg-white border-2 border-gray-200 hover:border-black p-8 transition-colors">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-gray-500">MBA</span>
-            <h3 class="text-xl sm:text-2xl font-black text-gray-900 mt-2">Want to know more about our MBA Programme?</h3>
-            <span class="inline-flex items-center gap-2 mt-4 text-sm font-extrabold text-black">Explore MBA <span class="transition-transform group-hover:translate-x-1">&rarr;</span></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. SPECIALIST ADMISSIONS PATHWAYS (client copy, 30 Oct doc) -->
+        <!-- 5. SPECIALIST ADMISSIONS PATHWAYS (client copy, 30 Oct doc) -->
     <section id="additional-services" class="py-14 bg-gray-50 border-b border-gray-200 scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-10">
@@ -692,62 +670,114 @@
           <p class="text-xs sm:text-sm text-gray-600 mt-2">Some students have aspirations that call for a more specialised admissions strategy. Our additional services provide guidance tailored to specific academic and extracurricular pathways.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3">
-          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between" data-pathway-card>
             <div>
               <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Medical School</span>
               <h3 class="text-base font-bold text-gray-900 mt-1">A Pathway into Medicine</h3>
-              <p class="text-xs text-gray-600 leading-relaxed mt-2">Explore medical school pathways, understand academic prerequisites and navigate the application requirements for relevant undergraduate or direct-entry medical programmes.</p>
+              <p class="text-xs text-gray-600 leading-relaxed mt-2 line-clamp-3">Explore medical school pathways, understand academic prerequisites and navigate the application requirements for relevant undergraduate or direct-entry medical programmes.</p>
             </div>
             <div class="mt-5 pt-4 border-t border-gray-200">
-              <div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/johns-hopkins-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/duke-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-pennsylvania.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/columbia-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/brown-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/cornell-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div>
-              <p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p>
+              <button type="button" data-pathway-open class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline cursor-pointer">Learn More <span>&rarr;</span></button>
+            </div>
+            <div class="hidden" data-pathway-detail>
+              <h3 class="text-xl font-black text-gray-900">A Pathway into Medicine</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Medical School</span>
+              <p class="text-sm text-gray-600 leading-relaxed mt-3">Explore medical school pathways, understand academic prerequisites and navigate the application requirements for relevant undergraduate or direct-entry medical programmes.</p>
+              <div class="mt-4"><div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/johns-hopkins-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/duke-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-pennsylvania.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/columbia-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/brown-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/cornell-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div><p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p></div>
             </div>
           </div>
-          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between" data-pathway-card>
             <div>
               <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Athletic Recruitment</span>
               <h3 class="text-base font-bold text-gray-900 mt-1">Where Academic Potential Meets Athletic Ability</h3>
-              <p class="text-xs text-gray-600 leading-relaxed mt-2">For student-athletes aspiring to compete at university, we provide end-to-end guidance through the college athletic recruitment process, from evaluating academic and athletic profiles to identifying suitable programmes.</p><p class="text-xs text-gray-600 leading-relaxed mt-2">We support sports r&eacute;sum&eacute; development, recruitment videos, college shortlisting and coach communication, alongside application, course selection and test planning.</p>
+              <p class="text-xs text-gray-600 leading-relaxed mt-2 line-clamp-3">For student-athletes aspiring to compete at university, we provide end-to-end guidance through the college athletic recruitment process, from evaluating academic and athletic profiles to identifying suitable programmes.</p>
             </div>
             <div class="mt-5 pt-4 border-t border-gray-200">
-              <div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/stanford-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/duke-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/northwestern-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/dartmouth-college.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/princeton-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/yale-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div>
-              <p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p>
+              <button type="button" data-pathway-open class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline cursor-pointer">Learn More <span>&rarr;</span></button>
+            </div>
+            <div class="hidden" data-pathway-detail>
+              <h3 class="text-xl font-black text-gray-900">Where Academic Potential Meets Athletic Ability</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Athletic Recruitment</span>
+              <p class="text-sm text-gray-600 leading-relaxed mt-3">For student-athletes aspiring to compete at university, we provide end-to-end guidance through the college athletic recruitment process, from evaluating academic and athletic profiles to identifying suitable programmes.</p><p class="text-sm text-gray-600 leading-relaxed mt-3">We support sports r&eacute;sum&eacute; development, recruitment videos, college shortlisting and coach communication, alongside application, course selection and test planning.</p>
+              <div class="mt-4"><div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/stanford-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/duke-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/northwestern-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/dartmouth-college.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/princeton-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/yale-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div><p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p></div>
             </div>
           </div>
-          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between" data-pathway-card>
             <div>
               <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Transfer Admissions</span>
               <h3 class="text-base font-bold text-gray-900 mt-1">Finding the Right Next Step</h3>
-              <p class="text-xs text-gray-600 leading-relaxed mt-2">For students considering a university transfer, we help evaluate potential destinations, understand transfer requirements and develop an application strategy aligned with their academic progress and future goals.</p>
+              <p class="text-xs text-gray-600 leading-relaxed mt-2 line-clamp-3">For students considering a university transfer, we help evaluate potential destinations, understand transfer requirements and develop an application strategy aligned with their academic progress and future goals.</p>
             </div>
             <div class="mt-5 pt-4 border-t border-gray-200">
-              <div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/new-york-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/uc-berkeley.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/cornell-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-chicago.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/carnegie-mellon-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/mcgill-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div>
-              <p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p>
+              <button type="button" data-pathway-open class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline cursor-pointer">Learn More <span>&rarr;</span></button>
+            </div>
+            <div class="hidden" data-pathway-detail>
+              <h3 class="text-xl font-black text-gray-900">Finding the Right Next Step</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Transfer Admissions</span>
+              <p class="text-sm text-gray-600 leading-relaxed mt-3">For students considering a university transfer, we help evaluate potential destinations, understand transfer requirements and develop an application strategy aligned with their academic progress and future goals.</p>
+              <div class="mt-4"><div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/new-york-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/uc-berkeley.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/cornell-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-chicago.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/carnegie-mellon-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/mcgill-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div><p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p></div>
             </div>
           </div>
-          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between" data-pathway-card>
             <div>
               <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Art &amp; Design</span>
               <h3 class="text-base font-bold text-gray-900 mt-1">Turning Creative Potential into a Portfolio</h3>
-              <p class="text-xs text-gray-600 leading-relaxed mt-2">For aspiring artists and designers, we provide guidance on portfolio development, programme selection and applications that communicate each student&rsquo;s creative thinking, individual perspective and technical abilities.</p>
+              <p class="text-xs text-gray-600 leading-relaxed mt-2 line-clamp-3">For aspiring artists and designers, we provide guidance on portfolio development, programme selection and applications that communicate each student&rsquo;s creative thinking, individual perspective and technical abilities.</p>
             </div>
             <div class="mt-5 pt-4 border-t border-gray-200">
-              <div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/new-york-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/brown-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/imperial-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/king-s-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/columbia-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div>
-              <p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p>
+              <button type="button" data-pathway-open class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline cursor-pointer">Learn More <span>&rarr;</span></button>
+            </div>
+            <div class="hidden" data-pathway-detail>
+              <h3 class="text-xl font-black text-gray-900">Turning Creative Potential into a Portfolio</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Art &amp; Design</span>
+              <p class="text-sm text-gray-600 leading-relaxed mt-3">For aspiring artists and designers, we provide guidance on portfolio development, programme selection and applications that communicate each student&rsquo;s creative thinking, individual perspective and technical abilities.</p>
+              <div class="mt-4"><div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/new-york-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/brown-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/imperial-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/king-s-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/columbia-university.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div><p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p></div>
             </div>
           </div>
-          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between">
+          <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-black transition-colors flex flex-col justify-between" data-pathway-card>
             <div>
               <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Law</span>
               <h3 class="text-base font-bold text-gray-900 mt-1">Building a Foundation for a Legal Career</h3>
-              <p class="text-xs text-gray-600 leading-relaxed mt-2">Explore undergraduate law programmes and understand the academic requirements, admissions processes and written assessments relevant to your target universities. We help students identify suitable courses and approach their applications with a clear strategy.</p>
+              <p class="text-xs text-gray-600 leading-relaxed mt-2 line-clamp-3">Explore undergraduate law programmes and understand the academic requirements, admissions processes and written assessments relevant to your target universities. We help students identify suitable courses and approach their applications with a clear strategy.</p>
             </div>
             <div class="mt-5 pt-4 border-t border-gray-200">
-              <div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/university-of-oxford.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-cambridge.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/london-school-of-economics.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/king-s-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-toronto.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div>
-              <p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p>
+              <button type="button" data-pathway-open class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline cursor-pointer">Learn More <span>&rarr;</span></button>
+            </div>
+            <div class="hidden" data-pathway-detail>
+              <h3 class="text-xl font-black text-gray-900">Building a Foundation for a Legal Career</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Law</span>
+              <p class="text-sm text-gray-600 leading-relaxed mt-3">Explore undergraduate law programmes and understand the academic requirements, admissions processes and written assessments relevant to your target universities. We help students identify suitable courses and approach their applications with a clear strategy.</p>
+              <div class="mt-4"><div class="flex flex-wrap items-center gap-2"><img src="../assets/images/colleges/university-of-oxford.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-cambridge.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/london-school-of-economics.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/king-s-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-college-london.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"><img src="../assets/images/colleges/university-of-toronto.svg" alt="" title="Placeholder logo" class="w-9 h-9" loading="lazy"></div><p class="text-[10px] font-mono text-gray-400 mt-2">[Up to 6 college logos &mdash; client to supply]</p></div>
             </div>
           </div>
         </div>
+        <div id="pathway-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="pathway-modal-title">
+          <div id="pathway-modal-backdrop" class="absolute inset-0 bg-black/70 cursor-pointer"></div>
+          <div class="relative bg-white rounded-2xl shadow-2xl border border-gray-200 max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8">
+            <button type="button" id="pathway-modal-close" class="absolute top-3 right-3 w-8 h-8 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 flex items-center justify-center" aria-label="Close">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="pathway-modal-body"></div>
+            <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-lg bg-black text-white font-extrabold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">Book a Consultation <span>&rarr;</span></a>
+          </div>
+        </div>
+        <script>
+          (function () {
+            var m = document.getElementById('pathway-modal'), body = document.getElementById('pathway-modal-body');
+            if (!m) return;
+            function close() { m.classList.add('hidden'); m.classList.remove('flex'); document.body.style.overflow = ''; }
+            document.querySelectorAll('[data-pathway-open]').forEach(function (b) {
+              b.addEventListener('click', function () {
+                var d = b.closest('[data-pathway-card]').querySelector('[data-pathway-detail]');
+                body.innerHTML = d.innerHTML;
+                m.classList.remove('hidden'); m.classList.add('flex'); document.body.style.overflow = 'hidden';
+              });
+            });
+            document.getElementById('pathway-modal-close').addEventListener('click', close);
+            document.getElementById('pathway-modal-backdrop').addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !m.classList.contains('hidden')) close(); });
+          })();
+        </script>
         <div class="mt-8 text-center">
           <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="undergraduate" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">Book a Consultation &rarr;</a>
         </div>
@@ -1050,6 +1080,78 @@
           </a>
         </div>
 
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE CENTRE PREVIEW -->
+    <section id="knowledge-preview" class="py-14 bg-white border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Knowledge Centre</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Guides and Resources for Undergraduate Applicants</h2>
+          </div>
+          <a href="undergraduate-knowledge.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline">Explore the Knowledge Centre &rarr;</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-grid-3">
+          <a href="undergraduate-knowledge.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all overflow-hidden bg-white">
+            <div class="wireframe-placeholder h-32 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
+            <div class="p-5">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Resource type]</span>
+              <h3 class="text-sm font-bold text-gray-900 mt-1">[Resource title &mdash; placeholder]</h3>
+              <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </a>
+          <a href="undergraduate-knowledge.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all overflow-hidden bg-white">
+            <div class="wireframe-placeholder h-32 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
+            <div class="p-5">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Resource type]</span>
+              <h3 class="text-sm font-bold text-gray-900 mt-1">[Resource title &mdash; placeholder]</h3>
+              <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </a>
+          <a href="undergraduate-knowledge.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all overflow-hidden bg-white">
+            <div class="wireframe-placeholder h-32 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
+            <div class="p-5">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Resource type]</span>
+              <h3 class="text-sm font-bold text-gray-900 mt-1">[Resource title &mdash; placeholder]</h3>
+              <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS PREVIEW -->
+    <section id="events-preview" class="py-14 bg-gray-50 border-b border-gray-200 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Events</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Upcoming Undergraduate Events</h2>
+          </div>
+          <a href="undergraduate-events.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-black hover:underline">View All Events &rarr;</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-grid-3">
+          <a href="undergraduate-events.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all bg-white p-5">
+            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Date &bull; Format]</span>
+            <h3 class="text-sm font-bold text-gray-900 mt-2">[Event title &mdash; placeholder]</h3>
+            <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span class="inline-flex items-center gap-1 mt-3 text-xs font-extrabold text-black">Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+          <a href="undergraduate-events.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all bg-white p-5">
+            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Date &bull; Format]</span>
+            <h3 class="text-sm font-bold text-gray-900 mt-2">[Event title &mdash; placeholder]</h3>
+            <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span class="inline-flex items-center gap-1 mt-3 text-xs font-extrabold text-black">Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+          <a href="undergraduate-events.html" class="group block rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all bg-white p-5">
+            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-500">[Date &bull; Format]</span>
+            <h3 class="text-sm font-bold text-gray-900 mt-2">[Event title &mdash; placeholder]</h3>
+            <p class="text-xs text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span class="inline-flex items-center gap-1 mt-3 text-xs font-extrabold text-black">Learn More <span class="transition-transform group-hover:translate-x-1">&rarr;</span></span>
+          </a>
+        </div>
       </div>
     </section>
 

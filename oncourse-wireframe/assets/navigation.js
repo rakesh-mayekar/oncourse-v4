@@ -39,7 +39,7 @@
         { label: 'FAQs', href: 'mba-faqs.html', id: 'faqs' }
       ],
       'test-prep': [
-        { label: 'Overview', href: 'test-prep.html', id: 'overview' },
+        { label: 'Programme Overview', href: 'test-prep.html', id: 'overview' },
         { label: 'SAT & ACT', href: 'test-prep-sat-act.html', id: 'sat-act' },
         { label: 'GMAT & GRE', href: 'test-prep-gmat-gre.html', id: 'gmat-gre' },
         { label: 'Knowledge Centre', href: 'test-prep-knowledge.html', id: 'knowledge' },

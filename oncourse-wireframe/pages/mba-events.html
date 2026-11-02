@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MBA Admissions Events | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -497,12 +497,12 @@
     <section class="py-12 lg:py-16 bg-gray-50 flex-1">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3">
+        <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3" data-mobile-load-more="4" data-load-more-label="Load More Events">
 
           <!-- Event 1: M7 MBA Roadmap (Upcoming) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="mba" data-status="upcoming">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">MBA Strategy</span>
                 <span class="text-[11px] font-mono font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
                   Sunday &bull; 11:30 AM IST
@@ -534,7 +534,7 @@
           <!-- Event 2: Extracurricular Spikes (Upcoming) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug" data-status="upcoming">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">UG Admissions</span>
                 <span class="text-[11px] font-mono font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
                   Saturday &bull; 4:00 PM IST
@@ -566,7 +566,7 @@
           <!-- Event 3: Top STEM Master's & SOP Architecture (Upcoming) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="masters" data-status="upcoming">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Master's / Postgrad</span>
                 <span class="text-[11px] font-mono font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded">
                   Tuesday &bull; 6:00 PM IST
@@ -598,7 +598,7 @@
           <!-- Event 4: Digital SAT 1550+ Strategy (Upcoming) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="test-prep" data-status="upcoming">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Standardised Tests</span>
                 <span class="text-[11px] font-mono font-bold text-purple-600 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">
                   Thursday &bull; 5:30 PM IST
@@ -630,7 +630,7 @@
           <!-- Event 5: Oxbridge Admissions Decoded (Completed) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug" data-status="completed">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Oxbridge Admissions</span>
                 <span class="text-[11px] font-mono font-bold text-gray-700 bg-gray-100 border border-gray-300 px-2 py-0.5 rounded flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -663,7 +663,7 @@
           <!-- Event 6: GMAT Focus Edition 705+ (Completed) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="test-prep" data-status="completed">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">GMAT Focus Prep</span>
                 <span class="text-[11px] font-mono font-bold text-gray-700 bg-gray-100 border border-gray-300 px-2 py-0.5 rounded flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -696,7 +696,7 @@
           <!-- Event 7: Grade 9–10 Summer Blueprint (Upcoming) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug" data-status="upcoming">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Early High School</span>
                 <span class="text-[11px] font-mono font-bold text-teal-600 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">
                   Wednesday &bull; 5:00 PM IST
@@ -728,7 +728,7 @@
           <!-- Event 8: Executive MBA & Global Careers (Completed) -->
           <div class="event-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="mba" data-status="completed">
             <div>
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex flex-col items-start gap-2 mb-3">
                 <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Executive MBA</span>
                 <span class="text-[11px] font-mono font-bold text-gray-700 bg-gray-100 border border-gray-300 px-2 py-0.5 rounded flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -1501,6 +1501,6 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
 </body>
 </html>

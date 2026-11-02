@@ -786,3 +786,45 @@ html, body { overflow-x: clip; }
 }
 /* Stat figures and short labels never hyphenate mid-word */
 .font-black, .font-extrabold, .font-bold { overflow-wrap: normal; }
+
+/* ---------- 5. Mobile swipe rows (global rule: multi-card sections swipe left/right on phones) ----------
+   Add `swipe-row` to any card grid. Desktop/tablet (>= 768px) keep their grid untouched.
+   Only the row scrolls; headings stay put. Cards peek (86% wide) so the next card hints at the swipe. */
+@media (max-width: 767.98px) {
+  .swipe-row.swipe-row {
+    display: flex !important;
+    grid-template-columns: none !important;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0.875rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    /* bleed to the screen edge so the peek is visible, while the first card still lines up with the page margin */
+    margin-left: -1rem; margin-right: -1rem;
+    padding: 0 1rem 0.5rem;
+    scroll-padding-left: 1rem;
+    max-width: none;
+  }
+  .swipe-row.swipe-row::-webkit-scrollbar { display: none; }
+  .swipe-row.swipe-row > * {
+    flex: 0 0 86%;
+    max-width: 86%;
+    min-width: 0;
+    scroll-snap-align: start;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  /* trailing space so the last card can be fully reached */
+  .swipe-row.swipe-row::after { content: ''; flex: 0 0 0.125rem; }
+}
+@media (min-width: 640px) and (max-width: 767.98px) {
+  .swipe-row.swipe-row { margin-left: -1.5rem; margin-right: -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; scroll-padding-left: 1.5rem; }
+  .swipe-row.swipe-row > * { flex-basis: 62%; max-width: 62%; }
+}
+
+/* Mobile Load More (see initMobileLoadMore in wireframe.js): cards beyond the first batch stay hidden on phones only */
+@media (max-width: 767.98px) { .lm-hide { display: none !important; } }

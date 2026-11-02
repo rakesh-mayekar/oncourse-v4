@@ -6,7 +6,7 @@
   <title>Admissions Masterclasses & Live Briefings | OnCourse</title>
   <meta name="description" content="Browse all upcoming live admissions masterclasses, Ivy League workshops, Oxbridge events, and MBA roundtables led by senior mentors and former admissions directors.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -466,12 +466,12 @@
   <section class="py-12 lg:py-16 bg-gray-50 flex-1">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div id="masterclass-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3">
+      <div id="masterclass-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3" data-mobile-load-more="4" data-load-more-label="Load More Events">
 
         <!-- Masterclass 1: Extracurricular Spikes -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">UG Admissions</span>
               <span class="text-[11px] font-mono font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
                 Saturday &bull; 4:00 PM IST
@@ -503,7 +503,7 @@
         <!-- Masterclass 2: M7 MBA Roadmap -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="mba">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">MBA Strategy</span>
               <span class="text-[11px] font-mono font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
                 Sunday &bull; 11:30 AM IST
@@ -535,7 +535,7 @@
         <!-- Masterclass 3: Top STEM Master's & SOP Architecture -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="masters">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Master's / Postgrad</span>
               <span class="text-[11px] font-mono font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded">
                 Tuesday &bull; 6:00 PM IST
@@ -567,7 +567,7 @@
         <!-- Masterclass 4: Digital SAT 1550+ Strategy -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="test-prep">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Standardised Tests</span>
               <span class="text-[11px] font-mono font-bold text-purple-600 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">
                 Thursday &bull; 5:30 PM IST
@@ -599,7 +599,7 @@
         <!-- Masterclass 5: Oxbridge Admissions Decoded -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Oxbridge Admissions</span>
               <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
                 Saturday &bull; 3:00 PM IST
@@ -631,7 +631,7 @@
         <!-- Masterclass 6: GMAT Focus Edition 705+ -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="test-prep">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">GMAT Focus Prep</span>
               <span class="text-[11px] font-mono font-bold text-purple-600 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">
                 Sunday &bull; 4:00 PM IST
@@ -663,7 +663,7 @@
         <!-- Masterclass 7: Grade 9–10 Summer Blueprint -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="ug">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Early High School</span>
               <span class="text-[11px] font-mono font-bold text-teal-600 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">
                 Wednesday &bull; 5:00 PM IST
@@ -695,7 +695,7 @@
         <!-- Masterclass 8: Executive MBA & Global Careers -->
         <div class="masterclass-card bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between hover:border-black hover:shadow-lg transition-all group" data-category="mba">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex flex-col items-start gap-2 mb-3">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">Executive MBA</span>
               <span class="text-[11px] font-mono font-bold text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
                 Friday &bull; 6:30 PM IST
@@ -1582,6 +1582,6 @@
     });
   </script>
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>All Testimonials & Verified Admissions Outcomes | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -1247,6 +1247,10 @@
       </div>
 
       <!-- No Results Fallback State (Hidden by default) -->
+            <!-- Progressive loading: reveals the next batch of matching stories (works with filters and search) -->
+      <div id="load-more-wrap" class="mt-8 text-center hidden">
+        <button type="button" id="load-more-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">Load More Stories <span>&darr;</span></button>
+      </div>
       <div id="no-results-state" class="hidden text-center py-16 bg-white rounded-2xl border border-gray-200 my-8">
         <span class="text-3xl mb-2 block">🔍</span>
         <h3 class="text-lg font-bold text-gray-900">No testimonials found matching your criteria</h3>
@@ -1895,7 +1899,7 @@
   <!-- /@component:footer -->
 
   <!-- Scripts -->
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
   <script>
     (function initTestimonialsPage() {
       const tabs = document.querySelectorAll('.testimonial-filter-tab');
@@ -1907,9 +1911,13 @@
 
       let currentCategory = 'all';
       let currentQuery = '';
+      const PAGE_SIZE = window.matchMedia('(max-width: 767px)').matches ? 4 : 1000;   // phones: first 4, then Load More
+      let limit = PAGE_SIZE;
+      const moreWrap = document.getElementById('load-more-wrap');
+      const moreBtn = document.getElementById('load-more-btn');
 
       function filterAndSearch() {
-        let visibleCount = 0;
+        let visibleCount = 0, matchedCount = 0;
 
         cards.forEach(card => {
           const cat = card.getAttribute('data-category');
@@ -1920,8 +1928,9 @@
           const matchesQuery = (!currentQuery || text.includes(currentQuery) || keywords.includes(currentQuery));
 
           if (matchesCat && matchesQuery) {
-            card.classList.remove('hidden');
-            visibleCount++;
+            matchedCount++;
+            if (matchedCount <= limit) { card.classList.remove('hidden'); visibleCount++; }
+            else card.classList.add('hidden');
           } else {
             card.classList.add('hidden');
           }
@@ -1930,6 +1939,7 @@
         if (countBadge) {
           countBadge.textContent = `Showing ${visibleCount} of ${cards.length}`;
         }
+        if (moreWrap) moreWrap.classList.toggle('hidden', matchedCount <= limit);
 
         if (noResults) {
           if (visibleCount === 0) {
@@ -1953,19 +1963,22 @@
             }
           });
 
-          filterAndSearch();
+          limit = PAGE_SIZE; filterAndSearch();
         });
       });
 
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           currentQuery = e.target.value.trim().toLowerCase();
-          filterAndSearch();
+          limit = PAGE_SIZE; filterAndSearch();
         });
       }
 
+      if (moreBtn) moreBtn.addEventListener('click', () => { limit += PAGE_SIZE; filterAndSearch(); });
+
       if (resetBtn) {
         resetBtn.addEventListener('click', () => {
+          limit = PAGE_SIZE;
           currentCategory = 'all';
           currentQuery = '';
           if (searchInput) searchInput.value = '';
@@ -1979,6 +1992,7 @@
           filterAndSearch();
         });
       }
+    filterAndSearch(); // initial render (phones: first 4 + Load More)
     })();
   </script>
 </body>

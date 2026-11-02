@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>GMAT &amp; GRE Test Preparation | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -359,9 +359,16 @@
       </div>
 
       <!-- Cross-program navigation (contextual tabs to the related admissions pathway) -->
-      <div class="flex flex-wrap items-center gap-3 mb-10 -mt-2">
-        <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500">Know more</span>
-        <a href="masters.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-800 hover:border-black hover:text-black transition-colors">Master's Admissions <span aria-hidden="true">&rarr;</span></a><a href="mba.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-800 hover:border-black hover:text-black transition-colors">MBA Admissions <span aria-hidden="true">&rarr;</span></a>
+      <div class="rounded-2xl bg-black text-white p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10 -mt-2">
+        <div class="lg:col-span-8 space-y-3">
+          <span class="px-3 py-1 rounded-full bg-white/10 text-white text-[10px] font-mono font-bold uppercase tracking-wider">Know More</span>
+          <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Planning Your Master's or MBA Admissions?</h2>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">GMAT and GRE preparation works best alongside a complete admissions plan. Explore the advisory programme that fits your next step.</p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col gap-3">
+          <a href="masters.html" class="w-full text-center px-6 py-3.5 rounded-lg bg-white text-black font-extrabold text-xs hover:bg-gray-100 transition-colors">Master's Admissions &rarr;</a>
+          <a href="mba.html" class="w-full text-center px-6 py-3.5 rounded-lg border border-gray-500 text-white font-semibold text-xs hover:bg-gray-800 transition-colors">MBA Admissions &rarr;</a>
+        </div>
       </div>
       <!-- SECTION 01: EXAM INTRODUCTION -->
       <div class="mb-14">
@@ -370,7 +377,7 @@
           <h2 class="text-2xl font-bold text-gray-900 mt-1">1-on-1 GMAT &amp; GRE Preparation</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-grid-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-grid-2 swipe-row">
           
           <!-- GMAT Focus Card -->
           <div class="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 shadow-xs flex flex-col justify-between">
@@ -428,7 +435,7 @@
           <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">Your GMAT &amp; GRE Preparation Roadmap</h2>
           <p class="text-xs sm:text-sm text-gray-600 mt-2">From diagnostic to test day.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 swipe-row">
           <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
             <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
             <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">01</div>
@@ -469,7 +476,7 @@
           <h2 class="text-2xl font-bold text-gray-900 mt-1">Test Snapshot: GMAT &amp; GRE</h2>
           <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-2xl">Format, sections, timing and scoring for each test.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-grid-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-grid-2 swipe-row">
         <div id="gmat-snapshot" class="bg-white rounded-xl border border-gray-200 p-6 shadow-xs scroll-mt-40">
           <div class="flex items-center justify-between mb-4">
             <span class="px-3 py-1 rounded bg-black text-white text-xs font-bold uppercase">GMAT Focus Edition</span>
@@ -577,7 +584,7 @@
           <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">GMAT &amp; GRE Testimonials</h2>
           <p class="text-xs sm:text-sm text-gray-600 mt-2">Verified GMAT &amp; GRE score stories. [Cases to be supplied by the client]</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch auto-grid-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch auto-grid-4 swipe-row">
           <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="test-prep">
             <div>
               <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
@@ -1348,6 +1355,6 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MBA Knowledge Centre & Strategy Guides | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -351,7 +351,7 @@
     <!-- RESOURCE LIBRARY (downloads gated: email + phone, max 3 per contact, then "book a short call") -->
     <section id="resources" class="py-14 bg-[#f8f9fa] border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div id="resource-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-grid-4">
+        <div id="resource-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-grid-4" data-mobile-load-more="4" data-load-more-label="Load More Resources">
           <article class="resource-card bg-white rounded-2xl border border-gray-200 hover:border-black hover:shadow-lg transition-all flex flex-col overflow-hidden" data-category="guides">
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
@@ -1131,7 +1131,7 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
   <script>
     (function initResourceFilter() {
       var tabs = document.querySelectorAll('.resource-filter-tab'), cards = document.querySelectorAll('.resource-card');

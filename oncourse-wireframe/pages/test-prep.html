@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>1-on-1 SAT, ACT, GMAT & GRE Preparation | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -416,7 +416,7 @@
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 auto-grid-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 auto-grid-2 swipe-row">
           <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
             <div>
               <span class="px-2.5 py-1 rounded bg-gray-100 text-black text-xs font-bold uppercase border border-gray-200">Undergraduate</span>
@@ -452,7 +452,7 @@
           <p class="text-xs sm:text-sm text-gray-600 mt-2">Five steps from first diagnostic to test day.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 auto-grid-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 auto-grid-5 swipe-row">
           <div class="relative bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
             <div class="hidden lg:block absolute top-7 -right-3 w-6 border-t-2 border-dashed border-gray-300"></div>
             <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-black text-sm mb-4">01</div>
@@ -494,7 +494,7 @@
           <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Why OnCourse Test Prep</span>
           <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">What You Get With 1-on-1 Preparation</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-grid-3 swipe-row">
           <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-xs">
             <div class="w-9 h-9 rounded-lg bg-black text-white flex items-center justify-center font-black text-xs mb-3">01</div>
             <h3 class="text-sm font-bold text-gray-900">Dedicated 1:1 classes</h3>
@@ -526,7 +526,7 @@
             <p class="text-xs text-gray-600 mt-2 leading-relaxed">Section-by-section progress tracking shared with students.</p>
           </div>
         </div>
-        <div class="mt-8 text-center"><a href="test-prep-success.html" class="text-xs font-bold text-black hover:underline">See Score Outcomes and Testimonials &rarr;</a></div>
+        <div class="mt-8 text-center"><a href="test-prep-success.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-black text-white text-xs font-extrabold hover:bg-gray-800 transition-colors">See Score Outcomes and Testimonials <span aria-hidden="true">&rarr;</span></a></div>
       </div>
     </section>
 
@@ -586,16 +586,16 @@
                   <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
                     <div class="lg:col-span-8 space-y-4">
-                      <div class="flex flex-wrap items-center gap-2">
+                      <div class="flex flex-col items-start gap-2">
                         <span class="px-3 py-1 rounded-full bg-black text-white text-[10px] font-mono font-bold uppercase tracking-wider">
                           Standardised Tests
                         </span>
-                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-mono font-bold">
+                        <div class="flex flex-wrap items-center gap-2"><span class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-mono font-bold">
                           Tuesday &bull; 6:00 PM IST
                         </span>
                         <span class="px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-[10px] font-mono">
                           Virtual (Zoom) &bull; 60 Min
-                        </span>
+                        </span></div>
                       </div>
 
                       <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight leading-snug">
@@ -726,263 +726,24 @@
       </div>
     </section>
 
-    <!-- 07. CLOSING CTA + ENQUIRY FORM (reuses the shared OnCourse lead form) -->
-    <section id="consultation-form" class="py-16 bg-white scroll-mt-32">
+    <!-- 07. CLOSING CTA (client sitemap: "Closing CTA and form"; the form opens as the shared consultation popup, no duplicate inline form) -->
+    <section id="consultation-form" class="py-14 bg-white scroll-mt-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-
-          <div class="lg:col-span-5 space-y-6">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-gray-800">Get Started</span>
-              <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-1">
-                Start with a Free Diagnostic Consultation
-              </h2>
-              <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                Tell us which test you are preparing for and your target date. We will set up a diagnostic, match you with a subject matter expert and share a 1-on-1 preparation plan.
-              </p>
-            </div>
-            <ul class="text-xs text-gray-700 space-y-2">
-              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Full-length diagnostic test and score breakdown</span></li>
-              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Tutor match based on your test, schedule and learning style</span></li>
-              <li class="flex items-start gap-2"><span class="font-bold text-black">&bull;</span><span>Personalised study plan to your test date</span></li>
+        <div class="rounded-2xl bg-black text-white p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <span class="px-3 py-1 rounded-full bg-white/10 text-white text-[10px] font-mono font-bold uppercase tracking-wider">Get Started</span>
+            <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Start with a Free Diagnostic Consultation</h2>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">Tell us which test you are preparing for and your target date. We will set up a diagnostic, match you with a subject matter expert and share a 1-on-1 preparation plan.</p>
+            <ul class="text-xs sm:text-sm text-gray-300 space-y-1.5 pt-1">
+              <li class="flex items-start gap-2"><span class="font-bold text-white">&bull;</span><span>Full-length diagnostic test and score breakdown</span></li>
+              <li class="flex items-start gap-2"><span class="font-bold text-white">&bull;</span><span>Tutor match based on your test, schedule and learning style</span></li>
+              <li class="flex items-start gap-2"><span class="font-bold text-white">&bull;</span><span>Personalised study plan to your test date</span></li>
             </ul>
-            <div class="bg-black text-white rounded-2xl p-6">
-              <h3 class="text-lg font-black tracking-tight">Prefer to talk first?</h3>
-              <p class="text-xs text-gray-300 mt-1">Book a short call with a test prep advisor.</p>
-              <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="test-prep" class="mt-4 inline-flex items-center px-5 py-2.5 rounded-lg bg-white text-black font-extrabold text-xs hover:bg-gray-100 transition-colors cursor-pointer">
-                Book a Diagnostic Assessment &rarr;
-              </a>
-            </div>
           </div>
-
-          <div class="lg:col-span-7">
-      <div id="lead-form-container" class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8">
-        <div class="mb-6">
-          <div
-            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 text-black border border-gray-300 mb-2">
-            <span class="w-2 h-2 rounded-full bg-black"></span>
-            Admissions Evaluation
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="test-prep" class="w-full text-center px-6 py-3.5 rounded-lg bg-white text-black font-extrabold text-xs hover:bg-gray-100 transition-colors cursor-pointer">Book a Diagnostic Assessment &rarr;</a>
+            <a href="test-prep-sat-act.html" class="w-full text-center px-6 py-3.5 rounded-lg border border-gray-500 text-white font-semibold text-xs hover:bg-gray-800 transition-colors">Explore SAT &amp; ACT Prep</a>
           </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Request a Test Prep Consultation</h3>
-          <p class="text-xs sm:text-sm text-gray-600 mt-1">
-            Tell us which test you are preparing for and we will schedule a diagnostic and tutor match.
-          </p>
-        </div>
-
-        <form id="oncourse-lead-form" class="space-y-4" data-segment="test-prep">
-
-          <div>
-            <label for="form-segment-selector" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">
-              Your Area of Interest *
-            </label>
-            <select id="form-segment-selector" name="segment"
-              class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-gray-50 focus:bg-white text-sm text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition-all font-medium">
-              <option value="undergraduate">Undergraduate Admissions (Class 8–12)</option>
-              <option value="masters">Master's & Postgraduate Programmes</option>
-              <option value="mba">MBA & Executive Degrees</option>
-              <option value="test-prep" selected>Test Prep (SAT / ACT / GRE / GMAT)</option>
-            </select>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-grid-2">
-            <div>
-              <label for="applicant_name" class="block text-xs font-semibold text-gray-700 mb-1">
-                Applicant Name *
-              </label>
-              <input type="text" id="applicant_name" name="applicant_name" required placeholder="e.g. Aarav Sharma"
-                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
-            </div>
-          </div>
-
-          <!-- Common Row 2: Email & Phone / WhatsApp -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-grid-2">
-            <div>
-              <label for="contact_email" class="block text-xs font-semibold text-gray-700 mb-1">
-                Email Address *
-              </label>
-              <input type="email" id="contact_email" name="email" required placeholder="name@example.com"
-                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
-            </div>
-            <div>
-              <label for="contact_phone" class="block text-xs font-semibold text-gray-700 mb-1">
-                Phone / WhatsApp Number *
-              </label>
-              <input type="tel" id="contact_phone" name="phone" required placeholder="+91 98765 43210"
-                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-black focus:border-black">
-            </div>
-          </div>
-
-          <!-- DYNAMIC SECTION A: Undergraduate Specific Fields -->
-          <div id="segment-fields-undergraduate" class="hidden p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
-            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                </path>
-              </svg>
-              Undergraduate Profile Context (Class 8 to 12)
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-grid-2">
-              <div>
-                <label for="ug_grade" class="block text-xs font-medium text-gray-700 mb-1">Current Grade / Class</label>
-                <select id="ug_grade" name="ug_grade"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="class-8">Class 8 (Early Foundation)</option>
-                  <option value="class-9">Class 9 (Early Profile Building)</option>
-                  <option value="class-10">Class 10 (Curriculum & Pre-IB/AP)</option>
-                  <option value="class-11" selected>Class 11 (Critical Admissions Year)</option>
-                  <option value="class-12">Class 12 (Active Application Cycle)</option>
-                </select>
-              </div>
-              <div>
-                <label for="ug_curriculum" class="block text-xs font-medium text-gray-700 mb-1">Curriculum Board</label>
-                <select id="ug_curriculum" name="ug_curriculum"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="ib">IB Diploma (IBDP)</option>
-                  <option value="cambridge">Cambridge (IGCSE / A-Levels)</option>
-                  <option value="cbse">CBSE</option>
-                  <option value="icse">ICSE / ISC</option>
-                  <option value="us-high-school">US High School / AP</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- DYNAMIC SECTION B: MBA & Master's Specific Fields -->
-          <div id="segment-fields-pg-mba" class="hidden p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
-            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                </path>
-              </svg>
-              MBA & Graduate Professional Credentials
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-grid-2">
-              <div>
-                <label for="gmat_gre_status" class="block text-xs font-medium text-gray-700 mb-1">GMAT / GRE Score Status
-                  *</label>
-                <select id="gmat_gre_status" name="gmat_gre_status"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="taken-720-plus">GMAT 720+ / GRE 325+ (Taken)</option>
-                  <option value="taken-650-710">GMAT 650–710 / GRE 315–324 (Taken)</option>
-                  <option value="preparing">Currently Preparing / Test Date Scheduled</option>
-                  <option value="seeking-waiver">Seeking Test Waiver / EA</option>
-                  <option value="not-started">Have Not Started Test Prep</option>
-                </select>
-              </div>
-              <div>
-                <label for="work_experience" class="block text-xs font-medium text-gray-700 mb-1">Full-Time Work Experience
-                  *</label>
-                <select id="work_experience" name="work_experience"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="under-2">Under 2 Years</option>
-                  <option value="2-4" selected>2–4 Years</option>
-                  <option value="5-7">5–7 Years</option>
-                  <option value="8-plus">8+ Years (Executive MBA)</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- DYNAMIC SECTION C: Test Prep Specific Fields -->
-          <div id="segment-fields-testprep" class="p-4 rounded-lg bg-gray-50 border border-gray-200 space-y-3">
-            <div class="text-xs font-bold text-black uppercase tracking-wide flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
-                </path>
-              </svg>
-              Target Exam &amp; Diagnostic
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-grid-2">
-              <div>
-                <label for="target_exam" class="block text-xs font-medium text-gray-700 mb-1">Target Exam</label>
-                <select id="target_exam" name="target_exam"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="digital-sat">Digital SAT (Undergraduate)</option>
-                  <option value="act">ACT (Undergraduate)</option>
-                  <option value="gmat-focus">GMAT Focus Edition (MBA)</option>
-                  <option value="gre">GRE General (Master's / MBA)</option>
-                  <option value="ap-exams">Advanced Placement (AP) Subject Prep</option>
-                </select>
-              </div>
-              <div>
-                <label for="exam_timeline" class="block text-xs font-medium text-gray-700 mb-1">Planned Test Date</label>
-                <select id="exam_timeline" name="exam_timeline"
-                  class="w-full px-3 py-2 rounded border border-gray-300 text-xs bg-white">
-                  <option value="next-3-months">Next 1–3 Months</option>
-                  <option value="3-6-months" selected>3–6 Months</option>
-                  <option value="6-plus-months">6+ Months (Long-term foundation)</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Preferred Office Hub -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-grid-2">
-            <div>
-              <label for="preferred_office" class="block text-xs font-semibold text-gray-700 mb-1">Preferred Office /
-                Mode</label>
-              <select id="preferred_office" name="office"
-                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs text-gray-800 bg-white">
-                <option value="mumbai">Mumbai</option>
-                <option value="delhi">Delhi</option>
-                <option value="gurgaon">Gurgaon</option>
-                <option value="dubai">Dubai</option>
-                <option value="online" selected>Online / Global Virtual Consultation</option>
-              </select>
-            </div>
-            <div>
-              <label for="target_intake" class="block text-xs font-semibold text-gray-700 mb-1">Target Intake Year</label>
-              <select id="target_intake" name="target_intake"
-                class="w-full px-3.5 py-2 rounded-lg border border-gray-300 text-xs text-gray-800 bg-white">
-                <option value="fall-2027">Fall 2027</option>
-                <option value="fall-2028" selected>Fall 2028</option>
-                <option value="fall-2029-beyond">Fall 2029 or Beyond</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="pt-2">
-            <button type="submit"
-              class="w-full py-3 px-6 rounded-lg bg-black hover:bg-gray-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
-              <span>Confirm Consultation Request</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </button>
-            <p class="text-center text-xs text-gray-500 mt-2">
-              Confidential evaluation. An OnCourse Admissions Director will respond within 24 hours.
-            </p>
-          </div>
-
-        </form>
-
-        <!-- Mock Confirmation State (revealed via wireframe.js) -->
-        <div id="form-success-message" class="hidden text-center py-8 px-4">
-          <div
-            class="w-14 h-14 bg-gray-100 text-black rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-300">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <h4 class="text-xl font-bold text-gray-900 mb-1">Consultation Request Received</h4>
-          <p class="text-sm text-gray-600 max-w-md mx-auto mb-4">
-            Thank you! Your profile details have been routed to our Senior Admissions Strategist. A dedicated mentor will
-            reach out within 24 business hours to schedule your diagnostic session.
-          </p>
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-black text-xs font-semibold border border-gray-300">
-            <span>Office Selected: Virtual / Dedicated Advisor</span>
-          </div>
-        </div>
-
-      </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -1026,7 +787,7 @@
           <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
         </a>
         <!-- @slot:cta-secondary -->
-        <a href="test-prep.html#consultation-form" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-black hover:bg-neutral-900 text-white border border-neutral-600 hover:border-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
+        <a href="contact.html#consultation-form" data-open-modal="consultation" data-segment="test-prep" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-black hover:bg-neutral-900 text-white border border-neutral-600 hover:border-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
           <span>Book a Diagnostic Assessment</span>
           <span>&rarr;</span>
         </a>
@@ -1630,9 +1391,6 @@
         <span class="hidden sm:inline-flex w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
         <div>
           <p class="text-sm font-semibold text-white">
-            Plan your global admissions roadmap with senior mentors
-          </p>
-          <p class="text-xs text-gray-400 hidden md:block">
             Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programmes.
           </p>
         </div>
@@ -1706,6 +1464,7 @@
           <option value="masters">Master’s &amp; Postgraduate Degrees</option>
           <option value="mba">MBA &amp; Executive Degrees (M7 / European)</option>
           <option value="test-prep">Test Prep (SAT / ACT / GRE / GMAT)</option>
+          <option value="boarding-school">Boarding School Admissions</option>
         </select>
       </div>
 
@@ -1799,6 +1558,6 @@
   </div>
 </div>
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
 </body>
 </html>

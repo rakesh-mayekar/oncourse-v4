@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>OnCourse | Endless Possibility &bull; Premier Admissions Advisory</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
   <style>
@@ -556,7 +556,7 @@
 
         <!-- 3 STATIC TESTIMONIAL CATEGORIES SIDE-BY-SIDE (DESKTOP) -->
         <!-- 01 Undergraduate | 02 Master's | 03 MBA | 04 Test Prep (one case per segment, per client feedback) -->
-        <div id="testimonials-static-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 items-stretch auto-grid-4">
+        <div id="testimonials-static-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 items-stretch auto-grid-4 swipe-row">
           
           <!-- Category 01: Undergraduate (UG) -->
           <div class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:border-black hover:shadow-md transition-all flex flex-col justify-between h-full group" data-category="undergraduate">
@@ -667,7 +667,7 @@
         </div>
 
         <!-- BOTTOM ROW: 4 9:16 Vertical Instagram Reel Cards (Linked to @oncoursevantage) -->
-        <div id="carousel-track" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8 auto-grid-4">
+        <div id="carousel-track" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8 auto-grid-4 swipe-row">
           
           <!-- Reel 1: Advait M. -->
           <a href="https://www.instagram.com/oncoursevantage/" target="_blank" rel="noopener noreferrer" class="h-[460px] rounded-2xl border border-gray-200 shadow-md hover:border-black transition-all flex flex-col justify-between overflow-hidden group relative bg-slate-950 block">
@@ -833,7 +833,7 @@
         </div>
 
         <!-- 4 Pathway Cards (1 Row on Desktop) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-grid-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-grid-4 swipe-row">
           
           <!-- PATHWAY 1: Undergraduate -->
           <a href="undergraduate.html" class="p-6 rounded-2xl bg-white border-2 border-gray-200 hover:border-black hover:shadow-lg transition-all group flex flex-col justify-between">
@@ -959,16 +959,16 @@
                   <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
                     <div class="lg:col-span-8 space-y-4">
-                      <div class="flex flex-wrap items-center gap-2">
+                      <div class="flex flex-col items-start gap-2">
                         <span class="px-3 py-1 rounded-full bg-black text-white text-[10px] font-mono font-bold uppercase tracking-wider">
                     [Event Category]
                   </span>
-                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-mono font-bold">
+                        <div class="flex flex-wrap items-center gap-2"><span class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-mono font-bold">
                           [Day &bull; Time IST]
                         </span>
                         <span class="px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-[10px] font-mono">
                           [Format &bull; Duration]
-                        </span>
+                        </span></div>
                       </div>
 
                       <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight leading-snug">
@@ -1035,7 +1035,7 @@
               <h3 class="text-xl sm:text-2xl font-black text-gray-900 mt-1">Catch Up on Recent Sessions.</h3>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-grid-3">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-grid-3 swipe-row">
           <a href="upcoming-events.html#past-events" class="group block bg-white rounded-2xl border border-gray-200 hover:border-black hover:shadow-md transition-all p-5 flex flex-col">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded bg-black text-white text-[10px] font-bold uppercase font-mono">[Event Category]</span>
@@ -1801,9 +1801,6 @@
         <span class="hidden sm:inline-flex w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
         <div>
           <p class="text-sm font-semibold text-white">
-            Plan your global admissions roadmap with senior mentors
-          </p>
-          <p class="text-xs text-gray-400 hidden md:block">
             Targeting Ivy League, Top 20 US, Oxford, Cambridge, and Top Global MBA Programmes.
           </p>
         </div>
@@ -1876,6 +1873,7 @@
           <option value="masters">Master’s &amp; Postgraduate Degrees</option>
           <option value="mba">MBA &amp; Executive Degrees (M7 / European)</option>
           <option value="test-prep">Test Prep (SAT / ACT / GRE / GMAT)</option>
+          <option value="boarding-school">Boarding School Admissions</option>
         </select>
       </div>
 
@@ -1969,7 +1967,7 @@
   </div>
 </div>
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
   <!-- Success Stories Carousel Controller Script -->
   <script>
     (function initSuccessStoriesCarousel() {

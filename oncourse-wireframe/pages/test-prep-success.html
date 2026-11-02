@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Test Prep Success Stories &amp; Score Results | OnCourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/wireframe.css?v=6">
+  <link rel="stylesheet" href="../assets/wireframe.css?v=10">
   <script src="../assets/navigation.js?v=9"></script>
   <script src="../assets/event-panel.js?v=8"></script>
 </head>
@@ -1573,10 +1573,10 @@
 </footer>
   <!-- /@component:footer -->
 
-  <script src="../assets/wireframe.js?v=11"></script>
+  <script src="../assets/wireframe.js?v=13"></script>
   <script>
     (function initTestimonialsPage() {
-      const PAGE_SIZE = 6;                       // progressive loading: reveal PAGE_SIZE matching cards at a time
+      const PAGE_SIZE = window.matchMedia('(max-width: 767px)').matches ? 4 : 6;                       // progressive loading: reveal PAGE_SIZE matching cards at a time
       const select = document.getElementById('testimonial-category-select');
       const cards = Array.from(document.querySelectorAll('.testimonial-item-card'));
       const searchInput = document.getElementById('testimonial-search-input');

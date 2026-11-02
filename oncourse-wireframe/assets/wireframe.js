@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstagramFeed();
   initTimelineDownloadModal();
   initEventsController();
+  initMobileLoadMore();
   initMajorEventAnnouncement();
   initGetStartedPopup();
 });
@@ -179,7 +180,7 @@ function initLeadFormSwitcher() {
   const successMessage = document.getElementById('form-success-message');
 
   const updateFields = (val) => {
-    if (ugFields) ugFields.classList.toggle('hidden', val !== 'undergraduate');
+    if (ugFields) ugFields.classList.toggle('hidden', val !== 'undergraduate' && val !== 'boarding-school');
     if (pgFields) pgFields.classList.toggle('hidden', val !== 'mba' && val !== 'masters');
     if (testPrepFields) testPrepFields.classList.toggle('hidden', val !== 'test-prep');
   };
@@ -401,6 +402,7 @@ function initConsultationModal() {
           <option value="masters">Master’s &amp; Postgraduate Degrees</option>
           <option value="mba">MBA &amp; Executive Degrees (M7 / European)</option>
           <option value="test-prep">Test Prep (SAT / ACT / GRE / GMAT)</option>
+          <option value="boarding-school">Boarding School Admissions</option>
           <option value="parent-advisory">Parent &amp; Strategic Family Advisory</option>
         </select>
       </div>
@@ -622,6 +624,7 @@ function initConsultationModal() {
         else if (dataSeg === 'mba') segmentSelect.value = 'mba';
         else if (dataSeg === 'masters') segmentSelect.value = 'masters';
         else if (dataSeg === 'test-prep') segmentSelect.value = 'test-prep';
+        else if (dataSeg === 'boarding-school') segmentSelect.value = 'boarding-school';
       }
       if (segmentSelect && !segmentSelect.dataset.labelBound) {
         segmentSelect.dataset.labelBound = '1';
@@ -1234,5 +1237,37 @@ function initGetStartedPopup() {
     e.preventDefault();
     e.target.classList.add('hidden');
     panel.querySelector('#gs-thanks').classList.remove('hidden');
+  });
+}
+
+
+// 12. Mobile "Load More": phones show the first N cards of a list, then a Load More button.
+// Opt in with data-mobile-load-more="4" on the card container. Works on top of any filter/search code
+// that hides cards with the Tailwind `hidden` class (the filter decides what matches, this decides how many show).
+function initMobileLoadMore() {
+  const mq = window.matchMedia('(max-width: 767.98px)');
+  document.querySelectorAll('[data-mobile-load-more]').forEach((grid) => {
+    const step = parseInt(grid.getAttribute('data-mobile-load-more'), 10) || 4;
+    const label = grid.getAttribute('data-load-more-label') || 'Load More';
+    let limit = step, signature = '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'lm-wrap mt-8 text-center hidden';
+    wrap.innerHTML = '<button type="button" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-extrabold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">' + label + ' <span aria-hidden="true">&darr;</span></button>';
+    grid.insertAdjacentElement('afterend', wrap);
+
+    const observer = new MutationObserver(() => apply());
+    function apply() {
+      observer.disconnect();
+      const items = Array.from(grid.children).filter((c) => !c.classList.contains('hidden'));
+      const sig = items.map((c) => Array.prototype.indexOf.call(grid.children, c)).join(',');
+      if (sig !== signature) { signature = sig; limit = step; }   // filter or search changed: start again from the first batch
+      items.forEach((c, i) => c.classList.toggle('lm-hide', mq.matches && i >= limit));
+      wrap.classList.toggle('hidden', !(mq.matches && items.length > limit));
+      observer.observe(grid, { attributes: true, attributeFilter: ['class'], subtree: true, childList: true });
+    }
+    wrap.querySelector('button').addEventListener('click', () => { limit += step; apply(); });
+    mq.addEventListener('change', apply);
+    apply();
   });
 }

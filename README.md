@@ -29,7 +29,7 @@ A coded structural UX wireframe prototype with client-side interactivity for the
 ├── index.html                       # Master Prototype Hub & Interactive Viewport Switcher
 ├── README.md
 ├── scripts/
-│   └── sync-components.py           # Stamps the shared header/footer into every page
+│   └── sync-components.py           # Stamps the shared header/footer and the section sub-nav (from assets/navigation.js) into every page
 └── oncourse-wireframe/
     ├── index.html                   # Redirect to pages/home.html
     ├── components/

@@ -107,6 +107,40 @@ def render_breadcrumb(attrs):
 RENDERERS = {'header': render_header, 'footer': render_footer, 'breadcrumb': render_breadcrumb}
 
 
+SECONDARY_NAV = re.compile(r'(?P<open><nav id="secondary-nav" data-section="(?P<section>[\w-]+)" data-active="(?P<active>[\w-]+)")[^>]*>.*?</nav>', re.S)
+SECONDARY_CLASS = 'bg-black text-white border-b border-gray-800 sticky top-20 z-30 shadow-xs h-12 secondary-nav-bar'
+
+
+def load_secondary_schema():
+    """Read the sub-nav schema from assets/navigation.js so the static HTML and the script never disagree."""
+    js = (ROOT / 'assets' / 'navigation.js').read_text(encoding='utf-8')
+    block = js[js.index('secondary: {'):]
+    schema = {}
+    for m in re.finditer(r"(?:'([\w-]+)'|(\w+)): \[(.*?)\n      \]", block, re.S):
+        key = m.group(1) or m.group(2)
+        schema[key] = re.findall(r"\{ label: '(.*?)', href: '(.*?)', id: '(.*?)' \}", m.group(3))
+    return schema
+
+
+def render_secondary_nav(m, schema):
+    items = schema.get(m.group('section'))
+    if not items:
+        return m.group(0)
+    links = ''
+    for label, href, iid in items:
+        active = iid == m.group('active')
+        cls = ('text-white border-b-2 border-white font-bold h-full flex items-center transition-colors' if active
+               else 'text-gray-300 hover:text-white border-b-2 border-transparent h-full flex items-center transition-colors')
+        links += f'\n        <a href="{href}" class="{cls} text-xs sm:text-sm whitespace-nowrap">\n          {label.replace("&", "&amp;")}\n        </a>'
+    return (f'{m.group("open")} class="{SECONDARY_CLASS}">\n'
+            '    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">\n'
+            '      <div class="flex items-center overflow-x-auto hide-scrollbar space-x-8 text-xs sm:text-sm font-semibold whitespace-nowrap h-full">'
+            f'{links}\n'
+            '      </div>\n'
+            '    </div>\n'
+            '  </nav>')
+
+
 def sync_page(text):
     def replace(m):
         name, attrs = m.group('name'), m.group('attrs')
@@ -115,7 +149,9 @@ def sync_page(text):
         body = RENDERERS[name](parse_attrs(attrs))
         indent = m.group('indent')
         return f'{indent}<!-- @component:{name}{attrs} -->\n{body}\n{indent}<!-- /@component:{name} -->'
-    return MARKER.sub(replace, text)
+    text = MARKER.sub(replace, text)
+    schema = load_secondary_schema()
+    return SECONDARY_NAV.sub(lambda m: render_secondary_nav(m, schema), text)
 
 
 def main():

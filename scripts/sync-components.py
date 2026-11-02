@@ -13,7 +13,7 @@ Each page marks where they go:
     ...generated, do not edit...
     <!-- /@component:breadcrumb -->
 
-    <!-- @component:footer -->            (or cta="home" to apply the slot overrides in components/footer-cta-home.html)
+    <!-- @component:footer -->            (or cta="home" to apply the slot overrides in components/footer-cta-home.html, or cta="none" to omit the CTA band)
     ...generated, do not edit...
     <!-- /@component:footer -->
 
@@ -73,6 +73,9 @@ def render_header(attrs):
 def render_footer(attrs):
     html = read_component('footer.html')
     cta = attrs.get('cta')
+    if cta == 'none':
+        # cta="none": page omits the CTA band entirely (FAQ pages, per client feedback)
+        return re.sub(r'<section id="ambition-cta-wrapper".*?</section>\n\n', '', html, count=1, flags=re.S)
     if cta:
         # footer-cta-<name>.html holds one or more <!-- @slot:x --> blocks; each replaces the same-named slot
         overrides = {m.group('name'): m.group('body') for m in SLOT.finditer(read_component(f'footer-cta-{cta}.html'))}

@@ -73,7 +73,6 @@ def render_header(attrs):
 def render_footer(attrs):
     html = read_component('footer.html')
     cta = attrs.get('cta')
-    overrides = {}
     if cta:
         # footer-cta-<name>.html holds one or more <!-- @slot:x --> blocks; each replaces the same-named slot
         overrides = {m.group('name'): m.group('body') for m in SLOT.finditer(read_component(f'footer-cta-{cta}.html'))}
@@ -81,10 +80,6 @@ def render_footer(attrs):
         if unknown:
             raise SystemExit(f'footer-cta-{cta}.html: unknown slot(s) {sorted(unknown)}')
         html = SLOT.sub(lambda m: m.group('open') + overrides[m.group('name')] + m.group('close') if m.group('name') in overrides else m.group(0), html)
-    if 'cta' not in overrides:
-        # Client feedback: drop the default "Your Next Chapter Starts Here." band. Only pages that supply their own
-        # headline via a footer-cta-<name>.html "cta" slot (home) keep the CTA band.
-        html = re.sub(r'<section id="ambition-cta-wrapper".*?</section>\n\n', '', html, count=1, flags=re.S)
     return html
 
 

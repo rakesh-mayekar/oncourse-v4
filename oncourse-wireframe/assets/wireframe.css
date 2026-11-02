@@ -828,3 +828,19 @@ html, body { overflow-x: clip; }
 
 /* Mobile Load More (see initMobileLoadMore in wireframe.js): cards beyond the first batch stay hidden on phones only */
 @media (max-width: 767.98px) { .lm-hide { display: none !important; } }
+
+/* Student Score Results: 4x5 / 2x5 / 2x3 grids on desktop; below 1024px every test group is its own left/right swipe row */
+@media (max-width: 1023.98px) {
+  .score-row.score-row {
+    display: flex !important; flex-wrap: nowrap; align-items: stretch; gap: 0.75rem;
+    overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; scrollbar-width: none;
+    margin-left: -1rem; margin-right: -1rem; padding: 0 1rem 0.5rem; scroll-padding-left: 1rem;
+  }
+  .score-row.score-row::-webkit-scrollbar { display: none; }
+  .score-row.score-row > .score-card { flex: 0 0 44%; max-width: 44%; min-width: 0; scroll-snap-align: start; }
+}
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .score-row.score-row { margin-left: -1.5rem; margin-right: -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; scroll-padding-left: 1.5rem; }
+  .score-row.score-row > .score-card { flex-basis: 28%; max-width: 28%; }
+}

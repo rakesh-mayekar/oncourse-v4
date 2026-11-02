@@ -334,14 +334,21 @@
       </div>
     </section>
 
-    <!-- FILTER BAR -->
+    <!-- FILTER BAR (one unified library: filter by resource type + search) -->
     <section class="bg-[#f8f9fa] border-b border-gray-200 py-5 sticky top-32 z-20 bg-[#f8f9fa]/95 backdrop-blur-md shadow-xs">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap items-center gap-2">
-          <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-black text-white cursor-pointer" data-category="all">All Resources</button>
-          <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="guides">Guides</button>
-          <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="webinars">Webinars</button>
-          <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="checklists">Checklists</button>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter resources by type">
+            <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-black text-white cursor-pointer" data-category="all" aria-pressed="true">All Resources <span class="opacity-70">(12)</span></button>
+            <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="guides" aria-pressed="false">Guides <span class="opacity-70">(8)</span></button>
+            <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="webinars" aria-pressed="false">Webinars <span class="opacity-70">(2)</span></button>
+            <button type="button" class="resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer" data-category="checklists" aria-pressed="false">Checklists <span class="opacity-70">(2)</span></button>
+          </div>
+          <div class="relative w-full md:w-72">
+            <label for="resource-search" class="sr-only">Search resources</label>
+            <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+            <input id="resource-search" type="text" placeholder="Search resources" autocomplete="off" class="w-full pl-9 pr-3 py-2 rounded-full text-xs border border-gray-300 focus:outline-none">
+          </div>
         </div>
       </div>
     </section>
@@ -349,12 +356,13 @@
     <!-- RESOURCE LIBRARY (downloads gated: email + phone, max 3 per contact, then "book a short call") -->
     <section id="resources" class="py-14 bg-[#f8f9fa] border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p id="resource-count" class="text-xs font-mono text-gray-500 mb-5" role="status" aria-live="polite">Showing 12 resources</p>
         <div id="resource-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-grid-4">
           <article class="resource-card bg-white rounded-2xl border border-gray-200 hover:border-black hover:shadow-lg transition-all flex flex-col overflow-hidden" data-category="guides">
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guides</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guide</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 1</h3>
@@ -399,7 +407,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Webinars</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Webinar</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 4</h3>
@@ -414,7 +422,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Checklists</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Checklist</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 5</h3>
@@ -429,7 +437,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guides</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guide</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 6</h3>
@@ -474,7 +482,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Webinars</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Webinar</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 9</h3>
@@ -489,7 +497,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Checklists</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Checklist</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 10</h3>
@@ -504,7 +512,7 @@
             <div class="wireframe-placeholder h-36 bg-gray-100 border-b border-gray-200 flex items-center justify-center text-gray-400 text-[11px] font-mono">[Cover image]</div>
             <div class="p-5 flex flex-col flex-1">
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guides</span>
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[10px] font-bold uppercase font-mono border border-gray-200">Guide</span>
                 <span class="text-[10px] font-mono text-gray-400">[Date]</span>
               </div>
               <h3 class="text-sm font-bold text-gray-900 leading-snug">Lorem ipsum dolor sit amet 11</h3>
@@ -531,6 +539,7 @@
             </div>
           </article>
         </div>
+        <div id="resource-empty" class="hidden text-center py-16 text-sm text-gray-500">No resources match your search. <button type="button" id="resource-reset" class="font-bold text-black underline cursor-pointer">Clear filters</button></div>
         <p class="text-[11px] font-mono text-gray-400 mt-6 text-center">Each email / phone number can download up to 3 resources. After that, a prompt asks the visitor to book a short call.</p>
       </div>
     </section>
@@ -1129,166 +1138,35 @@
 </footer>
   <!-- /@component:footer -->
 
-  <!-- ================= TIMELINE PDF DOWNLOAD GATED POPUP MODAL ================= -->
-  <div id="timeline-download-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto hidden opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="timeline-modal-title">
-    <!-- Backdrop -->
-    <div id="timeline-modal-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity cursor-pointer"></div>
-
-    <!-- Modal Dialog Window -->
-    <div class="relative bg-white text-neutral-900 rounded-2xl shadow-2xl border border-neutral-200 max-w-lg w-full p-6 sm:p-8 transform transition-transform duration-300 scale-95 z-10 max-h-[90vh] overflow-y-auto">
-      
-      <!-- Top Bar with Close Button -->
-      <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-lg bg-black text-white flex items-center justify-center font-black text-xs shadow-sm">
-            PDF
-          </div>
-          <div>
-            <span class="text-xs font-black tracking-tight text-neutral-900 uppercase block">Class 8–12 Timelines Guide</span>
-            <span class="text-[10px] font-mono text-neutral-500 uppercase tracking-wider block">Official OnCourse Roadmap &bull; Printable</span>
-          </div>
-        </div>
-        <button id="timeline-modal-close" type="button" class="w-8 h-8 rounded-lg text-neutral-400 hover:text-black hover:bg-neutral-100 flex items-center justify-center transition-colors cursor-pointer" aria-label="Close dialog">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-      </div>
-
-      <!-- Modal Header -->
-      <div class="mt-4 mb-5">
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest bg-neutral-100 text-neutral-800 border border-neutral-200 mb-2">
-          Instant PDF Download
-        </span>
-        <h3 id="timeline-modal-title" class="text-xl sm:text-2xl font-black text-neutral-950 tracking-tight leading-snug">
-          Download Application Timelines Guide (PDF)
-        </h3>
-        <p class="text-xs sm:text-sm text-neutral-600 mt-1 leading-relaxed">
-          Please fill in your details below to instantly download the comprehensive Class 8 to 12 milestone roadmap and checklist.
-        </p>
-      </div>
-
-      <!-- Gated Download Form -->
-      <form id="timeline-download-form" class="space-y-4">
-        <div>
-          <label for="pdf-user-name" class="block text-xs font-semibold text-neutral-700 mb-1">
-            Full Name *
-          </label>
-          <input type="text" id="pdf-user-name" name="name" required placeholder="e.g. Radhika / Aarav Sharma" class="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:ring-2 focus:ring-black focus:border-black">
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 auto-grid-2">
-          <div>
-            <label for="pdf-user-email" class="block text-xs font-semibold text-neutral-700 mb-1">
-              Email Address *
-            </label>
-            <input type="email" id="pdf-user-email" name="email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:ring-2 focus:ring-black focus:border-black">
-          </div>
-          <div>
-            <label for="pdf-user-phone" class="block text-xs font-semibold text-neutral-700 mb-1">
-              Phone / WhatsApp Number *
-            </label>
-            <input type="tel" id="pdf-user-phone" name="phone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:ring-2 focus:ring-black focus:border-black">
-          </div>
-        </div>
-
-        <div>
-          <label for="pdf-student-grade" class="block text-xs font-semibold text-neutral-700 mb-1">
-            Student's Current Grade / Class *
-          </label>
-          <select id="pdf-student-grade" name="grade" required class="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 bg-neutral-50 focus:bg-white text-xs sm:text-sm text-neutral-900 focus:ring-2 focus:ring-black focus:border-black font-medium">
-            <option value="class-8">Class 8 (Early Exploration)</option>
-            <option value="class-9">Class 9 (Foundational Planning)</option>
-            <option value="class-10">Class 10 (Curriculum &amp; Spike)</option>
-            <option value="class-11" selected>Class 11 (Standardised Tests &amp; Capstones)</option>
-            <option value="class-12">Class 12 (Application Submissions)</option>
-          </select>
-        </div>
-
-        <div class="flex items-start gap-2 pt-1 text-[11px] text-neutral-600">
-          <input type="checkbox" id="pdf-consent" checked class="mt-0.5 rounded border-neutral-300 text-black focus:ring-black">
-          <label for="pdf-consent">
-            I agree to receive the downloadable PDF guide and admissions updates via WhatsApp &amp; Email.
-          </label>
-        </div>
-
-        <button type="submit" class="w-full py-3 rounded-lg bg-black text-white hover:bg-neutral-800 font-extrabold text-xs transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-          Submit &amp; Download PDF Now
-        </button>
-      </form>
-
-      <!-- Success & Auto-Download State -->
-      <div id="timeline-download-success" class="hidden text-center py-6 space-y-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto text-2xl">
-          ✓
-        </div>
-        <div>
-          <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2 download-quota-badge">
-            Download 1 of 3 Used
-          </span>
-          <h4 class="text-xl font-black text-neutral-900">Your Download Has Started!</h4>
-          <p class="text-xs sm:text-sm text-neutral-600 mt-2 max-w-sm mx-auto leading-relaxed">
-            The <strong>Class 8 to 12 Timelines &amp; Milestones Guide</strong> PDF is now downloading to your device. A copy has also been sent to your email.
-          </p>
-        </div>
-        <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200 text-xs text-neutral-600 flex items-center justify-center gap-2">
-          <span>Didn't start automatically?</span>
-          <a id="timeline-manual-download-link" href="../assets/docs/OnCourse-Class-8-to-12-Timelines-Guide.pdf" download="OnCourse-Class-8-to-12-Timelines-Guide.pdf" class="font-bold text-black underline hover:text-neutral-800">
-            Click here to download
-          </a>
-        </div>
-        <div class="pt-2">
-          <button id="timeline-success-close" type="button" class="px-6 py-2.5 rounded-lg bg-black text-white font-bold text-xs hover:bg-neutral-800 transition-colors cursor-pointer">
-            Done
-          </button>
-        </div>
-      </div>
-
-      <!-- Limit Reached State (Downloads 4+ with same Email / Phone) -->
-      <!-- BACKEND INTEGRATION NOTE: Client-side state managed via localStorage for prototype. In production, validate quota server-side against CRM/DB. -->
-      <div id="timeline-download-limit-reached" class="hidden text-center py-6 space-y-4">
-        <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center mx-auto text-2xl shadow-xs">
-          ⚠️
-        </div>
-        <div>
-          <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest bg-amber-100 text-amber-900 border border-amber-200 mb-2">
-            Download Allowance Reached (3 of 3 Used)
-          </span>
-          <h4 class="text-xl font-black text-neutral-900 tracking-tight">You've reached your resource download limit.</h4>
-          <p class="text-xs sm:text-sm text-neutral-600 mt-2 max-w-sm mx-auto leading-relaxed">
-            You have already accessed the maximum of 3 complimentary resource downloads for this email and contact number. To explore our comprehensive curriculum roadmaps and receive tailored admissions guidance, connect directly with our senior advisory team.
-          </p>
-        </div>
-
-        <!-- Primary CTA: "Book a Short Call" using existing consultation/contact flow -->
-        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="contact.html#consultation-form" data-open-modal="consultation" id="limit-reached-consult-cta" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-black hover:bg-neutral-800 text-white font-extrabold text-xs transition-all shadow-md flex items-center justify-center gap-2 group cursor-pointer">
-            <span>Book a Short Call</span>
-            <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
-          </a>
-          <button id="timeline-limit-close" type="button" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-bold text-xs transition-colors cursor-pointer">
-            Close
-          </button>
-        </div>
-
-        <div class="pt-3 border-t border-neutral-100 text-[10px] font-mono text-neutral-400">
-          Need immediate assistance? Call <a href="tel:+912261234567" class="text-neutral-700 underline font-sans font-bold">+91 (022) 6123 4567</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
   <script src="../assets/wireframe.js?v=11"></script>
   <script>
     (function initResourceFilter() {
       var tabs = document.querySelectorAll('.resource-filter-tab'), cards = document.querySelectorAll('.resource-card');
+      var search = document.getElementById('resource-search'), count = document.getElementById('resource-count'),
+          empty = document.getElementById('resource-empty'), reset = document.getElementById('resource-reset');
+      var cat = 'all';
+      var ON = 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-black text-white cursor-pointer';
+      var OFF = 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer';
+      function apply() {
+        var q = (search.value || '').trim().toLowerCase(), shown = 0;
+        cards.forEach(function (c) {
+          var ok = (cat === 'all' || c.getAttribute('data-category') === cat) && (!q || c.textContent.toLowerCase().indexOf(q) !== -1);
+          c.classList.toggle('hidden', !ok);
+          if (ok) shown++;
+        });
+        count.textContent = 'Showing ' + shown + (shown === 1 ? ' resource' : ' resources');
+        empty.classList.toggle('hidden', shown !== 0);
+      }
       tabs.forEach(function (t) {
         t.addEventListener('click', function () {
-          var cat = t.getAttribute('data-category');
-          tabs.forEach(function (x) { x.className = (x === t) ? 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-black text-white cursor-pointer' : 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer'; });
-          cards.forEach(function (c) { c.classList.toggle('hidden', cat !== 'all' && c.getAttribute('data-category') !== cat); });
+          cat = t.getAttribute('data-category');
+          tabs.forEach(function (x) { x.className = (x === t) ? ON : OFF; x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
+          apply();
         });
       });
+      search.addEventListener('input', apply);
+      reset.addEventListener('click', function () { search.value = ''; tabs[0].click(); });
     })();
   </script>
 </body>

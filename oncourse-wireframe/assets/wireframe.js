@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelineDownloadModal();
   initEventsController();
   initMobileLoadMore();
+  initPortraitIntro();
+  initResourceLibrary();
   initMajorEventAnnouncement();
   initGetStartedPopup();
 });
@@ -1130,11 +1132,16 @@ function initMajorEventAnnouncement() {
     <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-black" aria-label="Close" data-gate-close>&#10005;</button>
     <div data-gate-form>
       <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-bold uppercase bg-gray-100 text-gray-800 border border-gray-200">Knowledge Centre</span>
-      <h3 id="resource-gate-title" class="text-xl font-black text-gray-900 mt-2">Download this resource</h3>
-      <p class="text-xs text-gray-600 mt-1">Enter your email and phone number to download. <span class="font-mono text-gray-400">[Up to ${LIMIT} downloads per contact]</span></p>
+      <h3 id="resource-gate-title" class="text-xl font-black text-gray-900 mt-2">Download this premium resource</h3>
+      <p class="text-xs text-gray-600 mt-1">Premium resources need a few details. Enter your email, phone number and who is filling this form. <span class="font-mono text-gray-400">[Up to ${LIMIT} downloads per contact]</span></p>
       <form class="mt-4 space-y-3" data-gate-fields>
         <input type="email" required placeholder="Email address" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-black focus:border-black">
         <input type="tel" required placeholder="Phone / WhatsApp number" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-black focus:border-black">
+        <select required aria-label="Who is filling this form?" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm bg-white focus:ring-2 focus:ring-black focus:border-black">
+          <option value="">I am a&hellip;</option>
+          <option value="student">Student</option>
+          <option value="parent">Parent</option>
+        </select>
         <button type="submit" class="w-full py-3 rounded-lg bg-black text-white font-bold text-xs hover:bg-neutral-800">Download</button>
       </form>
     </div>
@@ -1270,4 +1277,76 @@ function initMobileLoadMore() {
     mq.addEventListener('change', apply);
     apply();
   });
+}
+
+
+// 13. Team / leadership portraits: one-line introduction shows on hover (desktop), on tap or Enter/Space (touch + keyboard).
+function initPortraitIntro() {
+  const portraits = Array.from(document.querySelectorAll('.leader-portrait'));
+  if (!portraits.length) return;
+  const setOpen = (p, open) => {
+    const bio = p.querySelector('.leader-bio');
+    if (!bio) return;
+    bio.classList.toggle('opacity-100', open);
+    bio.classList.toggle('opacity-0', !open);
+    p.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+  portraits.forEach((p) => {
+    const toggle = (e) => {
+      if (e.type === 'keydown') { if (e.key !== 'Enter' && e.key !== ' ') return; e.preventDefault(); }
+      const bio = p.querySelector('.leader-bio');
+      const open = !(bio && bio.classList.contains('opacity-100'));
+      portraits.forEach((o) => { if (o !== p) setOpen(o, false); });   // one open at a time
+      setOpen(p, open);
+    };
+    p.addEventListener('click', toggle);
+    p.addEventListener('keydown', toggle);
+  });
+  document.addEventListener('click', (e) => { if (!e.target.closest('.leader-portrait')) portraits.forEach((o) => setOpen(o, false)); });
+}
+
+
+// 14. Knowledge Centre library: category tabs + search + Free/Premium dropdown + live count.
+// Hides cards with the Tailwind `hidden` class, so the mobile Load More (data-mobile-load-more) keeps working on top.
+function initResourceLibrary() {
+  const grid = document.getElementById('resource-grid');
+  if (!grid) return;
+  const cards = Array.from(grid.querySelectorAll('.resource-card'));
+  const tabs = Array.from(document.querySelectorAll('.resource-filter-tab'));
+  const search = document.getElementById('resource-search');
+  const access = document.getElementById('resource-access');
+  const count = document.getElementById('resource-count');
+  const empty = document.getElementById('resource-empty');
+  const reset = document.getElementById('resource-reset');
+  const ON = 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-black text-white cursor-pointer';
+  const OFF = 'resource-filter-tab px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 hover:border-black cursor-pointer';
+  let cat = 'all';
+
+  function apply() {
+    const q = search ? search.value.trim().toLowerCase() : '';
+    const acc = access ? access.value : 'all';
+    let shown = 0;
+    cards.forEach((c) => {
+      const ok = (cat === 'all' || c.getAttribute('data-category') === cat)
+        && (acc === 'all' || c.getAttribute('data-access') === acc)
+        && (!q || c.textContent.toLowerCase().indexOf(q) !== -1);
+      c.classList.toggle('hidden', !ok);
+      if (ok) shown++;
+    });
+    if (count) count.textContent = 'Showing ' + shown + (shown === 1 ? ' resource' : ' resources');
+    if (empty) empty.classList.toggle('hidden', shown !== 0);
+  }
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    cat = t.getAttribute('data-category') || 'all';
+    tabs.forEach((x) => { x.className = x === t ? ON : OFF; x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
+    apply();
+  }));
+  if (search) search.addEventListener('input', apply);
+  if (access) access.addEventListener('change', apply);
+  if (reset) reset.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (access) access.value = 'all';
+    if (tabs[0]) tabs[0].click(); else apply();
+  });
+  apply();
 }

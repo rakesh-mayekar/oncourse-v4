@@ -844,3 +844,14 @@ html, body { overflow-x: clip; }
   .score-row.score-row { margin-left: -1.5rem; margin-right: -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; scroll-padding-left: 1.5rem; }
   .score-row.score-row > .score-card { flex-basis: 28%; max-width: 28%; }
 }
+
+/* Portrait introductions: keyboard focus reveals the intro like hover; touch devices get a small "i" hint so the tap target is discoverable */
+.leader-portrait:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+.leader-portrait:focus-visible .leader-bio { opacity: 1; }
+@media (hover: none) {
+  .leader-portrait::after {
+    content: 'i'; position: absolute; top: 0.5rem; right: 0.5rem; z-index: 20;
+    width: 1.5rem; height: 1.5rem; border-radius: 9999px; background: rgba(0,0,0,.75); color: #fff;
+    font: italic 700 0.8rem/1.5rem Georgia, serif; text-align: center; pointer-events: none;
+  }
+}
